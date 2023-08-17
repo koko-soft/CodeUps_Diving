@@ -33,11 +33,71 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
+
+    <div class="header__inner inner">
+
+      <h1 class="header__logoBlock">
+        <a href="#" class="header__logoLink"><img src="./assets/images/common/logo.svg" alt=""></a>
+      </h1>
+
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="header__pc-nav pc-nav">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item">
+            <a href="#news">News</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#service">Service</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#results">Results</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#price">Price</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#comments">Comments</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#faq">FAQs</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+
+    <!-- ドロワーメニュー -->
+    <nav class="header__sp-nav sp-nav js-sp-nav">
+
+      <ul class="sp-nav__items">
+        <li class="sp-nav__item"><a href="#news">News</a></li>
+        <li class="sp-nav__item"><a href="#service">Service</a></li>
+        <li class="sp-nav__item"><a href="#results">Results</a></li>
+        <li class="sp-nav__item"><a href="#price">Price</a></li>
+        <li class="sp-nav__item"><a href="#comments">Comments</a></li>
+        <li class="sp-nav__item"><a href="#faq">FAQs</a></li>
+        <li class="sp-nav__item"><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+
+    <div class="sp-nav__bg"></div>
 
   </header>
   <main>
+
     <div class="inner">
+
       <div class="xxx__title section-title">
         <h2 class="section-title__eng">Campaign</h2>
         <p class="section-title__ja">キャンペーン</p>
@@ -49,26 +109,26 @@
         </a>
       </div>
 
-      <div class="xxx__item card-campaign">
-        <div class="card-campaign__img">
+      <div class="xxx__item campaign-card">
+        <div class="campaign-card__img">
           <img src="./assets/images/common/campaign_1.jpg" alt="">
         </div>
-        <div class="card-campaign__body">
-          <div class="card-campaign__category">
-            <p>ライセンス講習</p>
+        <div class="campaign-card__body">
+          <div class="campaign-card__category">
+            <p class="campaign-card__category-text">ライセンス講習</p>
           </div>
-          <div class="card-campaign__title">
-            <p>ライセンス取得</p>
+          <div class="campaign-card__title">
+            <p class="campaign-card__title-text text">ライセンス取得</p>
           </div>
-          <div class="card-campaign__offer">
+          <div class="campaign-card__offer">
             <p>全部コミコミ(お一人様)</p>
           </div>
-          <div class="card-campaign__wrap">
-            <div class="card-campaign__original-price">
-              <p>¥56,000</p>
+          <div class="campaign-card__wrap">
+            <div class="campaign-card__original-price">
+              <p class="campaign-card__original-price-text">¥56,000</p>
             </div>
-            <div class="card-campaign__sale-price">
-              <p>¥46,000</p>
+            <div class="campaign-card__sale-price">
+              <p class="campaign-card__sale-price-text">¥46,000</p>
             </div>
           </div>
         </div>
@@ -85,50 +145,204 @@
               <p>ライセンス取得</p>
             </div>
             <div class="blog-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              <p class="blog-card__text-text text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
             </div>
           </div>
 
         </div>
 
-        <div class="xxx__item blog-card">
-          <div class="blog-card__img">
-            <img src="./assets/images/common/blog_1.jpg" alt="">
-          </div>
-          <div class="blog-card__body">
-            <time class="blog-card__date" datetime="2023-11-17">2023.11.17</time>
-            <div class="blog-card__title">
-              <p>ライセンス取得</p>
+      </div>
+
+      <div class="xxx__items voice-cards">
+        <div class="xxx__item voice-card">
+          <div class="voice-card__head">
+
+            <div class="voice-card__left">
+              <div class="voice-card__meta">
+                <div class="voice-card__age">
+                  <p class="voice-card__age-text">20代(女性)</p>
+                </div>
+                <div class="voice-card__category">
+                  <p class="voice-card__category-text">ライセンス講習</p>
+                </div>
+              </div>
+              <div class="voice-card__title">
+                <h3 class="voice-card__title-text">ここにタイトルが入ります。ここにタイトル</h3>
+              </div>
             </div>
-            <div class="blog-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+
+            <div class="voice-card__right">
+              <div class="voice-card__img">
+                <img src="./assets/images/common/voice_1.jpg" alt="笑顔の女性の顔写真">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="voice-card__body">
+            <div class="voice-card__text">
+              <p class="voice-card__text-text text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                ここにテキストが入ります。ここにテキストが入ります。
+              </p>
             </div>
           </div>
 
-        </div>
-        <div class="xxx__item blog-card">
-          <div class="blog-card__img">
-            <img src="./assets/images/common/blog_1.jpg" alt="">
-          </div>
-          <div class="blog-card__body">
-            <time class="blog-card__date" datetime="2023-11-17">2023.11.17</time>
-            <div class="blog-card__title">
-              <p>ライセンス取得</p>
-            </div>
-            <div class="blog-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-            </div>
-          </div>
 
         </div>
       </div>
 
+
+
+
+
     </div>
+
+
   </main>
-  <footer>
+
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__wrapper">
+
+        <div class="footer-menu menu">
+
+          <div class="menu__column">
+
+            <div class="menu__item">
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">キャンペーン</p>
+                </a>
+              </div>
+              <ul class="menu__list">
+                <li><a href="#" class="menu__list-link">ライセンス取得</a></li>
+                <li><a href="#" class="menu__list-link">貸切体験ダイビング</a></li>
+                <li><a href="#" class="menu__list-link">ナイトダイビング</a></li>
+              </ul>
+            </div>
+
+            <div class="menu__item">
+
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">キャンペーン</p>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="menu__column">
+
+            <div class="menu__item">
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">ダイビング情報</p>
+                </a>
+              </div>
+              <ul class="menu__list">
+                <li><a href="#" class="menu__list-link">ライセンス取得</a></li>
+                <li><a href="#" class="menu__list-link">貸切体験ダイビング</a></li>
+                <li><a href="#" class="menu__list-link">ナイトダイビング</a></li>
+              </ul>
+            </div>
+
+            <div class="menu__item">
+
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">ブログ</p>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="menu__column">
+
+            <div class="menu__item">
+
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">お客様の声</p>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="menu__item">
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">料金一覧</p>
+                </a>
+              </div>
+              <ul class="menu__list">
+                <li><a href="#" class="menu__list-link">ライセンス取得</a></li>
+                <li><a href="#" class="menu__list-link">貸切体験ダイビング</a></li>
+                <li><a href="#" class="menu__list-link">ナイトダイビング</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="menu__column">
+
+            <div class="menu__item">
+
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">よくある質問</p>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="menu__item">
+
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">プライバシーポリシー</p>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="menu__item">
+
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">利用規約</p>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="menu__item">
+
+              <div class="menu__title">
+                <a href="">
+                  <p class="menu__title-text">おい問わ合せ</p>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
 
   </footer>
 </body>
