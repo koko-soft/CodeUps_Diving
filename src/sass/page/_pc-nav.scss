@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.pc-nav {}
+
+.pc-nav__items {
+	height: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(8);
+
+	// @include mq('lg') {
+	// 	gap: 0;
+	// }
+
+	@include mq('md') {
+		gap: rem(0);
+	}
+
+	@include mq('lg') {
+		// gap: rem(8);
+	}
+
+}
+
+.pc-nav__item {
+	height: inherit;
+}
+
+.pc-nav__item a {
+	display: flex;
+	align-items: center;
+	height: inherit;
+
+	position: relative;
+
+
+	@include mq('md') {
+
+		padding-left: rem(12);
+		padding-right: rem(12);
+	}
+
+	@include mq('lg') {
+
+		padding-left: rem(16);
+		padding-right: rem(16);
+	}
+}
+
+
+.pc-nav__item a::after {
+	position: absolute;
+	bottom: rem(27);
+	left: 0;
+	content: "";
+	width: 0;
+	height: 1px;
+	background-color: $color-black;
+	transition: width 0.3s ease;
+}
+
+.pc-nav__item a:hover {
+	opacity: 1;
+}
+
+.pc-nav__item a:hover::after {
+	width: 100%;
+}
+
+.pc-nav__title {
+	text-align: center;
+}
+
+.pc-nav__eng {
+	font-family: $font-family-eng;
+	font-size: rem(18);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	line-height: 1;
+	color: $color-white;
+}
+
+.pc-nav__ja {
+	margin-top: rem(4);
+	font-family: $font-family-jp-sans;
+	font-size: rem(10);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0em;
+	line-height: calc(15 / 10);
+	color: $color-white;
+}

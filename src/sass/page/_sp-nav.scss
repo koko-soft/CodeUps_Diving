@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.sp-nav {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: $color-accent;
+	z-index: $z-index-sp-nav;
+	overflow-x: hidden;
+	overflow-y: auto;
+	opacity: 0;
+
+	transform: translateX(-105%);
+	transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+
+.sp-nav.is-active {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.sp-nav__inner {
+	// width: rem(345);
+	// max-width: 100%;
+	// margin-left: auto;
+	// margin-right: auto;
+	// height: inherit;
+}
+
+.sp-nav__wrap {
+	padding-top: rem(21);
+	padding-bottom: rem(21);
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+}
+
+.sp-nav__head {}
+
+.sp-nav__logoBlock {
+	display: flex;
+}
+
+.sp-nav__logoLink {}
+
+.sp-nav__logo {
+	width: rem(102);
+
+	@include mq('md') {
+		width: rem(133);
+	}
+}
+
+.sp-nav__body {
+	margin-top: rem(45);
+}
+
+.sp-nav__menu-items {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+
+	row-gap: rem(40);
+	column-gap: rem(6);
+	grid-auto-flow: column;
+}
+
+.sp-nav__menu-item {}

@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.header {
+
+	height: rem(80);
+	background-color: rgba($color: $color-black, $alpha: 0.68);
+	z-index: $z-index-header;
+	position: fixed;
+	width: 100%;
+
+	@include mq('md') {
+		height: rem(90);
+	}
+}
+
+.header__inner {
+
+	max-width: rem(1440);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: rem(15);
+	padding-right: rem(15);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: inherit;
+
+	@include mq('lg') {
+		padding-left: rem(40);
+		padding-right: rem(40);
+
+	}
+}
+
+.header__logoBlock {
+	height: inherit;
+	z-index: $z-index-logoBlock;
+}
+
+.header__logoLink {
+	height: inherit;
+}
+
+.header__logo {
+	width: rem(102);
+
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@include mq('md') {
+		width: rem(133);
+	}
+}
+
+.header__drawer {
+	@include mq('md') {
+		display: none;
+	}
+}
+
+.header__pc-nav {
+	height: inherit;
+	display: none;
+
+	@include mq('md') {
+		display: block;
+	}
+}
+
+.header__sp-nav {}

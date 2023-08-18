@@ -27,8 +27,7 @@
 	content: "";
 	position: absolute;
 	left: 0px;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 0;
 	width: rem(18);
 	height: rem(18);
 	background-image: url('../images/common/icon_starfish.png');
@@ -47,7 +46,7 @@
 }
 
 .menu__list-link {
-	padding: 0.5em;
+	padding: 0.25em;
 	font-family: $font-family-jp-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-regular;
