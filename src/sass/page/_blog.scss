@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.blog {
+	padding-top: rem(80);
+
+	@include mq('md') {
+		padding-top: rem(100);
+		position: relative;
+	}
+}
+
+.blog::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100vw;
+	// height: min(calc(500 / 831 * 100%), rem(500));
+	// height: min(rem(500), calc(500 / 1440 * 100%));
+	height: rem(500);
+	background-image: url('../images/common/blog-bg_pc.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	z-index: -1;
+}
+
+.blog__inner {}
+
+.blog__title {}
+
+.blog__cards {
+	margin-top: rem(24);
+
+	@include mq('md') {
+		margin-top: rem(86);
+
+	}
+}
+
+
+.blog__card {}
+
+
+.blog__btn {
+	margin-top: rem(40);
+	text-align: center;
+
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}

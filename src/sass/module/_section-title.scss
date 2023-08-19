@@ -29,8 +29,17 @@
 	letter-spacing: 0;
 	line-height: 1;
 	color: $color-accent;
+
 	@include mq('md') {
 		margin-top: rem(8);
 	}
 
+}
+
+.section-title--white .section-title__eng,
+.section-title--white .section-title__eng::first-letter,
+.section-title--white .section-title__ja {
+	@include mq('md') {
+		color: $color-white;
+	}
 }

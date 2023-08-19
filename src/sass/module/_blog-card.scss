@@ -2,18 +2,28 @@
 
 .blog-card {
 	padding: rem(16) rem(16) rem(24);
+	background-color: $color-white;
 	box-shadow: 2px 2px 10px rgba($color: #000, $alpha: 0.25);
 
 	@include mq('md') {
 
 		max-width: 100%;
-		width: rem(333);
+		flex-basis: calc((100% - 80px) / 3);
+		// width: rem(333);
+	}
+}
+
+.blog-card:not(:first-child) {
+	margin-top: rem(40);
+
+	@include mq('md') {
+		margin-top: 0;
 	}
 }
 
 .blog-card__img {
 	aspect-ratio: 301 / 201;
-
+	width: 100%;
 }
 
 .blog-card__img img {
@@ -25,14 +35,12 @@
 }
 
 .blog-card__body {
-	margin-top: rem(24);
+	margin-top: rem(17);
 }
 
 .blog-card__body {}
 
-.blog-card__date {}
-
-.blog-card__date p {
+.blog-card__date {
 	// display: inline-block;
 	font-family: $font-family-eng;
 	font-size: rem(12);
@@ -71,4 +79,9 @@
 	margin-top: rem(16);
 }
 
-.blog-card__text-text {}
+.blog-card__text-text {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5; //何行まで表示するか
+}
