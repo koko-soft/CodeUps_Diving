@@ -45,17 +45,17 @@
 
 .blog-card__title {
 	padding-bottom: rem(4);
-	position: relative;
+	// position: relative;
 }
 
-.blog-card__title p {
-	font-family: $font-family-jp-sans;
-	font-size: rem(16);
-	font-weight: $font-weight-medium;
-	letter-spacing: 0;
-	line-height: calc(24 / 16);
-	color: $color-text;
-}
+// .blog-card__title p {
+// 	font-family: $font-family-jp-sans;
+// 	font-size: rem(16);
+// 	font-weight: $font-weight-medium;
+// 	letter-spacing: 0;
+// 	line-height: calc(24 / 16);
+// 	color: $color-text;
+// }
 
 .blog-card__title::after {
 	position: absolute;
