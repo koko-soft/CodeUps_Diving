@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.mv {
+	position: relative;
+	height: 100vh;
+}
+
+.mv__inner {
+	height: inherit;
+}
+
+.mv__content {
+	height: inherit;
+}
+
+.mv__images {
+	height: inherit;
+}
+
+.mv__swiper {
+	height: inherit;
+}
+
+.mv__swiper-wrapper {
+	height: inherit;
+}
+
+.mv__swiper-img {
+	height: inherit;
+}
+
+.mv__swiper-img picture {
+	height: inherit;
+}
+
+.mv__swiper-img source {
+	height: inherit;
+}
+
+.mv__swiper-img picture img {
+	height: inherit;
+	object-fit: cover;
+
+}
+
+.mv__header {
+	position: absolute;
+	margin-top: rem(40);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	width: 100%;
+
+	@include mq('md') {
+		margin-top: rem(50);
+		width: calc(100% - rem(410));
+	}
+}
+
+.mv__title {
+	font-family: $font-family-lato;
+	font-size: rem(40);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0.54em;
+	line-height: 1;
+	color: $color-white;
+	text-align: center;
+
+
+	@include mq('md') {
+		font-size: rem(80);
+		letter-spacing: 0.54em;
+	}
+}
+
+.mv__subtitle {
+	margin-top: rem(20);
+	font-family: $font-family-eng;
+	font-weight: $font-weight-regular;
+	font-size: rem(20);
+	letter-spacing: 0;
+	line-height: 1;
+	color: $color-white;
+	text-align: center;
+
+	@include mq('md') {
+		margin-top: rem(0);
+		font-size: rem(20);
+	}
+}

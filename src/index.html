@@ -26,8 +26,11 @@
     href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
     rel="stylesheet">
 
+
   <!-- css -->
   <!-- Swiper -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -35,6 +38,11 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!-- Swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script> -->
+
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -49,7 +57,7 @@
         </a>
       </h1>
 
-      <div class="header__drawer hamburger js-hamburger is-active">
+      <div class="header__drawer hamburger js-hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -128,7 +136,7 @@
     </div>
 
     <!-- ドロワーメニュー -->
-    <nav class="header__sp-nav sp-nav js-sp-nav is-active">
+    <nav class="header__sp-nav sp-nav js-sp-nav">
       <!-- <div class="sp-nav__head">
 
         <div class="sp-nav__logoBlock">
@@ -279,7 +287,219 @@
     </nav>
 
   </header>
+
   <main>
+
+    <div class="mv">
+      <div class="mv__inner">
+
+        <div class="mv__content">
+          <div class="mv__images">
+
+            <!-- Swiper -->
+            <div class="swiper mv__swiper js-mv__swiper">
+              <div class="swiper-wrapper mv__swiper-wrapper">
+                <div class="swiper-slide mv__swiper-img">
+                  <picture>
+                    <source srcset="../assets/images/common/mv_pc_1.jpg" media="(min-width:768px)">
+                    <img src="../assets/images/common/mv_sp_1.jpg" alt="大きな亀が海で泳いでいる様子">
+                  </picture>
+                </div>
+                <div class="swiper-slide mv__swiper-img">
+                  <picture>
+                    <source srcset="../assets/images/common/mv_pc_2.jpg" media="(min-width:768px)">
+                    <img src="../assets/images/common/mv_sp_2.jpg" alt="ダイバーと亀が水中で泳いでいる様子">
+                  </picture>
+                </div>
+                <div class="swiper-slide mv__swiper-img">
+                  <picture>
+                    <source srcset="../assets/images/common/mv_pc_3.jpg" media="(min-width:768px)">
+                    <img src="../assets/images/common/mv_sp_3.jpg" alt="海と山と空の風景">
+                  </picture>
+                </div>
+                <div class="swiper-slide mv__swiper-img">
+                  <picture>
+                    <source srcset="../assets/images/common/mv_pc_4.jpg" media="(min-width:768px)">
+                    <img src="../assets/images/common/mv_sp_4.jpg" alt="綺麗な砂浜と青空の風景">
+                  </picture>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="mv__header">
+            <div class="mv__title">
+              <p>DIVING</p>
+            </div>
+            <div class="mv__subtitle">
+              <p>into the ocean</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <section class="campaign">
+      <div class="campaign__inner inner">
+
+        <div class="campaign__title section-title">
+          <h2 class="section-title__eng">Campaign</h2>
+          <p class="section-title__ja">キャンペーン</p>
+        </div>
+
+        <!-- Swiper -->
+
+        <div class="swiper-button-prev campaign__button-prev"></div>
+        <div class="swiper-button-next campaign__button-next"></div>
+        <!-- <div class="campaign__button-next"></div>
+        <div class="campaign__button-prev"></div> -->
+
+        <div class="swiper campaign__swiper js-campaign__swiper">
+          <div class="swiper-wrapper campaign__cards">
+
+            <div class="swiper-slide campaign__card campaign-card">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign_1.jpg" alt="多種多少な熱帯魚が泳いでいる様子">
+              </div>
+              <div class="campaign-card__body">
+                <div class="campaign-card__category">
+                  <p class="campaign-card__category-text">ライセンス講習</p>
+                </div>
+                <div class="campaign-card__title">
+                  <p class="campaign-card__title-text text">ライセンス取得</p>
+                </div>
+                <div class="campaign-card__offer">
+                  <p>全部コミコミ(お一人様)</p>
+                </div>
+                <div class="campaign-card__wrap">
+                  <div class="campaign-card__original-price">
+                    <p class="campaign-card__original-price-text">¥56,000</p>
+                  </div>
+                  <div class="campaign-card__sale-price">
+                    <p class="campaign-card__sale-price-text">¥46,000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide campaign__card campaign-card">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign_2.jpg" alt="透き通った浅瀬に浮かぶ船と山と空の景色">
+              </div>
+              <div class="campaign-card__body">
+                <div class="campaign-card__category">
+                  <p class="campaign-card__category-text">体験ダイビング</p>
+                </div>
+                <div class="campaign-card__title">
+                  <p class="campaign-card__title-text text">貸切体験ダイビング</p>
+                </div>
+                <div class="campaign-card__offer">
+                  <p>全部コミコミ(お一人様)</p>
+                </div>
+                <div class="campaign-card__wrap">
+                  <div class="campaign-card__original-price">
+                    <p class="campaign-card__original-price-text">¥24,000</p>
+                  </div>
+                  <div class="campaign-card__sale-price">
+                    <p class="campaign-card__sale-price-text">¥18,000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide campaign__card campaign-card">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign_3.jpg" alt="水中を漂う多数のクラゲ">
+              </div>
+              <div class="campaign-card__body">
+                <div class="campaign-card__category">
+                  <p class="campaign-card__category-text">体験ダイビング</p>
+                </div>
+                <div class="campaign-card__title">
+                  <p class="campaign-card__title-text text">ナイトダイビング</p>
+                </div>
+                <div class="campaign-card__offer">
+                  <p>全部コミコミ(お一人様)</p>
+                </div>
+                <div class="campaign-card__wrap">
+                  <div class="campaign-card__original-price">
+                    <p class="campaign-card__original-price-text">¥10,000</p>
+                  </div>
+                  <div class="campaign-card__sale-price">
+                    <p class="campaign-card__sale-price-text">¥8,000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide campaign__card campaign-card">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign_4.jpg" alt="ダイバーの集団が海で浮かんでいる様子">
+              </div>
+              <div class="campaign-card__body">
+                <div class="campaign-card__category">
+                  <p class="campaign-card__category-text">ファンダイビング</p>
+                </div>
+                <div class="campaign-card__title">
+                  <p class="campaign-card__title-text text">貸切ファンダイビング</p>
+                </div>
+                <div class="campaign-card__offer">
+                  <p>全部コミコミ(お一人様)</p>
+                </div>
+                <div class="campaign-card__wrap">
+                  <div class="campaign-card__original-price">
+                    <p class="campaign-card__original-price-text">¥20,000</p>
+                  </div>
+                  <div class="campaign-card__sale-price">
+                    <p class="campaign-card__sale-price-text">¥16,000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide campaign__card campaign-card">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign_4.jpg" alt="ダイバーの集団が海で浮かんでいる様子">
+              </div>
+              <div class="campaign-card__body">
+                <div class="campaign-card__category">
+                  <p class="campaign-card__category-text">ファンダイビング</p>
+                </div>
+                <div class="campaign-card__title">
+                  <p class="campaign-card__title-text text">貸切ファンダイビング</p>
+                </div>
+                <div class="campaign-card__offer">
+                  <p>全部コミコミ(お一人様)</p>
+                </div>
+                <div class="campaign-card__wrap">
+                  <div class="campaign-card__original-price">
+                    <p class="campaign-card__original-price-text">¥20,000</p>
+                  </div>
+                  <div class="campaign-card__sale-price">
+                    <p class="campaign-card__sale-price-text">¥16,000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="campaign__btn">
+        <a href="#" class="button">
+          <p>View more</p>
+        </a>
+      </div>
+
+      <!-- </div> -->
+    </section>
 
     <div class="inner">
 
