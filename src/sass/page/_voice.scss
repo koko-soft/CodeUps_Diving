@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.voice {
+	margin-top: rem(80);
+
+	@include mq('md') {
+		margin-top: rem(140);
+	}
+}
+
+.voice__inner {}
+
+.voice__title {}
+
+.voice__cards {
+	margin-top: rem(40);
+
+	@include mq('md') {
+		margin-top: rem(30);
+	}
+}
+
+.voice__card {
+
+	@include mq('md') {
+		flex-basis: calc((100% - 40px) / 2);
+	}
+}
+
+.voice__btn {
+	margin-top: rem(40);
+	text-align: center;
+
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}

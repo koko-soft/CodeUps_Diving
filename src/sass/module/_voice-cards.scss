@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.voice-cards {
+	display: flex;
+	// flex-direction: column;
+	align-items: center;
+	row-gap: rem(40);
+
+	@include mq('md') {
+		flex-direction: row;
+		row-gap: rem(80);
+		column-gap: rem(40);
+	}
+}
