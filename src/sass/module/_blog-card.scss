@@ -4,13 +4,6 @@
 	padding: rem(16) rem(16) rem(24);
 	background-color: $color-white;
 	box-shadow: 2px 2px 10px rgba($color: #000, $alpha: 0.25);
-
-	@include mq('md') {
-
-		max-width: 100%;
-		flex-basis: calc((100% - 80px) / 3);
-		// width: rem(333);
-	}
 }
 
 .blog-card:not(:first-child) {
