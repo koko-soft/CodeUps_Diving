@@ -5,7 +5,24 @@
 	margin-bottom: rem(70);
 
 	@include mq('md') {
+		margin-top: rem(140);
+		margin-bottom: rem(140);
 		position: relative;
+	}
+}
+
+.about::after {
+	@include mq('md') {
+		position: absolute;
+		content: "";
+		bottom: rem(-90);
+		right: max(rem(20), calc(50vw - rem(640)));
+		width: rem(194);
+		height: rem(181);
+		background-image: url('../images/common/img-coral.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
 	}
 }
 
