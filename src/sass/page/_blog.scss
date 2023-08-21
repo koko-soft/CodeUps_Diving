@@ -25,6 +25,21 @@
 	z-index: -1;
 }
 
+.blog::after {
+	@include mq('md') {
+		position: absolute;
+		content: "";
+		top: rem(24);
+		left: max(rem(40), calc(50vw - rem(620)));
+		width: rem(437);
+		height: rem(201);
+		background-image: url('../images/common/fish_white.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
 .blog__inner {}
 
 .blog__title {}

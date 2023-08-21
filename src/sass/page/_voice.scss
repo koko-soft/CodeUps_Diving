@@ -2,9 +2,42 @@
 
 .voice {
 	margin-top: rem(80);
+	margin-bottom: rem(140);
 
 	@include mq('md') {
 		margin-top: rem(140);
+		position: relative;
+	}
+}
+
+.voice::before {
+	@include mq('md') {
+		position: absolute;
+		content: "";
+		top: rem(-117);
+		left: max(rem(40), calc(50vw - rem(620)));
+		width: rem(301);
+		height: rem(138);
+		background-image: url('../images/common/img-fish.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+		transform: scaleX(-1);
+	}
+}
+
+.voice::after {
+	@include mq('md') {
+		position: absolute;
+		content: "";
+		bottom: rem(-65);
+		right: max(rem(40), calc(50vw - rem(540)));
+		width: rem(71);
+		height: rem(162);
+		background-image: url('../images/common/img-seahorse.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
 	}
 }
 

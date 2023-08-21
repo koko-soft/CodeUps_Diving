@@ -8,6 +8,22 @@
 	@include mq('md') {
 		padding-top: rem(100);
 		padding-bottom: rem(100);
+		position: relative;
+	}
+}
+
+.price::before {
+	@include mq('md') {
+		position: absolute;
+		content: "";
+		bottom: rem(60);
+		left: max(rem(20), calc(50vw - rem(620)));
+		width: rem(437);
+		height: rem(201);
+		background-image: url('../images/common/img-fish.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
 	}
 }
 
