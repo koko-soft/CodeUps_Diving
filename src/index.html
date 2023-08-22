@@ -26,23 +26,16 @@
     href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
     rel="stylesheet">
 
-
-  <!-- css -->
-  <!-- Swiper -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- Original CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <!-- Swiper -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script> -->
-
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- Original JS -->
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -351,15 +344,8 @@
           <p class="section-title__ja">キャンペーン</p>
         </div>
 
-        <!-- Swiper -->
-
-        <div class="swiper-button-prev campaign__button-prev"></div>
-        <div class="swiper-button-next campaign__button-next"></div>
-        <!-- <div class="campaign__button-next"></div>
-        <div class="campaign__button-prev"></div> -->
-
         <div class="swiper campaign__swiper js-campaign__swiper">
-          <div class="swiper-wrapper campaign__cards">
+          <div class="swiper-wrapper">
 
             <div class="swiper-slide campaign__card campaign-card">
               <div class="campaign-card__img">
@@ -462,7 +448,11 @@
             </div>
 
           </div>
+        </div>
 
+        <div class="campaign__swiper-buttons">
+          <div class="swiper-button-prev campaign__button-prev"></div>
+          <div class="swiper-button-next campaign__button-next"></div>
         </div>
 
       </div>
@@ -486,16 +476,16 @@
         <div class="about__images">
 
           <div class="about__image-large">
-            <img src="./assets/images/common/about_sp_large.jpg" alt="">
-            <!-- <picture>
+            <picture>
               <source srcset="./assets/images/common/about_pc_large.jpg" media="(min-width:768px)">
-            </picture> -->
+              <img src="./assets/images/common/about_sp_large.jpg" alt="">
+            </picture>
           </div>
           <div class="about__image-small">
-            <img src="./assets/images/common/about_sp_small.jpg" alt="">
-            <!-- <picture>
+            <picture>
               <source srcset="./assets/images/common/about_pc_small.jpg" media="(min-width:768px)">
-            </picture> -->
+              <img src="./assets/images/common/about_sp_small.jpg" alt="">
+            </picture>
           </div>
 
         </div>

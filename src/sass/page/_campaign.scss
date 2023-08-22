@@ -2,10 +2,10 @@
 
 .campaign {
 	margin-top: rem(40);
-	// margin-bottom: rem(70);
 
 	@include mq('md') {
 		margin-top: rem(120);
+		position: relative;
 	}
 }
 
@@ -15,7 +15,10 @@
 
 .campaign__swiper {
 	margin-top: rem(24);
-	// margin-right: calc(50% - 50vw);
+	margin-left: rem(-10);
+
+	margin-right: calc(50% - 50vw);
+	padding-left: rem(10);
 
 	@include mq('md') {
 		margin-top: rem(40);
@@ -24,22 +27,7 @@
 
 .campaign__card {
 	margin-bottom: rem(16);
-	// margin-right: rem(24);
 }
-
-.campaign__card:not(:last-child) {
-	margin-right: rem(24);
-
-	// @include mq('md') {
-	// 	margin-right: rem(40);
-	// }
-}
-
-.campaign__card:last-child {
-	// margin-right: calc(100vw - 100%);
-}
-
-.campaign__swiper-pagination {}
 
 .campaign__btn {
 	margin-top: rem(40);
@@ -50,8 +38,8 @@
 	}
 }
 
-.campaign__button-next,
-.campaign__button-prev {
+.campaign__button-prev,
+.campaign__button-next {
 	display: none;
 
 
@@ -71,55 +59,59 @@
 	}
 }
 
-.campaign__button-next {}
-
 .campaign__button-prev {}
 
+.campaign__button-next {}
 
-.campaign__button-next p::before,
-.campaign__button-prev p::before {
+.campaign__button-prev::before,
+.campaign__button-next::before {
 	position: absolute;
 	content: "";
 	width: 40px;
 	height: 1px;
-	top: 0;
-	left: calc(100% + 8px);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background-color: $color-accent;
 	border-radius: 50%;
 }
 
-.button p::after {
+.campaign__button-prev::after {
 	position: absolute;
 	content: "";
 	width: 8px;
 	height: 1px;
-	top: -2px;
-	left: calc(100% + 41px);
+	top: 50%;
+	left: 50%;
+	transform: translate(calc(-50% - 17px), calc(-50% - 2px)) rotate(-37deg);
 	background-color: $color-accent;
 	border-radius: 50%;
-	transform: rotate(37deg);
 }
 
-.campaign__button-next p::after {
+.campaign__button-next::after {
 	position: absolute;
 	content: "";
 	width: 8px;
 	height: 1px;
-	top: -2px;
-	left: calc(100% + 41px);
+	top: 50%;
+	left: 50%;
+	transform: translate(calc(-50% + 17px), calc(-50% - 2px)) rotate(37deg);
+
 	background-color: $color-accent;
 	border-radius: 50%;
-	transform: rotate(37deg);
 }
 
-.campaign__button-prev p::after {
-	position: absolute;
-	content: "";
-	width: 8px;
-	height: 1px;
-	top: -2px;
-	left: calc(100% + 41px);
-	background-color: $color-accent;
-	border-radius: 50%;
-	transform: rotate(37deg);
+
+.campaign__swiper-buttons {
+	display: none;
+
+	@include mq('md') {
+		display: flex;
+		gap: rem(80);
+		position: absolute;
+		top: 0;
+		left: calc(50% + rem(300));
+	}
 }
+
+.campaign__btn {}
