@@ -21,6 +21,11 @@
 
 	position: relative;
 
+	@include mq('lg') {
+
+		padding-left: rem(12);
+		padding-right: rem(12);
+	}
 
 	@include mq('md') {
 
