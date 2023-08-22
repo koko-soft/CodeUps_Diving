@@ -34,7 +34,7 @@
 .sp-nav__inner {}
 
 .sp-nav__wrap {
-	margin-top: calc(rem(45) + (100vh - rem(667)) * 0.5);
+	margin-top: max(rem(37), calc(rem(37) + (100vh - rem(667)) * 0.5));
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -59,11 +59,12 @@
 .sp-nav__menu-items {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: auto auto;
 
-	row-gap: rem(40);
-	column-gap: min(calc(rem(6) + (100vw - rem(375)) * 0.5), rem(40));
+	row-gap: rem(29);
+	column-gap: min(calc(rem(4) + (100vw - rem(375)) * 0.5), rem(40));
 	grid-auto-flow: column;
+	// grid-auto-flow: dense;
 }
 
 .sp-nav__menu-item {}

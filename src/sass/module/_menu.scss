@@ -7,27 +7,30 @@
 .menu__item {}
 
 .menu__item:not(:first-child) {
-	margin-top: rem(40);
+	margin-top: rem(24);
 }
 
 .menu__title {}
 
-.menu__title-text {
+.menu__title a {
 	position: relative;
 	padding-left: rem(22);
+	display: block;
 	font-family: $font-family-jp-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-bold;
 	letter-spacing: 0;
 	line-height: calc(18 / 16);
 	color: $color-white;
+	padding: 0.5em 0;
 }
 
-.menu__title-text::before {
+.menu__title a::before {
 	content: "";
 	position: absolute;
+	// display: inline;
 	left: 0px;
-	top: 0;
+	top: rem(9);
 	width: rem(18);
 	height: rem(18);
 	background-image: url('../images/common/icon_starfish.png');
@@ -36,17 +39,17 @@
 }
 
 .menu__list {
-	margin-top: rem(24);
-	margin-left: rem(13);
+	margin-top: rem(13);
+	margin-left: rem(20);
 }
 
 
-.menu__list li:not(first-child) {
-	margin-top: rem(20);
+.menu__list li:not(:first-child) {
+	margin-top: rem(18);
 }
 
-.menu__list-link {
-	padding: 0.25em;
+.menu__list a {
+	padding: rem(0.25);
 	font-family: $font-family-jp-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-regular;
