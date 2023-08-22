@@ -18,19 +18,13 @@
 	max-width: rem(1440);
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: rem(15);
-	padding-right: rem(15);
+	padding-left: rem(36);
+	padding-right: rem(21);
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: inherit;
-
-	@include mq('lg') {
-		padding-left: rem(40);
-		padding-right: rem(40);
-
-	}
 }
 
 .header__logoBlock {

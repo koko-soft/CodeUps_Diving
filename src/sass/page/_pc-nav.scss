@@ -7,19 +7,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: rem(8);
-
-	// @include mq('lg') {
-	// 	gap: 0;
-	// }
-
-	@include mq('md') {
-		gap: rem(0);
-	}
-
-	@include mq('lg') {
-		// gap: rem(8);
-	}
 
 }
 
@@ -37,35 +24,35 @@
 
 	@include mq('md') {
 
-		padding-left: rem(12);
-		padding-right: rem(12);
+		padding-left: rem(20);
+		padding-right: rem(20);
 	}
-
-	@include mq('lg') {
-
-		padding-left: rem(16);
-		padding-right: rem(16);
-	}
-}
-
-
-.pc-nav__item a::after {
-	position: absolute;
-	bottom: rem(27);
-	left: 0;
-	content: "";
-	width: 0;
-	height: 1px;
-	background-color: $color-black;
-	transition: width 0.3s ease;
 }
 
 .pc-nav__item a:hover {
 	opacity: 1;
 }
 
+.pc-nav__item a::after {
+	position: absolute;
+	bottom: rem(20);
+	left: 50%;
+	content: "";
+	width: calc(100% - rem(25));
+	height: 1px;
+	background-color: $color-white;
+	transform: translateX(-50%) scale(0, 1);
+	transform-origin: center top;
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1, 1);
+		background-color: red;
+	}
+}
+
 .pc-nav__item a:hover::after {
-	width: 100%;
+	transform: translateX(-50%) scale(1, 1);
 }
 
 .pc-nav__title {
