@@ -1,45 +1,48 @@
 'use strict';
 
-$(function(){
-	gsap.utils.toArray("js-img-animation-wrap").forEach(function(target) {
-	  gsap.from(target, {
-		scrollTrigger: {
-		  trigger: target,
-		},
-		opacity: 0,
-		yPercent: 100,
-	  });
-	});
-  });
+// $(function () {
+// 	gsap.utils.toArray("js-img-animation-wrap").forEach(function (target) {
+// 		gsap.from(target, {
+// 			scrollTrigger: {
+// 				trigger: target,
+// 			},
+// 			opacity: 0,
+// 			yPercent: 100,
+// 		});
+// 	});
+// });
+
+
+
 
 // ひとつずつの場合
 const tl = gsap.timeline({
 	scrollTrigger: {
-		trigger: '.js-img-animation-wrap',
+		trigger: '.js-img-animation__wrap',
 		start: 'top 80%',
 		markers: true,
 	}
 });
 
-// const tl = gsap.timeline();
-
-tl.set(".img-animation__img", {
+tl.set(".js-img-animation__img", {
 	opacity: 0,
-}).fromTo(".img-animation__bg", {
+}).fromTo(".js-img-animation__bg", {
 	scaleX: 0,
 }, {
 	scaleX: 1,
 	duration: 1.0,
-}).set(".img-animation__img", {
+}).set(".js-img-animation__img", {
 	opacity: 1,
-}).set(".img-animation__bg", {
+}).set(".js-img-animation__bg", {
 	transformOrigin: 'left center',
-}).fromTo(".img-animation__bg", {
+}).fromTo(".js-img-animation__bg", {
 	scaleX: 1,
 }, {
 	scaleX: 0,
 	duration: 1.0,
 });
+
+
 
 
 
