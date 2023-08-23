@@ -1,5 +1,35 @@
 @use "global" as *;
 
 .footer {
+	padding-top: rem(48);
 	background-color: $color-accent;
+}
+
+.footer__inner {}
+
+
+.footer__nav {}
+
+.footer__logoBlock {
+	width: rem(120);
+}
+
+.footer__sns {}
+
+.footer__sns-items {
+	display: flex;
+	column-gap: rem(16);
+}
+
+.footer__sns-item {
+	width: rem(24);
+	height: rem(24);
+}
+
+.footer__sns-link {}
+
+.footer__nav-inner {}
+
+.footer__nav-wrap.nav__wrap {
+	margin-top: rem(40);
 }

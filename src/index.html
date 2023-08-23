@@ -34,8 +34,12 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <!-- Original JS -->
   <script defer src="./assets/js/script.js"></script>
+  <script defer src="./assets/js/gsap.js"></script>
 </head>
 
 <body>
@@ -44,7 +48,7 @@
     <div class="header__inner">
 
       <h1 class="header__logoBlock">
-        <a href="" class="header__logoLink">
+        <a href="">
           <img class="header__logo" src="../assets/images/common/logo.svg" alt="ヘッダーロゴ">
         </a>
       </h1>
@@ -128,22 +132,22 @@
     </div>
 
     <!-- ドロワーメニュー -->
-    <nav class="header__sp-nav sp-nav js-sp-nav">
+    <nav class="header__nav nav js-nav">
 
-      <div class="sp-nav__logoBlock">
-        <a href="" class="sp-nav__logoLink">
-          <img class="sp-nav__logo" src="../assets/images/common/logo.svg" alt="ヘッダーロゴ">
+      <div class="nav__logoBlock">
+        <a href="">
+          <img class="nav__logo" src="../assets/images/common/logo.svg" alt="ヘッダーロゴ">
         </a>
       </div>
 
-      <div class="sp-nav__inner">
-        <div class="sp-nav__wrap">
+      <div class="nav__inner">
+        <div class="nav__wrap">
 
-          <div class="sp-nav__body">
+          <div class="nav__body">
 
-            <div class="sp-nav__menu-items menu">
+            <div class="nav__menu-items menu">
 
-              <div class="sp-nav__menu-item menu__column">
+              <div class="nav__menu-item menu__column">
 
                 <div class="menu__item">
                   <div class="menu__title">
@@ -166,7 +170,7 @@
 
               </div>
 
-              <div class="sp-nav__menu-item menu__column">
+              <div class="nav__menu-item menu__column">
 
                 <div class="menu__item">
                   <div class="menu__title">
@@ -189,7 +193,7 @@
 
               </div>
 
-              <div class="sp-nav__menu-item menu__column">
+              <div class="nav__menu-item menu__column">
 
                 <div class="menu__item">
 
@@ -212,7 +216,7 @@
 
               </div>
 
-              <div class="sp-nav__menu-item menu__column">
+              <div class="nav__menu-item menu__column">
 
                 <div class="menu__item">
 
@@ -511,28 +515,36 @@
           <p class="section-title__ja">ダイビング情報</p>
         </div>
 
-        <div class="info__wrap">
-          <div class="info__img">
-            <picture>
-              <source srcset="./assets/images/common/info_pc.jpg" media="(min-width:768px)">
-              <img src="./assets/images/common/info_sp.jpg" alt="">
-            </picture>
+        <!-- できた！ -->
+        <div class="img-animation-wrap js-img-animation-wrap">
+          <picture class="img-animation__img js-img-animation__img">
+            <source srcset="./assets/images/common/info_pc.jpg" media="(min-width:768px)">
+            <img src="./assets/images/common/info_sp.jpg" alt="">
+          </picture>
+          <div class="img-animation__bg js-img-animation__bg"></div>
+        </div>
+
+        <!-- テスト用 -->
+        <!-- <div class="animation-test">
+          <div class="animation-box1">画像</div>
+          <div class="animation-box2">背景色</div>
+        </div> -->
+
+        <div class="info__body">
+          <div class="info__title title-line">
+            <h3 class="info__title-text">ライセンス講習</h3>
           </div>
-          <div class="info__body">
-            <div class="info__title title-line">
-              <h3 class="info__title-text">ライセンス講習</h3>
-            </div>
-            <div class="info__text">
-              <p class="info__text-text text">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
-                正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
-            </div>
-            <div class="info__btn">
-              <a href="#" class="button">
-                <p>View more</p>
-              </a>
-            </div>
+          <div class="info__text">
+            <p class="info__text-text text">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
+              正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
+          </div>
+          <div class="info__btn">
+            <a href="#" class="button">
+              <p>View more</p>
+            </a>
           </div>
         </div>
+      </div>
 
       </div>
     </section>
@@ -709,12 +721,32 @@
 
         <div class="price__wrap">
 
-          <div class="price__img">
+          <!-- <div class="price__img">
             <picture>
               <source srcset="./assets/images/common/price_pc.jpg" media="(min-width:768px)">
               <img src="./assets/images/common/price_sp.jpg" alt="">
             </picture>
+          </div> -->
+
+
+          <div class="img-animation__wrap js-img-animation__wrap">
+
+            <div class="price__img img-animation__img js-img-animation__img">
+              <picture>
+                <source srcset="./assets/images/common/price_pc.jpg" media="(min-width:768px)">
+                <img src="./assets/images/common/price_sp.jpg" alt="">
+              </picture>
+              <div class="img-animation__bg js-img-animation__bg"></div>
+            </div>
+            <!-- <div class="info__img img-animation__img js-img-animation__img">
+              <picture>
+                <source srcset="./assets/images/common/info_pc.jpg" media="(min-width:768px)">
+                <img src="./assets/images/common/info_sp.jpg" alt="">
+              </picture>
+            </div> -->
           </div>
+
+
 
           <dl class="price__items">
 
@@ -857,144 +889,162 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__wrapper">
+      <!-- <div class="footer__wrap"> -->
+      <nav class="footer__nav nav">
 
-        <div class="footer-menu menu">
-
-          <div class="menu__column">
-
-            <div class="menu__item">
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">キャンペーン</p>
-                </a>
-              </div>
-              <ul class="menu__list">
-                <li><a href="#" class="menu__list-link">ライセンス取得</a></li>
-                <li><a href="#" class="menu__list-link">貸切体験ダイビング</a></li>
-                <li><a href="#" class="menu__list-link">ナイトダイビング</a></li>
-              </ul>
-            </div>
-
-            <div class="menu__item">
-
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">キャンペーン</p>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="menu__column">
-
-            <div class="menu__item">
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">ダイビング情報</p>
-                </a>
-              </div>
-              <ul class="menu__list">
-                <li><a href="#" class="menu__list-link">ライセンス取得</a></li>
-                <li><a href="#" class="menu__list-link">貸切体験ダイビング</a></li>
-                <li><a href="#" class="menu__list-link">ナイトダイビング</a></li>
-              </ul>
-            </div>
-
-            <div class="menu__item">
-
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">ブログ</p>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="menu__column">
-
-            <div class="menu__item">
-
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">お客様の声</p>
-                </a>
-              </div>
-
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">料金一覧</p>
-                </a>
-              </div>
-              <ul class="menu__list">
-                <li><a href="#" class="menu__list-link">ライセンス取得</a></li>
-                <li><a href="#" class="menu__list-link">貸切体験ダイビング</a></li>
-                <li><a href="#" class="menu__list-link">ナイトダイビング</a></li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="menu__column">
-
-            <div class="menu__item">
-
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">よくある質問</p>
-                </a>
-              </div>
-
-            </div>
-
-            <div class="menu__item">
-
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">プライバシーポリシー</p>
-                </a>
-              </div>
-
-            </div>
-
-            <div class="menu__item">
-
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">利用規約</p>
-                </a>
-              </div>
-
-            </div>
-
-            <div class="menu__item">
-
-              <div class="menu__title">
-                <a href="">
-                  <p class="menu__title-text">おい問わ合せ</p>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
+        <!-- <div class="nav__logoBlock"> -->
+        <div class="footer__logoBlock">
+          <a href="">
+            <img class="nav__logo" src="../assets/images/common/logo.svg" alt="ヘッダーロゴ">
+          </a>
         </div>
 
-      </div>
+        <div class="footer__sns">
+          <div class="footer__sns-items">
+            <div class="footer__sns-item">
+              <a href="" class="footer__sns-link" aria-label="" target="_blank">
+                <img src="./assets/images/common/icon-facebook.svg" alt="">
+              </a>
+            </div>
+            <div class="footer__sns-item">
+              <a href="" class="footer__sns-link" aria-label="" target="_blank">
+                <img src="./assets/images/common/icon-instagram.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+
+        <div class="footer__nav-inner nav__inner">
+          <div class="footer__nav-wrap nav__wrap">
+
+            <div class="nav__body">
+
+              <div class="nav__menu-items menu">
+
+                <div class="nav__menu-item menu__column">
+
+                  <div class="menu__item">
+                    <div class="menu__title">
+                      <a href="#campaign">キャンペーン</a>
+                    </div>
+                    <ul class="menu__list">
+                      <li><a href="#">ライセンス取得</a></li>
+                      <li><a href="#">貸切体験ダイビング</a></li>
+                      <li><a href="#">ナイトダイビング</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="#about">私たちについて</a>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="nav__menu-item menu__column">
+
+                  <div class="menu__item">
+                    <div class="menu__title">
+                      <a href="#info">ダイビング情報</a>
+                    </div>
+                    <ul class="menu__list">
+                      <li><a href="#">ライセンス取得</a></li>
+                      <li><a href="#">体験ダイビング</a></li>
+                      <li><a href="#">ファンダイビング</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="#blog">ブログ</a>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="nav__menu-item menu__column">
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="#voice">お客様の声</a>
+                    </div>
+
+                  </div>
+
+                  <div class="menu__item">
+                    <div class="menu__title">
+                      <a href="#price">料金一覧</a>
+                    </div>
+                    <ul class="menu__list">
+                      <li><a href="#">ライセンス取得</a></li>
+                      <li><a href="#">体験ダイビング</a></li>
+                      <li><a href="#">ファンダイビング</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div class="nav__menu-item menu__column">
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="">よくある質問</a>
+                    </div>
+
+                  </div>
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="">プライバシー<br>ポリシー</a>
+                    </div>
+
+                  </div>
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="">利用規約</a>
+                    </div>
+
+                  </div>
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="#contact">お問い合わせ</a>
+                    </div>
+
+                  </div>
+
+                  <div class="menu__item">
+
+                    <div class="menu__title">
+                      <a href="#contact">サイトマップ</a>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
 
 
+      <!-- </div> -->
     </div>
-
-
-
   </footer>
 </body>
 

@@ -1,52 +1,45 @@
 @use "global" as *;
 
-.sp-nav {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	right: 0;
-	top: 0;
-	background-color: $color-accent;
-	z-index: $z-index-sp-nav;
-	overflow-x: hidden;
-	overflow-y: auto;
-	opacity: 0;
+.nav {
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// 	position: fixed;
+	// 	right: 0;
+	// 	top: 0;
+	// 	background-color: $color-accent;
+	// 	z-index: $z-index-sp-nav;
+	// 	overflow-x: hidden;
+	// 	overflow-y: auto;
+	// 	opacity: 0;
 
-	transform: translateX(-105%);
-	transition: transform 0.5s ease, opacity 0.5s ease;
+	// 	transform: translateX(-105%);
+	// 	transition: transform 0.5s ease, opacity 0.5s ease;
 
 }
 
-.sp-nav.is-active {
-	transform: translateX(0);
-	opacity: 1;
-}
-
-.sp-nav__logoBlock {
+.nav__logoBlock {
 	margin-top: rem(21);
 	margin-left: rem(15);
 }
 
-.sp-nav__logoLink {}
+.nav__logo {}
 
-.sp-nav__logo {}
+.nav__inner {}
 
-.sp-nav__inner {}
-
-.sp-nav__wrap {
+.nav__wrap {
 	margin-top: max(rem(37), calc(rem(37) + (100vh - rem(667)) * 0.5));
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
 
-.sp-nav__head {}
+.nav__head {}
 
-.sp-nav__logoBlock {}
+.nav__logoBlock {}
 
-.sp-nav__logoLink {}
+.nav__logoLink {}
 
-.sp-nav__logo {
+.nav__logo {
 	width: rem(102);
 
 	@include mq('md') {
@@ -54,9 +47,9 @@
 	}
 }
 
-.sp-nav__body {}
+.nav__body {}
 
-.sp-nav__menu-items {
+.nav__menu-items {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto auto;
@@ -67,4 +60,4 @@
 	// grid-auto-flow: dense;
 }
 
-.sp-nav__menu-item {}
+.nav__menu-item {}

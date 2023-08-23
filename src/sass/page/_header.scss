@@ -71,6 +71,26 @@
 	}
 }
 
-.header__sp-nav {
-	padding-bottom: $padding-sp
+.header__nav {
+	padding-bottom: $padding-sp;
+
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: $color-accent;
+	z-index: $z-index-sp-nav;
+	overflow-x: hidden;
+	overflow-y: auto;
+	opacity: 0;
+
+	transform: translateX(-105%);
+	transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+
+.header__nav.is-active {
+	transform: translateX(0);
+	opacity: 1;
 }
