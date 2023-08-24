@@ -27,6 +27,11 @@
 .nav__inner {
 	padding-left: rem(15);
 	padding-right: rem(15);
+
+	@include mq('md') {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .nav__wrap {

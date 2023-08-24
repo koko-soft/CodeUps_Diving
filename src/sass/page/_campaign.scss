@@ -22,7 +22,7 @@
 	padding-left: rem(10);
 
 	@include mq('md') {
-		margin-top: rem(47);
+		margin-top: rem(45);
 	}
 }
 
@@ -30,12 +30,15 @@
 	margin-bottom: rem(16);
 }
 
-.campaign__btn {
-	margin-top: rem(24);
-	text-align: center;
+.campaign__swiper-buttons {
+	display: none;
 
 	@include mq('md') {
-		margin-top: rem(64);
+		display: flex;
+		gap: rem(80);
+		position: absolute;
+		top: rem(44);
+		left: calc(50% + rem(300));
 	}
 }
 
@@ -102,17 +105,11 @@
 	border-radius: 50%;
 }
 
-
-.campaign__swiper-buttons {
-	display: none;
+.campaign__btn {
+	margin-top: rem(24);
+	text-align: center;
 
 	@include mq('md') {
-		display: flex;
-		gap: rem(80);
-		position: absolute;
-		top: rem(44);
-		left: calc(50% + rem(300));
+		margin-top: rem(64);
 	}
 }
-
-.campaign__btn {}

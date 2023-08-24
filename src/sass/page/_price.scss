@@ -1,13 +1,13 @@
 @use "global" as *;
 
 .price {
-	padding-top: rem(80);
-	padding-bottom: rem(80);
+	padding-top: rem(84);
+	padding-bottom: rem(82);
 	background-color: $color-lightgreen;
 
 	@include mq('md') {
 		padding-top: rem(100);
-		padding-bottom: rem(100);
+		padding-bottom: rem(103);
 		position: relative;
 	}
 }
@@ -32,13 +32,13 @@
 .price__title {}
 
 .price__wrap {
-	margin-top: rem(24);
+	margin-top: rem(31);
 	max-width: rem(345);
 	margin-left: auto;
 	margin-right: auto;
 
 	@include mq('md') {
-		margin-top: rem(40);
+		margin-top: rem(45);
 		max-width: initial;
 		margin-left: initial;
 		margin-right: initial;
@@ -85,7 +85,7 @@
 
 .price__item:not(:first-child) {
 	@include mq('md') {
-		margin-top: rem(40);
+		margin-top: rem(39);
 	}
 }
 
@@ -97,6 +97,9 @@
 	letter-spacing: 0;
 	line-height: calc(24 / 16);
 	color: $color-text;
+	@include mq('md') {
+		padding-bottom: rem(5);
+	}
 }
 
 .price__description {

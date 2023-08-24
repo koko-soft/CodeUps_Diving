@@ -75,7 +75,6 @@ jQuery(function ($) {
 
 	// ToTop
 	// ページトップボタン
-	// ページトップボタン
 	$(function () {
 		const pageTop = $("#page-top");
 		pageTop.hide();
@@ -105,16 +104,32 @@ jQuery(function ($) {
 				// ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
 				$("#page-top").css({
 					position: "absolute",
-					bottom: footHeight + 16,
+					bottom: footHeight + 20,
 				});
 			} else {
-				console.log(scrollHeight);
-				console.log(scrollPosition);
-				console.log(footHeight);
-				$("#page-top").css({
-					position: "fixed",
-					bottom: "16px",
-				});
+				// $("#page-top").css({
+				// 	position: "fixed",
+				// 	bottom: "16px",
+				// });
+				// var bottomValue = ($(window).width() >= 768) ? "20px" : "16px";
+
+				// $("#page-top").css({
+				// 	position: "fixed",
+				// 	bottom: bottomValue,
+				// });
+
+
+				if (window.matchMedia("(min-width: 768px)").matches) {
+					$("#page-top").css({
+						position: "fixed",
+						bottom: "20px",
+					});
+				} else {
+					$("#page-top").css({
+						position: "fixed",
+						bottom: "16px",
+					});
+				};
 			}
 		});
 	});

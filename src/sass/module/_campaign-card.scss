@@ -39,7 +39,7 @@
 
 
 	@include mq('md') {
-		padding: rem(9) rem(15);
+		padding: rem(10) rem(15);
 	}
 }
 
@@ -57,7 +57,7 @@
 	padding-bottom: rem(8);
 
 	@include mq('md') {
-		padding-bottom: rem(9);
+		padding-bottom: rem(8);
 	}
 }
 
@@ -76,7 +76,8 @@
 	color: $color-text;
 
 	@include mq('md') {
-		margin-top: rem(15);
+		margin-top: rem(16);
+		padding-right: rem(16);
 		font-size: rem(16);
 		line-height: calc(24 / 16);
 	}
@@ -91,7 +92,7 @@
 	gap: rem(18);
 
 	@include mq('md') {
-		margin-top: rem(9);
+		margin-top: rem(8);
 		margin-left: rem(19);
 		gap: rem(26);
 	}

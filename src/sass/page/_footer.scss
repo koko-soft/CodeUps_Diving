@@ -7,6 +7,7 @@
 
 	@include mq('md') {
 		padding-top: rem(80);
+		padding-bottom: rem(80);
 	}
 }
 
@@ -89,7 +90,7 @@
 	color: $color-white;
 
 	@include mq('md') {
-		margin-top: rem(24);
+		margin-top: rem(64);
 		font-size: rem(14);
 		line-height: calc(18 / 14);
 	}
