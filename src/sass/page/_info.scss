@@ -1,13 +1,13 @@
 @use "global" as *;
 
 .info {
-	padding-top: rem(80);
-	padding-bottom: rem(84);
+	padding-top: rem(84);
+	padding-bottom: rem(83);
 	background-color: $color-lightgreen;
 
 	@include mq('md') {
 		padding-top: rem(100);
-		padding-bottom: rem(100);
+		padding-bottom: rem(99);
 	}
 }
 
@@ -16,12 +16,13 @@
 .info__title {}
 
 .info__wrap {
-	margin-top: rem(24);
+	margin-top: rem(27);
 	max-width: rem(345);
 	margin-left: auto;
 	margin-right: auto;
 
 	@include mq('md') {
+		margin-top: rem(38);
 		display: flex;
 		column-gap: rem(48);
 		max-width: initial;
@@ -49,10 +50,10 @@
 }
 
 .info__body {
-	margin-top: rem(24);
+	margin-top: rem(25);
 
 	@include mq('md') {
-		margin-top: rem(60);
+		margin-top: rem(52);
 		width: calc(50% - rem(48));
 	}
 }
@@ -80,7 +81,9 @@
 	}
 }
 
-.info__text {}
+.info__text {
+	margin-top: rem(7);
+}
 
 .info__text-text {}
 

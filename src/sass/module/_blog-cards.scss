@@ -6,6 +6,7 @@
 	margin-right: auto;
 
 	@include mq('md') {
+		margin-top: rem(85);
 		display: flex;
 		column-gap: rem(40);
 		justify-content: space-between;

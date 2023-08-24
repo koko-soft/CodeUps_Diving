@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .about {
-	padding-top: rem(80);
-	padding-bottom: rem(70);
+	padding-top: rem(84);
+	padding-bottom: rem(73);
 
 	@include mq('md') {
-		margin-top: rem(140);
-		margin-bottom: rem(140);
+		margin-top: rem(56);
+		margin-bottom: rem(67);
 		position: relative;
 	}
 }
@@ -15,8 +15,8 @@
 	@include mq('md') {
 		position: absolute;
 		content: "";
-		bottom: rem(-90);
-		right: max(rem(20), calc(50vw - rem(640)));
+		bottom: rem(-16);
+		right: max(rem(20), calc(50vw - rem(637)));
 		width: rem(194);
 		height: rem(181);
 		background-image: url('../images/common/img-coral.png');
@@ -35,11 +35,11 @@
 }
 
 .about__images {
-	margin-top: rem(50);
+	margin-top: rem(57);
 	position: relative;
 
 	@include mq('md') {
-		margin-top: rem(120);
+		margin-top: rem(124);
 	}
 }
 
@@ -58,7 +58,7 @@
 	height: rem(194);
 	aspect-ratio: 128 / 194;
 	position: absolute;
-	top: rem(-28);
+	top: rem(-26);
 
 	@include mq('md') {
 		aspect-ratio: 400 / 606;
@@ -80,7 +80,7 @@
 	@include mq('md') {
 		display: flex;
 		gap: rem(40);
-		margin-top: 0;
+		margin-top: rem(63);
 		position: absolute;
 		max-width: rem(840);
 		top: rem(310);
@@ -88,7 +88,9 @@
 	}
 }
 
-.about__subtitle {}
+.about__subtitle {
+	margin-top: rem(18);
+}
 
 .about__subtitle-text {
 	font-family: $font-family-eng;
@@ -101,6 +103,7 @@
 	@include mq('md') {
 		font-size: rem(80);
 		color: $color-white;
+		line-height: calc(100 / 80);
 	}
 }
 

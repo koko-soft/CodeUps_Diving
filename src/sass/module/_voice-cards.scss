@@ -10,6 +10,7 @@
 	row-gap: rem(40);
 
 	@include mq('md') {
+		margin-top: rem(35);
 		max-width: initial;
 		margin-left: initial;
 		margin-right: initial;

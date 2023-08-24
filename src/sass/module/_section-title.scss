@@ -22,7 +22,7 @@
 }
 
 .section-title__ja {
-	margin-top: rem(4);
+	margin-top: rem(11);
 	font-family: $font-family-jp-sans;
 	font-size: rem(12);
 	font-weight: $font-weight-regular;
@@ -31,7 +31,7 @@
 	color: $color-accent;
 
 	@include mq('md') {
-		margin-top: rem(8);
+		margin-top: rem(9);
 	}
 
 }

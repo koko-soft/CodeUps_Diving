@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .campaign {
-	padding-top: rem(40);
+	padding-top: rem(44);
 	padding-bottom: rem(3);
 
 	@include mq('md') {
-		margin-top: rem(120);
+		margin-top: rem(76);
 		position: relative;
 	}
 }
@@ -15,14 +15,14 @@
 .campaign__title {}
 
 .campaign__swiper {
-	margin-top: rem(24);
+	margin-top: rem(31);
 	margin-left: rem(-10);
 
 	margin-right: calc(50% - 50vw);
 	padding-left: rem(10);
 
 	@include mq('md') {
-		margin-top: rem(40);
+		margin-top: rem(47);
 	}
 }
 
@@ -31,11 +31,11 @@
 }
 
 .campaign__btn {
-	margin-top: rem(40);
+	margin-top: rem(24);
 	text-align: center;
 
 	@include mq('md') {
-		margin-top: rem(80);
+		margin-top: rem(64);
 	}
 }
 
@@ -110,7 +110,7 @@
 		display: flex;
 		gap: rem(80);
 		position: absolute;
-		top: 0;
+		top: rem(44);
 		left: calc(50% + rem(300));
 	}
 }

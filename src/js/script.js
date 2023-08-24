@@ -39,7 +39,7 @@ jQuery(function ($) {
 	});
 
 	//Swiper --- mv
-	var swiper = new Swiper(".js-mv__swiper", {
+	var swiperMv = new Swiper(".js-mv__swiper", {
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: 'true',
@@ -52,10 +52,10 @@ jQuery(function ($) {
 	});
 
 	//Swiper --- campaign
-	var swiper2 = new Swiper(".js-campaign__swiper", {
+	var swiperCampaign = new Swiper(".js-campaign__swiper", {
 		loop: true,
 		autoplay: {
-			delay: 2000,
+			delay: 200000,
 			disableOnInteraction: false,
 		},
 		speed: 1000,

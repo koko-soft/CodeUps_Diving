@@ -50,7 +50,7 @@
 .voice-card__category {
 	display: inline-block;
 	border: 1px solid $color-accent;
-	padding: rem(8) rem(12);
+	padding: rem(8) rem(11);
 
 	@include mq('md') {
 		padding: rem(4) rem(16);
@@ -72,6 +72,7 @@
 
 .voice-card__title {
 	margin-top: rem(4);
+	padding-bottom: rem(2);
 	position: relative;
 	// height: 100%;
 
@@ -143,5 +144,5 @@
 	display: -webkit-box;
 	overflow: hidden;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 7;
+	-webkit-line-clamp: 10;
 }

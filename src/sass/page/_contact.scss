@@ -46,17 +46,20 @@
 }
 
 .contact__wrap::after {
-	position: absolute;
-	content: "";
-	width: 1px;
-	// height: calc(255 / 415 * 100%);
-	height: rem(255);
-	background-color: $color-accent;
-	top: 50%;
-	left: 53%;
-	transform: translateY(-50%);
-	// top: calc(70 / 415 * 100%);
-	// left: calc(572 / 1080 * 100%);
+	@include mq('md') {
+
+		position: absolute;
+		content: "";
+		width: 1px;
+		// height: calc(255 / 415 * 100%);
+		height: rem(255);
+		background-color: $color-accent;
+		top: 50%;
+		left: 53%;
+		transform: translateY(-50%);
+		// top: calc(70 / 415 * 100%);
+		// left: calc(572 / 1080 * 100%);
+	}
 }
 
 .contact__top {
