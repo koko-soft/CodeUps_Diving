@@ -29,6 +29,7 @@ $font-family-lato: 'Lato', sans-serif;
 
 body {
   font-family: $font-family-jp-sans;
+  position: relative;
 }
 
 // フォントウェイト
@@ -55,6 +56,7 @@ $color-text: $color-black;
 ////////////////////
 // z-index
 ////////////////////
+$z-index-toTop: 100;
 $z-index-header: 1000;
 $z-index-sp-nav: 2000;
 $z-index-logoBlock: 2800;

@@ -1,48 +1,5 @@
 'use strict';
 
-// $(function () {
-// 	gsap.utils.toArray("js-img-animation-wrap").forEach(function (target) {
-// 		gsap.from(target, {
-// 			scrollTrigger: {
-// 				trigger: target,
-// 			},
-// 			opacity: 0,
-// 			yPercent: 100,
-// 		});
-// 	});
-// });
-
-
-
-
-// ひとつずつの場合
-// const tl = gsap.timeline({
-// 	scrollTrigger: {
-// 		trigger: '.js-img-animation__wrap',
-// 		start: 'top 80%',
-// 		markers: true,
-// 	}
-// });
-
-// tl.set(".js-img-animation__img", {
-// 	opacity: 0,
-// }).fromTo(".js-img-animation__bg", {
-// 	scaleX: 0,
-// }, {
-// 	scaleX: 1,
-// 	duration: 1.0,
-// }).set(".js-img-animation__img", {
-// 	opacity: 1,
-// }).set(".js-img-animation__bg", {
-// 	transformOrigin: 'left center',
-// }).fromTo(".js-img-animation__bg", {
-// 	scaleX: 1,
-// }, {
-// 	scaleX: 0,
-// 	duration: 1.0,
-// });
-
-//本番用　複数でも動くやつ
 $(function () {
 	var targets = gsap.utils.toArray(".js-img-animation__wrap");
 
@@ -51,7 +8,6 @@ $(function () {
 			scrollTrigger: {
 				trigger: target,
 				start: 'top 80%',
-				markers: true,
 			}
 		});
 
@@ -85,14 +41,10 @@ $(function () {
 
 	console.log(targets);
 	targets.forEach(function (target) {
-		// ここで共通のアニメーションを設定する
-		// const tl3 = gsap.timeline();
 		const tl3 = gsap.timeline({
 			scrollTrigger: {
-				// trigger: '.animation-test',
 				trigger: target,
 				start: 'top 50%',
-				markers: true,
 			}
 		});
 

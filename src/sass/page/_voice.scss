@@ -30,7 +30,7 @@
 	@include mq('md') {
 		position: absolute;
 		content: "";
-		bottom: rem(-65);
+		bottom: rem(73);
 		right: max(rem(40), calc(50vw - rem(540)));
 		width: rem(71);
 		height: rem(162);

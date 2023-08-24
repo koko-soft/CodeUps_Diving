@@ -73,4 +73,50 @@ jQuery(function ($) {
 		}
 	});
 
+	// ToTop
+	// ページトップボタン
+	// ページトップボタン
+	$(function () {
+		const pageTop = $("#page-top");
+		pageTop.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				pageTop.fadeIn();
+			} else {
+				pageTop.fadeOut();
+			}
+		});
+		pageTop.click(function () {
+			$("body,html").animate(
+				{
+					scrollTop: 0,
+				},
+				500
+			);
+			return false;
+		});
+		// フッター手前でストップ
+		$("#page-top").hide();
+		$(window).on("scroll", function () {
+			var scrollHeight = $(document).height();
+			var scrollPosition = $(window).height() + $(window).scrollTop();
+			var footHeight = $("footer").innerHeight();
+			if (scrollHeight - scrollPosition <= footHeight) {
+				// ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+				$("#page-top").css({
+					position: "absolute",
+					bottom: footHeight + 16,
+				});
+			} else {
+				console.log(scrollHeight);
+				console.log(scrollPosition);
+				console.log(footHeight);
+				$("#page-top").css({
+					position: "fixed",
+					bottom: "16px",
+				});
+			}
+		});
+	});
+
 });

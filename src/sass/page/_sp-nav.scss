@@ -31,6 +31,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+
+	@include mq('md') {
+		display: block;
+	}
 }
 
 .nav__head {}
@@ -57,7 +61,16 @@
 	row-gap: rem(29);
 	column-gap: min(calc(rem(4) + (100vw - rem(375)) * 0.5), rem(40));
 	grid-auto-flow: column;
+
 	// grid-auto-flow: dense;
+	@include mq('md') {
+		display: flex;
+		column-gap: rem(120);
+		// column-gap: min(calc(rem(120) - (rem(1440) - 100vw) * 0.5), rem(120));
+		// column-gap: min(calc(rem(4) + (100vw - rem(375)) * 0.5), rem(40));
+		// column-gap: min(calc(rem(120) - (100vw - rem(1440)) * 0.5), rem(120));
+
+	}
 }
 
 .nav__menu-item {}
