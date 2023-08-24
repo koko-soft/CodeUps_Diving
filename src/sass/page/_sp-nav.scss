@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.nav {
+.sp-nav {
 	// 	width: 100vw;
 	// 	height: 100vh;
 	// 	position: fixed;
@@ -17,16 +17,23 @@
 
 }
 
-.nav__logoBlock {
+.sp-nav__logoBlock {
 	margin-top: rem(21);
 	margin-left: rem(15);
 }
 
-.nav__logo {}
+.sp-nav__logo {
+	width: rem(102);
 
-.nav__inner {
+	@include mq('md') {
+		width: rem(133);
+	}
+}
+
+.sp-nav__inner {
 	padding-left: rem(15);
-	padding-right: rem(15);
+	// padding-right: rem(15);
+	padding-right: rem(11);
 
 	@include mq('md') {
 		padding-left: 0;
@@ -34,8 +41,13 @@
 	}
 }
 
-.nav__wrap {
+.sp-nav__wrap {
 	margin-top: max(rem(37), calc(rem(37) + (100vh - rem(667)) * 0.5));
+	width: 100%;
+	max-width: rem(385);
+	margin-left: auto;
+	margin-right: auto;
+
 	// display: flex;
 	// align-items: center;
 	// justify-content: space-around;
@@ -45,29 +57,23 @@
 	}
 }
 
-.nav__head {}
-
-.nav__logoBlock {}
-
-.nav__logoLink {}
-
-.nav__logo {
-	width: rem(102);
+.sp-nav__wrap.sp-nav__wrap--footer {
+	margin-top: rem(32);
 
 	@include mq('md') {
-		width: rem(133);
+		margin-top: rem(16);
 	}
 }
 
-.nav__body {}
+// .sp-nav__body {}
 
-.nav__menu-items {
+.sp-nav__menu-items {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto auto;
 
 	row-gap: rem(24);
-	column-gap: min(calc(rem(1) + (100vw - rem(375)) * 0.5), rem(40));
+	column-gap: min(calc(rem(17) + (100vw - rem(375)) * 0.5), rem(40));
 	grid-auto-flow: column;
 
 	// grid-auto-flow: dense;
@@ -81,4 +87,4 @@
 	}
 }
 
-.nav__menu-item {}
+.sp-nav__menu-item {}

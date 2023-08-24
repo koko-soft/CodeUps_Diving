@@ -71,7 +71,7 @@
 	}
 }
 
-.header__nav {
+.header__sp-nav {
 	padding-bottom: $padding-sp;
 
 	width: 100vw;
@@ -90,7 +90,7 @@
 
 }
 
-.header__nav.is-active {
+.header__sp-nav.is-active {
 	transform: translateX(0);
 	opacity: 1;
 }
