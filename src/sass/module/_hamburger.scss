@@ -4,10 +4,10 @@
 	display: block;
 	position: fixed;
 	z-index: $z-index-hamburger;
-	top: 24px;
-	right: $padding-sp;
-	width: 32px;
-	height: 24px;
+	top: rem(30);
+	right: rem(12);
+	width: rem(38);
+	height: rem(24);
 	cursor: pointer;
 	transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -42,7 +42,7 @@
 
 .hamburger.is-active span:first-child {
 	top: 10px;
-	transform: rotate(-395deg);
+	transform: rotate(-396deg);
 	background-color: $color-white;
 }
 
@@ -52,6 +52,6 @@
 
 .hamburger.is-active span:nth-child(3) {
 	top: 10px;
-	transform: rotate(395deg);
+	transform: rotate(396deg);
 	background-color: $color-white;
 }

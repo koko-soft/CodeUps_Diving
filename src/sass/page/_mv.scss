@@ -45,7 +45,6 @@
 
 .mv__header {
 	position: absolute;
-	margin-top: rem(40);
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -54,11 +53,16 @@
 
 	@include mq('md') {
 		margin-top: rem(50);
-		width: calc(100% - rem(410));
+		// width: calc(100% - rem(410));
+
+		top: 36.3%;
+		transform: translate(-50%, 0);
+
 	}
 }
 
 .mv__title {
+	padding-left: rem(20);
 	font-family: $font-family-lato;
 	font-size: rem(40);
 	font-weight: $font-weight-regular;
@@ -69,13 +73,14 @@
 
 
 	@include mq('md') {
+		padding-left: rem(44);
 		font-size: rem(80);
 		letter-spacing: 0.54em;
 	}
 }
 
 .mv__subtitle {
-	margin-top: rem(20);
+	margin-top: rem(12);
 	font-family: $font-family-eng;
 	font-weight: $font-weight-regular;
 	font-size: rem(20);
@@ -85,7 +90,7 @@
 	text-align: center;
 
 	@include mq('md') {
-		margin-top: rem(0);
+		margin-top: rem(16);
 		font-size: rem(20);
 	}
 }

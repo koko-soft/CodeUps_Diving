@@ -24,13 +24,16 @@
 
 .nav__logo {}
 
-.nav__inner {}
+.nav__inner {
+	padding-left: rem(15);
+	padding-right: rem(15);
+}
 
 .nav__wrap {
 	margin-top: max(rem(37), calc(rem(37) + (100vh - rem(667)) * 0.5));
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	// display: flex;
+	// align-items: center;
+	// justify-content: space-around;
 
 	@include mq('md') {
 		display: block;
@@ -58,8 +61,8 @@
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto auto;
 
-	row-gap: rem(29);
-	column-gap: min(calc(rem(4) + (100vw - rem(375)) * 0.5), rem(40));
+	row-gap: rem(24);
+	column-gap: min(calc(rem(1) + (100vw - rem(375)) * 0.5), rem(40));
 	grid-auto-flow: column;
 
 	// grid-auto-flow: dense;

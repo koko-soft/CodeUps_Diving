@@ -27,10 +27,10 @@
 	height: inherit;
 
 	@include mq('md') {
-		padding-left: rem(36);
-		padding-right: rem(21);
-
+		padding-left: rem(40);
+		padding-right: rem(28);
 	}
+
 }
 
 .header__logoBlock {

@@ -39,17 +39,18 @@
 }
 
 .menu__list {
-	margin-top: rem(13);
-	margin-left: rem(20);
+	margin-top: rem(8);
+	margin-left: rem(22);
 }
 
 
 .menu__list li:not(:first-child) {
-	margin-top: rem(18);
+	margin-top: rem(8);
 }
 
 .menu__list a {
-	padding: rem(0.25);
+	padding: 0.5em 0;
+	display: block;
 	font-family: $font-family-jp-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-regular;
