@@ -33,6 +33,8 @@
 
 .button:hover {
 
+	opacity: 1;
+
 	&::after {
 		transform: scale(1, 1);
 	}

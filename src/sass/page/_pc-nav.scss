@@ -9,7 +9,7 @@
 	justify-content: center;
 
 	@include mq('md') {
-		column-gap: rem(16);
+		// column-gap: rem(16);
 	}
 
 }
@@ -25,16 +25,8 @@
 
 	position: relative;
 
-	@include mq('lg') {
-
-		padding-left: rem(12);
-		padding-right: rem(12);
-	}
-
 	@include mq('md') {
-
-		padding-left: rem(12);
-		padding-right: rem(12);
+		padding: 0 min(rem(20), rem(20) + (100vw - rem(1440)) * 0.015);
 	}
 }
 

@@ -28,7 +28,7 @@
 
 	@include mq('md') {
 		padding-left: rem(40);
-		padding-right: rem(28);
+		padding-right: rem(20);
 	}
 
 }
@@ -39,6 +39,7 @@
 
 .header__logoLink {
 	height: inherit;
+	display: block;
 }
 
 .header__logo {
