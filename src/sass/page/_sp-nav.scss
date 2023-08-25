@@ -3,8 +3,11 @@
 .sp-nav {}
 
 .sp-nav__logoBlock {
-	margin-top: rem(21);
-	margin-left: rem(15);
+	padding-left: rem(15);
+}
+
+.sp-nav__logoBlock a {
+	display: inline-block;
 }
 
 .sp-nav__logo {

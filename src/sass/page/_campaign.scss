@@ -38,14 +38,14 @@
 		gap: rem(80);
 		position: absolute;
 		top: rem(44);
-		left: calc(50% + rem(300));
+		right: max(rem(40), 50vw - rem(540));
 	}
 }
 
 .campaign__button-prev,
 .campaign__button-next {
 	display: none;
-
+	transition: opacity 0.3s ease;
 
 	@include mq('md') {
 		display: block;
@@ -76,38 +76,35 @@
 .campaign__button-next::before {
 	position: absolute;
 	content: "";
-	width: 40px;
+	width: rem(40);
 	height: 1px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: $color-accent;
-	border-radius: 50%;
 }
 
 .campaign__button-prev::after {
 	position: absolute;
 	content: "";
-	width: 8px;
+	width: rem(8);
 	height: 1px;
 	top: 50%;
 	left: 50%;
-	transform: translate(calc(-50% - 17px), calc(-50% - 2px)) rotate(-37deg);
+	transform: translate(calc(-50% - rem(17)), calc(-50% - rem(2))) rotate(-37deg);
 	background-color: $color-accent;
-	border-radius: 50%;
 }
 
 .campaign__button-next::after {
 	position: absolute;
 	content: "";
-	width: 8px;
+	width: rem(8);
 	height: 1px;
 	top: 50%;
 	left: 50%;
-	transform: translate(calc(-50% + 17px), calc(-50% - 2px)) rotate(37deg);
+	transform: translate(calc(-50% + rem(17)), calc(-50% - rem(2))) rotate(37deg);
 
 	background-color: $color-accent;
-	border-radius: 50%;
 }
 
 .campaign__btn {

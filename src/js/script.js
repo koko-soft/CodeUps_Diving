@@ -32,6 +32,18 @@ jQuery(function ($) {
 		return false;
 	});
 
+	// header
+	let header = $('.header');
+	let height = $('.mv').height();
+	let headerHeight = $('.header').height();
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > height - headerHeight) {
+			header.addClass('is-color');
+		} else {
+			header.removeClass('is-color');
+		}
+	});
+
 	//Swiper --- mv
 	var swiperMv = new Swiper(".js-mv__swiper", {
 		effect: 'fade',
@@ -49,7 +61,7 @@ jQuery(function ($) {
 	var swiperCampaign = new Swiper(".js-campaign__swiper", {
 		loop: true,
 		autoplay: {
-			delay: 200000,
+			delay: 2000,
 			disableOnInteraction: false,
 		},
 		speed: 1000,

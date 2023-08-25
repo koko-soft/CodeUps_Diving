@@ -7,10 +7,15 @@
 	z-index: $z-index-header;
 	position: fixed;
 	width: 100%;
+	transition: background-color 0.3s ease;
 
 	@include mq('md') {
 		height: rem(90);
 	}
+}
+
+.header.is-color {
+	background-color: rgba($color: $color-black, $alpha: 1.0);
 }
 
 .header__inner {
@@ -71,6 +76,10 @@
 }
 
 .header__sp-nav {
+
+	padding-top: rem(21);
+	padding-left: rem(15);
+	// padding-left: $padding-sp;
 	padding-bottom: $padding-sp;
 
 	width: 100vw;

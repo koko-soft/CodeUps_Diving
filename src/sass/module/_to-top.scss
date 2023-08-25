@@ -35,7 +35,6 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: $color-accent;
-	border-radius: 50%;
 
 	@include mq('md') {
 		width: 40px;
@@ -52,7 +51,6 @@
 	left: 50%;
 	transform: translate(calc(-50% - 11px), calc(-50% - 2px)) rotate(-37deg);
 	background-color: $color-accent;
-	border-radius: 50%;
 
 	@include mq('md') {
 		transform: translate(calc(-50% - 16px), calc(-50% - 1px)) rotate(-37deg);
