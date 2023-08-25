@@ -9,15 +9,6 @@ $inner: 1080px;
 $padding-pc: 40px;
 $padding-sp: 15px;
 
-// // インナー幅設定
-// // コンテンツのインナー幅（最も共通の幅が多い部分）
-// $inner: 1200px;
-// // ※キュンパス幅ではなくインナーの幅を指す
-
-// // 余白
-// $padding-pc: 40px;
-// $padding-sp: 16px;
-
 ////////////////////
 // フォント設定
 ////////////////////
@@ -59,5 +50,4 @@ $color-text: $color-black;
 $z-index-toTop: 100;
 $z-index-header: 1000;
 $z-index-sp-nav: 2000;
-$z-index-logoBlock: 2800;
 $z-index-hamburger: 2900;

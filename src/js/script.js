@@ -15,18 +15,12 @@ jQuery(function ($) {
 	});
 
 	// Smooth Scroll
-	// #から始まるURLがクリックされた時
 	jQuery('a[href^="#"]').on('click', function () {
 
-		// headerの高さを取得
 		var header = jQuery('.header').innerHeight();
-		// hrefで指定されたidを取得
 		var id = jQuery(this).attr('href');
-		// 移動速度を指定（ミリ秒）
 		var speed = 500;
-		// idの値が#のみだったらターゲットをhtmlタグにする
 		var target = jQuery("#" == id ? "html" : id);
-		// ページのトップを基準にターゲットの位置を取得
 		var position = 0;
 		position = jQuery(target).offset().top - header;
 
@@ -74,7 +68,6 @@ jQuery(function ($) {
 	});
 
 	// ToTop
-	// ページトップボタン
 	$(function () {
 		const pageTop = $("#page-top");
 		pageTop.hide();
@@ -94,31 +87,19 @@ jQuery(function ($) {
 			);
 			return false;
 		});
-		// フッター手前でストップ
+
+		//footer
 		$("#page-top").hide();
 		$(window).on("scroll", function () {
 			var scrollHeight = $(document).height();
 			var scrollPosition = $(window).height() + $(window).scrollTop();
 			var footHeight = $("footer").innerHeight();
 			if (scrollHeight - scrollPosition <= footHeight) {
-				// ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
 				$("#page-top").css({
 					position: "absolute",
 					bottom: footHeight + 20,
 				});
 			} else {
-				// $("#page-top").css({
-				// 	position: "fixed",
-				// 	bottom: "16px",
-				// });
-				// var bottomValue = ($(window).width() >= 768) ? "20px" : "16px";
-
-				// $("#page-top").css({
-				// 	position: "fixed",
-				// 	bottom: bottomValue,
-				// });
-
-
 				if (window.matchMedia("(min-width: 768px)").matches) {
 					$("#page-top").css({
 						position: "fixed",
