@@ -39,13 +39,29 @@
 	}
 }
 
-.footer__logoBlock .nav__logo {
-	width: rem(120);
+.footer__logoBlock {
+	padding-left: rem(15);
+}
+
+.footer__logoBlock a {
+	display: inline-block;
+}
+
+.footer__logo {
+	width: rem(102);
 
 	@include mq('md') {
-		width: rem(200);
+		width: rem(133);
 	}
 }
+
+// .footer__logoBlock .nav__logo {
+// 	width: rem(120);
+
+// 	@include mq('md') {
+// 		width: rem(200);
+// 	}
+// }
 
 .footer__sns {
 

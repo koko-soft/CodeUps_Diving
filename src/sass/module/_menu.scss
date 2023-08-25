@@ -4,6 +4,10 @@
 
 .menu__column {}
 
+.menu__column:not(:first-child) {
+	margin-top: rem(24);
+}
+
 .menu__item {}
 
 .menu__item:not(:first-child) {
