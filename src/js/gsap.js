@@ -35,11 +35,9 @@ $(function () {
 
 });
 
-console.log("targets:start");
 $(function () {
 	var targets = gsap.utils.toArray(".animation-test");
 
-	console.log(targets);
 	targets.forEach(function (target) {
 		const tl3 = gsap.timeline({
 			scrollTrigger: {

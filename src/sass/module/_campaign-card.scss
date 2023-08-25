@@ -62,7 +62,12 @@
 }
 
 
-.campaign-card__title-text {}
+.campaign-card__title-text {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
 
 .campaign-card__offer {
 	margin-top: rem(8);

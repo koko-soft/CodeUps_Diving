@@ -11,8 +11,15 @@
 	}
 }
 
-.footer__inner {}
+.footer__inner.inner {
+	padding-left: 0;
+	padding-right: 0;
 
+	@include mq('md') {
+		padding-left: $padding-pc;
+		padding-right: $padding-pc;
+	}
+}
 
 .footer__ft-nav {}
 
@@ -25,6 +32,7 @@
 
 	@include mq('md') {
 		margin-left: initial;
+		padding-left: 0;
 		display: flex;
 		column-gap: rem(40);
 		align-items: flex-end;
@@ -68,8 +76,7 @@
 
 .footer__sp-nav-inner {}
 
-.footer__sp-nav-wrap {
-}
+.footer__sp-nav-wrap {}
 
 .footer__copyright {
 	margin-top: rem(33);
@@ -85,7 +92,7 @@
 	color: $color-white;
 
 	@include mq('md') {
-		margin-top: rem(64);
+		margin-top: rem(83);
 		font-size: rem(14);
 		line-height: calc(18 / 14);
 	}

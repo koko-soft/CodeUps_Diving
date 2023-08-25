@@ -63,6 +63,11 @@
 	}
 }
 
+.campaign__button-prev:hover,
+.campaign__button-next:hover {
+	opacity: $opacity-hover;
+}
+
 .campaign__button-prev {}
 
 .campaign__button-next {}

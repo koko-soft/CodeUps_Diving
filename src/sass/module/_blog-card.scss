@@ -48,6 +48,13 @@
 	margin-top: rem(1);
 }
 
+.blog-card__title-text {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
 .blog-card__title::after {
 	position: absolute;
 	content: "";

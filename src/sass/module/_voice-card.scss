@@ -99,6 +99,11 @@
 	line-height: calc(23 / 16);
 	color: $color-text;
 
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+
 	@include mq('md') {
 		font-size: rem(24);
 		line-height: 1.5;
@@ -145,4 +150,8 @@
 	overflow: hidden;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 10;
+
+	@include mq('md') {
+		-webkit-line-clamp: 7;
+	}
 }
