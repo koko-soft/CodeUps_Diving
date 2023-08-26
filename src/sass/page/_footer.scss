@@ -40,7 +40,7 @@
 }
 
 .footer__logoBlock {
-	padding-left: rem(15);
+	padding-left: 0;
 }
 
 .footer__logoBlock a {
@@ -48,24 +48,15 @@
 }
 
 .footer__logo {
-	width: rem(102);
+	width: rem(120);
 
 	@include mq('md') {
-		width: rem(133);
+		width: rem(200);
 	}
 }
 
-// .footer__logoBlock .nav__logo {
-// 	width: rem(120);
-
-// 	@include mq('md') {
-// 		width: rem(200);
-// 	}
-// }
-
 .footer__sns {
-
-	margin-top: rem(16);
+	margin-top: rem(11);
 }
 
 .footer__sns-items {
@@ -74,7 +65,7 @@
 
 	@include mq('md') {
 		margin-top: rem(0);
-		margin-bottom: rem(13);
+		margin-bottom: rem(17);
 	}
 }
 

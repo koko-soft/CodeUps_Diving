@@ -6,6 +6,10 @@
 
 .menu__column:not(:first-child) {
 	margin-top: rem(24);
+
+	@include mq('md') {
+		margin-top: rem(0);
+	}
 }
 
 .menu__item {}
