@@ -2,10 +2,17 @@
 
 .img-animation__wrap {
 	position: relative;
+	height: auto;
 }
 
 .img-animation__img {
 	opacity: 0;
+	display: inline-block;
+}
+
+.img-animation__img.img-animation__img--pic {
+	display: block;
+	height: auto;
 }
 
 .img-animation__bg {

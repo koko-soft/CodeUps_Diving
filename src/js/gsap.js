@@ -34,35 +34,3 @@ $(function () {
 	});
 
 });
-
-$(function () {
-	var targets = gsap.utils.toArray(".animation-test");
-
-	targets.forEach(function (target) {
-		const tl3 = gsap.timeline({
-			scrollTrigger: {
-				trigger: target,
-				start: 'top 50%',
-			}
-		});
-
-		tl3.set(target.querySelector(".animation-box1"), {
-			opacity: 0,
-		}).fromTo(target.querySelector(".animation-box2"), {
-			scaleX: 0,
-		}, {
-			scaleX: 1,
-			duration: 1.0,
-		}).set(target.querySelector(".animation-box1"), {
-			opacity: 1,
-		}).set(target.querySelector(".animation-box1"), {
-			transformOrigin: 'left center',
-		}).fromTo(target.querySelector(".animation-box2"), {
-			scaleX: 1,
-		}, {
-			scaleX: 0,
-			duration: 1.0,
-		});
-	});
-
-});
