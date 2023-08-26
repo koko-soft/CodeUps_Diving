@@ -54,17 +54,17 @@ jQuery(function ($) {
 		autoplay: {
 			delay: 4000,
 		},
-		speed: 1000,
+		speed: 2000,
 	});
 
 	//Swiper --- campaign
 	var swiperCampaign = new Swiper(".js-campaign__swiper", {
 		loop: true,
 		autoplay: {
-			delay: 2000,
+			delay: 3000,
 			disableOnInteraction: false,
 		},
-		speed: 1000,
+		speed: 1500,
 		navigation: {
 			nextEl: ".campaign__button-prev",
 			prevEl: ".campaign__button-next",
