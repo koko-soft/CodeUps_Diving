@@ -101,17 +101,26 @@ jQuery(function ($) {
 			return false;
 		});
 
-		//footer
+		//page-top
 		$("#page-top").hide();
 		$(window).on("scroll", function () {
 			var scrollHeight = $(document).height();
 			var scrollPosition = $(window).height() + $(window).scrollTop();
 			var footHeight = $("footer").innerHeight();
 			if (scrollHeight - scrollPosition <= footHeight) {
-				$("#page-top").css({
-					position: "absolute",
-					bottom: footHeight + 20,
-				});
+
+				if (window.matchMedia("(min-width: 768px)").matches) {
+					$("#page-top").css({
+						position: "absolute",
+						bottom: footHeight + 20,
+					});
+				} else {
+					$("#page-top").css({
+						position: "absolute",
+						bottom: footHeight + 16,
+					});
+				};
+
 			} else {
 				if (window.matchMedia("(min-width: 768px)").matches) {
 					$("#page-top").css({
