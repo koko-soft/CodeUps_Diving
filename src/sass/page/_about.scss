@@ -1,12 +1,10 @@
 @use "global" as *;
 
 .about {
-	padding-top: rem(84);
-	padding-bottom: rem(73);
+	margin: rem(87);
 
 	@include mq('md') {
-		margin-top: rem(56);
-		margin-bottom: rem(67);
+		margin-top: rem(143);
 		position: relative;
 	}
 }

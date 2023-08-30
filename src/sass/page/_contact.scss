@@ -1,13 +1,11 @@
 @use "global" as *;
 
 .contact {
-	padding-top: rem(80);
-	padding-bottom: rem(103);
+	margin-top: rem(80);
 	position: relative;
 
 	@include mq('md') {
-		padding-top: rem(137);
-		padding-bottom: rem(163);
+		margin-top: rem(137);
 	}
 }
 
@@ -26,7 +24,7 @@
 	@include mq('md') {
 		position: absolute;
 		content: "";
-		top: rem(97);
+		top: rem(-37);
 		right: max(rem(20), 50vw - rem(670));
 		width: rem(301);
 		height: rem(138);

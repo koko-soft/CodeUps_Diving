@@ -1,12 +1,10 @@
 @use "global" as *;
 
 .voice {
-	padding-top: rem(84);
-	padding-bottom: rem(83);
+	margin-top: rem(87);
 
 	@include mq('md') {
-		padding-top: rem(140);
-		padding-bottom: rem(143);
+		margin-top: rem(144);
 		position: relative;
 	}
 }
@@ -15,7 +13,7 @@
 	@include mq('md') {
 		position: absolute;
 		content: "";
-		top: rem(19);
+		top: rem(-121);
 		left: max(rem(40), calc(50vw - rem(620)));
 		width: rem(301);
 		height: rem(138);
@@ -31,7 +29,7 @@
 	@include mq('md') {
 		position: absolute;
 		content: "";
-		bottom: rem(73);
+		bottom: rem(-69);
 		right: max(rem(40), calc(50vw - rem(540)));
 		width: rem(71);
 		height: rem(162);
