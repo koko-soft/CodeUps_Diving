@@ -24,13 +24,13 @@
 	}
 }
 
-.about__inner.inner {
-	max-width: rem(375);
+// .about__inner.inner {
+// 	// max-width: rem(375);
 
-	@include mq('md') {
-		max-width: $inner + strip-unit($padding-pc) * 2;
-	}
-}
+// 	// @include mq('md') {
+// 	// 	max-width: $inner + strip-unit($padding-pc) * 2;
+// 	// }
+// }
 
 .about__images {
 	margin-top: rem(57);

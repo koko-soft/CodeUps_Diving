@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .blog-cards {
-	max-width: rem(333);
-	margin-left: auto;
-	margin-right: auto;
+	// max-width: rem(333);
+	// margin-left: auto;
+	// margin-right: auto;
 
 	@include mq('md') {
 		margin-top: rem(85);
@@ -12,8 +12,8 @@
 		justify-content: space-between;
 		grid-template-columns: repeat(3, 1fr);
 
-		max-width: initial;
-		margin-left: initial;
-		margin-right: initial;
+		// max-width: initial;
+		// margin-left: initial;
+		// margin-right: initial;
 	}
 }
