@@ -142,9 +142,14 @@
 	}
 }
 
-.price__heading {}
+.price__heading {
+	width: 80%;
+}
 
-.price__price {}
+.price__price {
+	text-align: right;
+	width: 20%;
+}
 
 .price__btn {
 	margin-top: rem(40);
