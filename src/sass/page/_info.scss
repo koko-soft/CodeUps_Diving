@@ -32,21 +32,23 @@
 }
 
 .info__img {
-	aspect-ratio: 345 / 227;
+	// overflow: hidden;
 	width: 100%;
 
 	@include mq('md') {
-		aspect-ratio: 540 / 356;
 		width: 50%;
 	}
 }
 
 .info__img img {
-
+	aspect-ratio: 345 / 227;
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 
+	@include mq('md') {
+		aspect-ratio: 540 / 356;
+	}
 }
 
 .info__body {

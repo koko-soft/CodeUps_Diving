@@ -53,26 +53,34 @@
 }
 
 .price__img {
-	aspect-ratio: 345 / 227;
+	// aspect-ratio: 345 / 227;
+	// width: 100%;
+	// height: auto;
+	// overflow: hidden;
 
 	@include mq('md') {
-		aspect-ratio: 726 / 492;
+		// aspect-ratio: 746 / 492;
 		width: 68.7%;
-		height: auto;
+		// height: auto;
 	}
 }
 
-.price__img picture {
+.price__img img {
+	aspect-ratio: 345 / 227;
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+
+	@include mq('md') {
+		aspect-ratio: 492 / 746;
+	}
 }
 
-.price__img picture source,
-.price__img picture img {
-	width: 100%;
-	height: auto;
-}
+// .price__img picture source,
+// .price__img picture img {
+// 	width: 100%;
+// 	height: auto;
+// }
 
 .price__items {
 	margin-top: rem(40);

@@ -119,22 +119,21 @@
 }
 
 .voice-card__img {
-	aspect-ratio: 151 / 117;
-	overflow: hidden;
-	height: 100%;
-	width: auto;
-
-	@include mq('md') {
-		aspect-ratio: 180 / 140;
-	}
-
+	// overflow: hidden;
+	// height: 100%;
+	// width: auto;
 }
 
 .voice-card__img img {
+	aspect-ratio: 151 / 117;
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 	vertical-align: bottom;
+
+	@include mq('md') {
+		aspect-ratio: 180 / 140;
+	}
 }
 
 .voice-card__body {
