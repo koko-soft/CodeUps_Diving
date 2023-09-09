@@ -9,6 +9,10 @@ $inner: 1080px;
 $padding-pc: 40px;
 $padding-sp: 15px;
 
+// 計算用（pxではなく数値）
+$calc-inner-sp: calc(375 - 15 * 2);
+$calc-inner-pc: calc(1440 - 40 * 2);
+
 ////////////////////
 // フォント設定
 ////////////////////

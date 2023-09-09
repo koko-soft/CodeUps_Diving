@@ -5,8 +5,10 @@
 	// margin-left: auto;
 	// margin-right: auto;
 
-	display: flex;
-	flex-direction: column;
+	// display: flex;
+	// flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
 	row-gap: rem(40);
 
 	@include mq('md') {
@@ -15,7 +17,8 @@
 		// margin-left: initial;
 		// margin-right: initial;
 
-		flex-direction: row;
+		// flex-direction: row;
+		grid-template-columns: repeat(2, 1fr);
 		row-gap: rem(80);
 		column-gap: rem(40);
 	}

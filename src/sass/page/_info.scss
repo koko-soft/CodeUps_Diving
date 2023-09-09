@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .info {
+	margin-top: rem(73);
 	padding-top: rem(84);
 	padding-bottom: rem(82);
 	background-color: $color-lightgreen;
