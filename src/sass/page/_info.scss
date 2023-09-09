@@ -7,6 +7,7 @@
 	background-color: $color-lightgreen;
 
 	@include mq('md') {
+		margin-top: rem(140);
 		padding-top: rem(100);
 		padding-bottom: rem(100);
 	}
