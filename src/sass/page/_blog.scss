@@ -39,7 +39,10 @@
 	}
 }
 
-.blog__inner {}
+.blog__inner.inner {
+	padding-left: rem(21);
+	padding-right: rem(21);
+}
 
 .blog__title {}
 
