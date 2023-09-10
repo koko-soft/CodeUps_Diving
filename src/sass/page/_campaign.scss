@@ -16,8 +16,8 @@
 .campaign__swiper {
 	margin-top: rem(31);
 	margin-left: rem(-10);
-
 	margin-right: calc(50% - 50vw);
+	padding-bottom: rem(16);
 	padding-left: rem(10);
 
 	@include mq('md') {
@@ -25,9 +25,7 @@
 	}
 }
 
-.campaign__card {
-	margin-bottom: rem(16);
-}
+.campaign__card {}
 
 .campaign__swiper-buttons {
 	display: none;

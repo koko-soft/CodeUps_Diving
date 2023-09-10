@@ -50,7 +50,7 @@ jQuery(function ($) {
 	var swiperCampaign = new Swiper(".js-campaign__swiper", {
 		loop: true,
 		autoplay: {
-			delay: 300000,
+			delay: 2000,
 			disableOnInteraction: false,
 		},
 		speed: 1500,
@@ -62,7 +62,6 @@ jQuery(function ($) {
 		spaceBetween: 24,
 		breakpoints: {
 			768: {
-				slidesPerView: 'auto',
 				spaceBetween: 40,
 			}
 		}

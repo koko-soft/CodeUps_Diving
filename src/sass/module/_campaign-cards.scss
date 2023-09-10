@@ -1,10 +1,6 @@
 @use "global" as *;
 
 .campaign-cards {
-	display: flex;
-	row-gap: rem(40);
-
-	@include mq('md') {
-		row-gap: rem(80);
-	}
+	display: grid;
+	grid-auto-flow: column;
 }
