@@ -42,6 +42,11 @@
 .blog__inner.inner {
 	padding-left: rem(21);
 	padding-right: rem(21);
+
+	@include mq('md') {
+		padding-left: $padding-pc;
+		padding-right: $padding-pc;
+	}
 }
 
 .blog__title {}
