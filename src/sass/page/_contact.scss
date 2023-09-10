@@ -12,7 +12,7 @@
 .contact::before {
 	position: absolute;
 	content: "";
-	top: rem(54);
+	top: rem(-26);
 	right: max(rem(15), 50vw - rem(173));
 	width: rem(109);
 	height: rem(50);
@@ -37,34 +37,51 @@
 
 .contact__inner {}
 
-.contact__wrap {
+.contact__content {
 
 	@include mq('md') {
-		padding-top: rem(80);
+		padding-top: rem(84);
 		padding-bottom: rem(80);
-		padding-left: calc(50 / 1080 * 100%);
-		padding-right: calc(112 / 1080 * 100%);
+		// padding-left: calc(50 / 1080 * 100%);
+		// // padding-right: calc(112 / 1080 * 100%);
+		// padding-right: calc(31 / 1080 * 100%);
 
-		display: flex;
-		justify-content: space-between;
-		position: relative;
+		// display: flex;
+		// justify-content: space-between;
+		// // position: relative;
 		box-shadow: 4px 4px 10px rgba($color: #000, $alpha: 0.25);
 	}
 }
 
-.contact__wrap::after {
+.contact__content-inner {
 	@include mq('md') {
-
-		position: absolute;
-		content: "";
-		width: 1px;
-		height: rem(255);
-		background-color: $color-accent;
-		top: 50%;
-		left: 53%;
-		transform: translateY(-50%);
+		padding-left: calc(50 / 1080 * 100%);
+		padding-right: calc(31 / 1080 * 100%);
 	}
 }
+
+.contact__wrap {
+	@include mq('md') {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// position: relative;
+}
+
+// .contact__wrap::after {
+// @include mq('md') {
+
+// 	position: absolute;
+// 	content: "";
+// 	width: 1px;
+// 	height: rem(255);
+// 	background-color: $color-accent;
+// 	top: 50%;
+// 	left: 53%;
+// 	transform: translateY(-50%);
+// }
+// }
 
 .contact__top {
 	// max-width: rem(295);
@@ -77,6 +94,33 @@
 	// margin-right: initial;
 	// 	max-width: rem(440);
 	// }
+	padding-left: rem(25);
+	padding-right: rem(25);
+
+	@include mq('md') {
+		padding-left: 0;
+		padding-right: 0;
+
+		width: 44%;
+		position: relative;
+	}
+}
+
+.contact__top::after {
+	@include mq('md') {
+
+		position: absolute;
+		content: "";
+		width: 1px;
+		// height: rem(255);
+		height: 100%;
+		background-color: $color-accent;
+		// top: 50%;
+		// left: 53%;
+		top: 0;
+		right: -18.8%;
+		// transform: translateY(-50%);
+	}
 }
 
 .contact__logoBlock {
@@ -107,16 +151,19 @@
 	@include mq('md') {
 		margin-top: rem(24);
 		display: flex;
-		justify-content: space-between;
+		// justify-content: space-between;
 	}
 }
 
 .contact__info {
 	margin-top: rem(16);
-	margin-right: rem(21);
+	// margin-right: rem(21);
 
 	@include mq('md') {
 		margin-top: 0;
+		width: calc(150 / 440 * 100%);
+		// width: calc(160 / 440 * 100%);
+		// width: 37%;
 	}
 }
 
@@ -141,6 +188,9 @@
 
 	@include mq('md') {
 		margin-top: rem(0);
+		// margin-left: 1%;
+		margin-left: auto;
+		// width: 62%;
 		width: calc(273 / 440 * 100%);
 		aspect-ratio: 273 / 148;
 	}
@@ -161,7 +211,10 @@
 
 	@include mq('md') {
 		margin-top: rem(22);
-		max-width: rem(315);
+		// margin-left: 4%;
+		// max-width: rem(315);
+		width: 48%;
+		// position: relative;
 	}
 }
 
@@ -207,6 +260,10 @@
 .contact__btn {
 	margin-top: rem(41);
 	text-align: center;
+
+	@include mq('md') {
+		margin-top: rem(39);
+	}
 }
 
 .contact__btn.button::before {
