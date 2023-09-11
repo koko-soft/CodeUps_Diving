@@ -61,20 +61,18 @@
 }
 
 .mv__title {
-	padding-left: rem(20);
 	font-family: $font-family-lato;
 	font-size: rem(40);
 	font-weight: $font-weight-regular;
 	letter-spacing: 0.54em;
+	text-indent: 0.54em;
 	line-height: 1;
 	color: $color-white;
 	text-align: center;
 
 
 	@include mq('md') {
-		padding-left: rem(44);
 		font-size: rem(80);
-		letter-spacing: 0.54em;
 	}
 }
 
