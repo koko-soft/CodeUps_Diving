@@ -1,23 +1,12 @@
 @use "global" as *;
 
 .voice-cards {
-	// max-width: rem(345);
-	// margin-left: auto;
-	// margin-right: auto;
-
-	// display: flex;
-	// flex-direction: column;
 	display: grid;
 	grid-template-columns: 1fr;
 	row-gap: rem(40);
 
 	@include mq('md') {
 		margin-top: rem(35);
-		// max-width: initial;
-		// margin-left: initial;
-		// margin-right: initial;
-
-		// flex-direction: row;
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: rem(80);
 		column-gap: rem(40);

@@ -1,9 +1,6 @@
 @use "global" as *;
 
 .blog-cards {
-	// max-width: rem(333);
-	// margin-left: auto;
-	// margin-right: auto;
 	display: grid;
 	row-gap: rem(40);
 	grid-template-columns: 1fr;
@@ -14,9 +11,5 @@
 		row-gap: rem(80);
 		justify-content: space-between;
 		grid-template-columns: repeat(3, 1fr);
-
-		// max-width: initial;
-		// margin-left: initial;
-		// margin-right: initial;
 	}
 }

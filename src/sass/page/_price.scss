@@ -35,16 +35,9 @@
 
 .price__wrap {
 	margin-top: rem(31);
-	// max-width: rem(345);
-	// margin-left: auto;
-	// margin-right: auto;
 
 	@include mq('md') {
 		margin-top: rem(45);
-		// max-width: initial;
-		// margin-left: initial;
-		// margin-right: initial;
-
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
@@ -53,15 +46,9 @@
 }
 
 .price__img {
-	// aspect-ratio: 345 / 227;
-	// width: 100%;
-	// height: auto;
-	// overflow: hidden;
 
 	@include mq('md') {
-		// aspect-ratio: 746 / 492;
 		width: 68.7%;
-		// height: auto;
 	}
 }
 
@@ -75,12 +62,6 @@
 		aspect-ratio: 492 / 746;
 	}
 }
-
-// .price__img picture source,
-// .price__img picture img {
-// 	width: 100%;
-// 	height: auto;
-// }
 
 .price__items {
 	margin-top: rem(40);

@@ -7,11 +7,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	@include mq('md') {
-		// column-gap: rem(16);
-	}
-
 }
 
 .pc-nav__item {
