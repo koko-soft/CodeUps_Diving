@@ -2,18 +2,21 @@
 
 .contact {
 	margin-top: rem(80);
-	position: relative;
 
 	@include mq('md') {
 		margin-top: rem(137);
 	}
 }
 
-.contact::before {
+.contact__inner {
+	position: relative;
+}
+
+.contact__inner::before {
 	position: absolute;
 	content: "";
 	top: rem(-26);
-	right: max(rem(15), 50vw - rem(173));
+	right: calc(50% - min(46.1vw, 17.9rem));
 	width: rem(109);
 	height: rem(50);
 	background-image: url('../images/common/img-fish.svg');
@@ -25,7 +28,7 @@
 		position: absolute;
 		content: "";
 		top: rem(-37);
-		right: max(rem(20), 50vw - rem(670));
+		right: calc(50% - min(48.5vw, rem(670)));
 		width: rem(301);
 		height: rem(138);
 		background-image: url('../images/common/img-fish.svg');
@@ -34,8 +37,6 @@
 		background-position: center center;
 	}
 }
-
-.contact__inner {}
 
 .contact__content {
 

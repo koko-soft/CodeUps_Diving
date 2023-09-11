@@ -10,16 +10,19 @@
 		margin-top: rem(142);
 		padding-top: rem(100);
 		padding-bottom: rem(103);
-		position: relative;
 	}
 }
 
-.price::before {
+.price__inner {
+	position: relative;
+}
+
+.price__inner::before {
 	@include mq('md') {
 		position: absolute;
 		content: "";
-		bottom: rem(60);
-		left: max(rem(20), calc(50vw - rem(620)));
+		bottom: rem(-43);
+		left: calc(50% - min(48.5vw, 38.75rem));
 		width: rem(437);
 		height: rem(201);
 		background-image: url('../images/common/img-fish.svg');
@@ -28,8 +31,6 @@
 		background-position: center center;
 	}
 }
-
-.price__inner {}
 
 .price__title {}
 

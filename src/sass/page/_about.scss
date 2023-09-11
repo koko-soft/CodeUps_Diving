@@ -5,16 +5,21 @@
 
 	@include mq('md') {
 		margin-top: rem(143);
+	}
+}
+
+.about__inner {
+	@include mq('md') {
 		position: relative;
 	}
 }
 
-.about::after {
+.about__inner::after {
 	@include mq('md') {
 		position: absolute;
 		content: "";
 		bottom: rem(-90);
-		right: max(rem(20), calc(50vw - rem(637)));
+		right: calc(50% - min(48.5vw, 40rem));
 		width: rem(194);
 		height: rem(181);
 		background-image: url('../images/common/img-coral.png');
@@ -22,10 +27,6 @@
 		background-size: contain;
 		background-position: center center;
 	}
-}
-
-.about__inner {
-	position: relative;
 }
 
 .about__images {
