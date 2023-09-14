@@ -1,12 +1,6 @@
 @use "global" as *;
 
-.about {
-	margin-top: rem(87);
-
-	@include mq('md') {
-		margin-top: rem(143);
-	}
-}
+.about {}
 
 .about__inner {
 	@include mq('md') {
