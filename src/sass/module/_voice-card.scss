@@ -53,6 +53,7 @@
 	padding: rem(8) rem(11);
 
 	@include mq('md') {
+		margin-left: auto;
 		padding: rem(5) rem(15);
 	}
 }
