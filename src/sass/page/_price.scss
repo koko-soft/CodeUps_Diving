@@ -47,7 +47,7 @@
 .price__img {
 
 	@include mq('md') {
-		width: 68.7%;
+		width: rem(492);
 	}
 }
 
@@ -62,12 +62,17 @@
 	}
 }
 
+.price__table {
+	@include mq('md') {
+		width: calc(100% - rem(492) - rem(93));
+	}
+}
+
 .price__items {
 	margin-top: rem(40);
 
 	@include mq('md') {
 		margin-top: 0;
-		width: 68.6%;
 	}
 }
 
@@ -81,12 +86,22 @@
 
 .price__item:not(:first-child) {
 	@include mq('md') {
-		margin-top: rem(39);
+		margin-top: rem(35);
 	}
 }
 
-.price__term {
-	padding-bottom: rem(4);
+.price__sub-title {
+	padding-bottom: rem(5);
+
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-bold;
+	letter-spacing: 0;
+	line-height: calc(24 / 16);
+	color: $color-text;
+}
+
+.price__list {
 	font-family: $font-family-jp-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-bold;
@@ -99,43 +114,11 @@
 	}
 }
 
-.price__description {
-	margin-top: rem(8);
-
-	display: flex;
-	justify-content: space-between;
-}
-
-.price__heading,
-.price__price {
-
-	font-family: $font-family-jp-sans;
-	font-size: rem(14);
-	font-weight: $font-weight-regular;
-	letter-spacing: 0;
-	line-height: calc(24 / 14);
-	color: $color-text;
-
-	@include mq('md') {
-		font-size: rem(16);
-		line-height: calc(24 / 16);
-	}
-}
-
-.price__heading {
-	width: 80%;
-}
-
-.price__price {
-	text-align: right;
-	width: 20%;
-}
-
 .price__btn {
 	margin-top: rem(40);
 	text-align: center;
 
 	@include mq('md') {
-		margin-top: rem(77);
+		margin-top: rem(80);
 	}
 }
