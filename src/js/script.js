@@ -1,6 +1,13 @@
 
 jQuery(function ($) {
 
+	//Loading
+	$(function () {
+		$(window).on("load", function () {
+			$(".js-loading").fadeOut(5000);
+		});
+	});
+
 	//Drawer
 	$(".js-hamburger,.js-sp-nav,.js-sp-nav a").click(function () {
 
