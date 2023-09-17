@@ -5,16 +5,29 @@ jQuery(function ($) {
 	$(".js-hamburger,.js-sp-nav,.js-sp-nav a").click(function () {
 
 		if ($(".js-hamburger").hasClass('is-active')) {
-			$('.js-hamburger').removeClass("is-active");
-			$('.js-sp-nav').removeClass("is-active");
-			document.body.style.overflow = 'auto';
+			closeDrawer();
 		} else {
-			$('.js-hamburger').addClass("is-active");
-			$('.js-sp-nav').addClass("is-active");
-			document.body.style.overflow = 'hidden';
+			openDrawer();
 		};
-
 	});
+
+	$(window).resize(function () {
+		if (window.matchMedia("(min-width: 768px)").matches) {
+			closeDrawer();
+		}
+	})
+
+	function closeDrawer() {
+		$('.js-hamburger').removeClass("is-active");
+		$('.js-sp-nav').removeClass("is-active");
+		document.body.style.overflow = 'auto';
+	}
+
+	function openDrawer() {
+		$('.js-hamburger').addClass("is-active");
+		$('.js-sp-nav').addClass("is-active");
+		document.body.style.overflow = 'hidden';
+	}
 
 	// Smooth Scroll
 	jQuery('a[href^="#"]').on('click', function () {
