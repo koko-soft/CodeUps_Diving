@@ -9,17 +9,19 @@
 }
 
 .blog::before {
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: rem(500);
-	background-image: url('../images/common/blog-bg_pc.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	z-index: -1;
+	@include mq('md') {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: rem(500);
+		background-image: url('../images/common/blog-bg_pc.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		z-index: -1;
+	}
 }
 
 .blog__inner {
