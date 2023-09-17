@@ -1,6 +1,8 @@
 @use "global" as *;
 
-.sp-nav {}
+.sp-nav {
+	z-index: $z-index-sp-nav;
+}
 
 
 .sp-nav__head {
@@ -36,10 +38,10 @@
 }
 
 .sp-nav__wrap {
-	margin-top: rem(32);
-
+	padding-top: rem(16);
+	padding-bottom: rem(45);
 	overflow: scroll;
-	height: 100vh;
+	height: calc(100vh - rem(80));
 
 	@include mq('md') {
 		display: block;
