@@ -42,7 +42,7 @@ jQuery(function ($) {
 		},
 		loop: true,
 		autoplay: {
-			delay: 300000,
+			delay: 3000,
 			disableOnInteraction: false
 		},
 		speed: 2000,
