@@ -22,6 +22,10 @@
 }
 
 .sp-nav__inner {
+	width: 100%;
+	max-width: rem(400);
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: rem(15);
 	padding-right: rem(11);
 
@@ -32,11 +36,10 @@
 }
 
 .sp-nav__wrap {
-	margin-top: max(rem(32), calc(rem(32) + (100vh - rem(667)) * 0.5));
-	width: 100%;
-	max-width: rem(400);
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: rem(32);
+
+	overflow: scroll;
+	height: 100vh;
 
 	@include mq('md') {
 		display: block;

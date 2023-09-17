@@ -82,8 +82,8 @@
 	top: 0;
 	background-color: $color-accent;
 	z-index: $z-index-sp-nav;
-	overflow-x: hidden;
-	overflow-y: auto;
+	// overflow-x: hidden;
+	// overflow-y: auto;
 	opacity: 0;
 
 	transform: translateX(-105%);
