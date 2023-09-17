@@ -7,9 +7,11 @@ jQuery(function ($) {
 		if ($(".js-hamburger").hasClass('is-active')) {
 			$('.js-hamburger').removeClass("is-active");
 			$('.js-sp-nav').removeClass("is-active");
+			document.body.style.overflow = 'auto';
 		} else {
 			$('.js-hamburger').addClass("is-active");
 			$('.js-sp-nav').addClass("is-active");
+			document.body.style.overflow = 'hidden';
 		};
 
 	});
