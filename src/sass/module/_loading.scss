@@ -11,21 +11,29 @@
 	flex-direction: column;
 	justify-content: center;
 
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 
 	background-color: $color-accent;
 }
 
-.loading__wrap {}
+.loading__wrap {
+	width: inherit;
+	height: inherit;
+	position: relative;
+}
 
 .loading__left,
 .loading__right {
-	width: 100vw;
-	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 	background-image: url('../images/common/mv_sp_1.jpg');
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center center;
 	background-clip: content-box;
 	opacity: 0;
 
@@ -35,17 +43,9 @@
 }
 
 .loading__left {
-	background-color: transparent;
-	background-position: 50% center;
-	position: relative;
-	clip-path: polygon(0 0, calc(50vw + 1px) 0, calc(50vw + 1px) 100%, 0 100%);
+	clip-path: polygon(0 0, calc(50% + 1px) 0, calc(50% + 1px) 100%, 0 100%);
 }
 
 .loading__right {
-	position: absolute;
-	left: 0;
-	top: 0;
-	background-color: transparent;
-	background-position: 50% center;
-	clip-path: polygon(50% 0, 100% 0, 100% 100%, 50vw 100%);
+	clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
