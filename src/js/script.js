@@ -59,7 +59,13 @@ jQuery(function ($) {
 			disableOnInteraction: false
 		},
 		speed: 2000,
+
 	});
+
+	swiperMv.autoplay.stop();
+	setTimeout(function () {
+		swiperMv.autoplay.start();
+	}, 10000);
 
 	//Swiper --- campaign
 	var swiperCampaign = new Swiper(".js-campaign__swiper", {
