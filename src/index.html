@@ -36,8 +36,12 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <!-- inview -->
   <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <!-- GSAP -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <!-- Original JS -->
   <script defer src="./assets/js/script.js"></script>
+  <script defer src="./assets/js/gsap.js"></script>
 </head>
 
 <body>
@@ -270,11 +274,9 @@
 
     <div class="loading js-loading">
       <div class="loading__wrap">
-        <div class="loading__left"></div>
-        <div class="loading__right"></div>
+        <div class="loading__left js-loading-left"></div>
+        <div class="loading__right js-loading-right"></div>
       </div>
-      <!-- <div class="loading__circle"></div> -->
-      <!-- <div class="loading__text">loading...</div> -->
     </div>
 
     <div class="mv">
@@ -316,11 +318,11 @@
 
           </div>
 
-          <div class="mv__header">
-            <div class="mv__title">
+          <div class="mv__header js-loading-header">
+            <div class="mv__title js-loading-title">
               <p>DIVING</p>
             </div>
-            <div class="mv__subtitle">
+            <div class="mv__subtitle js-loading-subtitle">
               <p>into the ocean</p>
             </div>
           </div>
