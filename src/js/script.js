@@ -11,6 +11,13 @@ jQuery(function ($) {
 		};
 	});
 
+	$(".js-logoLink").click(function () {
+
+		if ($(".js-hamburger").hasClass('is-active')) {
+			closeDrawer();
+		};
+	});
+
 	$(window).resize(function () {
 		if (window.matchMedia("(min-width: 768px)").matches) {
 			closeDrawer();
