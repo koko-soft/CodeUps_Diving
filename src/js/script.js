@@ -72,7 +72,7 @@ jQuery(function ($) {
 	swiperMv.autoplay.stop();
 	setTimeout(function () {
 		swiperMv.autoplay.start();
-	}, 10000);
+	}, 3000);
 
 	//Swiper --- campaign
 	var swiperCampaign = new Swiper(".js-campaign__swiper", {

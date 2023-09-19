@@ -16,14 +16,12 @@ window.addEventListener('DOMContentLoaded', function () {
 			document.body.style.overflow = 'hidden';
 		})
 		.set([left, right], { y: "100%", opacity: 1 })
-		.set([titleWrap], { zIndex: 99999 })
-		.to([left], { duration: 2, y: "0%", ease: "power1.out", delay: 0.6 })
-		.to([right], { duration: 2.2, y: "0%", ease: "power1.out", delay: 0.2 }, '<')
-		.to([title], { opacity: 1, duration: 1.5, delay: 0.5 })
-		.fromTo([subtitle], { opacity: 0, y: "50%" }, { opacity: 1, y: 0, duration: 1 }, '-=0.2')
-		.to([loading], { autoAlpha: 0, duration: 2, delay: 1.8 })
-		.to([imgWrap], { scale: 1.2, duration: 2 }, '<')
-		.set([titleWrap], { zIndex: 10 })
+		.to([left], { duration: 0.8, y: "0%", ease: "Power0.easeNone" })
+		.to([right], { duration: 0.9, y: "0%", ease: "Power0.easeNone", delay: 0.1 }, '<')
+		.fromTo([title], { y: "50%", opacity: 0 }, { y: "0%", opacity: 1, duration: 0.3, delay: 0.2 })
+		.fromTo([subtitle], { y: "50%", opacity: 0 }, { y: "0%", opacity: 1, duration: 0.2 })
+		.to([loading], { duration: 0.8, autoAlpha: 0, delay: 0.5 })
+		.to([imgWrap], { duration: 0.8, scale: 1.2 }, '<')
 		.add(function () {
 			document.body.style.overflow = 'auto';
 		})
