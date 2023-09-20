@@ -1,6 +1,9 @@
 
 jQuery(function ($) {
 
+	//Loading
+	document.body.style.overflow = 'hidden';
+
 	//Drawer
 	$(".js-hamburger,.js-sp-nav,.js-sp-nav a").click(function () {
 

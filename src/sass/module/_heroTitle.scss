@@ -8,18 +8,9 @@
 	transform: translate(-50%, -50%);
 	z-index: $z-index-mvTitle;
 	width: 100%;
-
-	@include mq('md') {
-		margin-top: rem(50);
-
-		top: 36.3%;
-		transform: translate(-50%, 0);
-
-	}
 }
 
 .heroTitle__title {
-	opacity: 0;
 
 	font-family: $font-family-lato;
 	font-size: rem(40);
@@ -36,7 +27,6 @@
 }
 
 .heroTitle__subtitle {
-	opacity: 0;
 
 	margin-top: rem(12);
 	font-family: $font-family-eng;
