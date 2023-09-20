@@ -21,7 +21,7 @@
 	position: relative;
 
 	@include mq('md') {
-		padding: 0 min(rem(20), rem(20) + (100vw - rem(1440)) * 0.015);
+		padding: 0 min(vw(768, 10.7), rem(20));
 	}
 }
 
