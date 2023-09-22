@@ -13,7 +13,7 @@
 
 .info__inner {}
 
-.info__title {}
+.info__section-title {}
 
 .info__wrap {
 	margin-top: rem(27);
@@ -53,7 +53,7 @@
 	}
 }
 
-.info__title {
+.info__subtitle {
 	padding-bottom: rem(4);
 
 	@include mq('md') {
@@ -61,7 +61,7 @@
 	}
 }
 
-.info__title-text {
+.info__subtitle-text {
 	margin-top: rem(8);
 	font-family: $font-family-jp-sans;
 	font-size: rem(20);
