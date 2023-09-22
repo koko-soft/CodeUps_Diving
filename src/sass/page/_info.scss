@@ -16,10 +16,10 @@
 .info__section-title {}
 
 .info__wrap {
-	margin-top: rem(27);
+	margin-top: rem(31);
 
 	@include mq('md') {
-		margin-top: rem(37);
+		margin-top: rem(46);
 		display: flex;
 		column-gap: rem(48);
 	}
