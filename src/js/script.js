@@ -5,12 +5,17 @@ jQuery(function ($) {
 	function isVisited() {
 		let bReturn = false;
 
-		if (sessionStorage.getItem('visited')) {
+		// if (sessionStorage.getItem('visited')) {
+		// 	bReturn = true
+		// } else {
+		// 	sessionStorage.setItem('visited', 'true');
+		// }
+
+		if (sessionStorage.getItem('visited') !== null) {
 			bReturn = true
 		} else {
 			sessionStorage.setItem('visited', 'true');
 		}
-
 		return bReturn;
 	}
 
@@ -35,6 +40,9 @@ jQuery(function ($) {
 			.fromTo([subtitle], { opacity: 0 }, { opacity: 1, duration: 0.4, delay: 0.4 }, '<')
 			.to([loading], { duration: 0.9, autoAlpha: 0, delay: 0.6 })
 			.to([imgWrap], { duration: 0.9, scale: 1.2 }, '<')
+			.add(function () {
+				document.body.style.overflow = 'auto';
+			})
 			;
 
 	}
@@ -44,7 +52,7 @@ jQuery(function ($) {
 		const tl1 = gsap.timeline();
 		const loading = $(".js-loading");
 
-		tl1.to([loading], { duration: 0.9, autoAlpha: 0, delay: 0.6 })
+		tl1.to([loading], { duration: 0.8, autoAlpha: 0 })
 			;
 
 	}
@@ -52,20 +60,25 @@ jQuery(function ($) {
 	//Loading
 	window.addEventListener('load', function () {
 
-		document.body.style.overflow = 'hidden';
+		// swiperMv.autoplay.stop();
 
 		if (!isVisited()) {
 
+			swiperMv.autoplay.stop();
+			document.body.style.overflow = 'hidden';
 			loadingAnimation();
 
+			setTimeout(function () {
+				swiperMv.autoplay.start();
+			}, 3000);
+
 		} else {
-
 			loadingClose();
-
+			// swiperMv.autoplay.start();
 		}
 
-		document.body.style.overflow = 'auto';
-
+		// document.body.style.overflow = 'auto';
+		// swiperMv.autoplay.start();
 	});
 
 
@@ -151,10 +164,10 @@ jQuery(function ($) {
 
 	});
 
-	swiperMv.autoplay.stop();
-	setTimeout(function () {
-		swiperMv.autoplay.start();
-	}, 3000);
+	// swiperMv.autoplay.stop();
+	// setTimeout(function () {
+	// 	swiperMv.autoplay.start();
+	// }, 3000);
 
 	//Swiper --- campaign
 	var swiperCampaign = new Swiper(".js-campaign__swiper", {

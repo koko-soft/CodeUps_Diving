@@ -22,8 +22,8 @@
 	height: 50px;
 	content: "";
 	animation: 1s linear loading 4;
-	border: 2px solid #fff;
-	border-top: 2px solid $color-accent;
+	border: 2px solid $color-white;
+	border-top: 2px solid transparent;
 	border-radius: 50%;
 }
 
