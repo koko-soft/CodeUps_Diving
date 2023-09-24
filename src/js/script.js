@@ -2,14 +2,16 @@
 
 jQuery(function ($) {
 
+	function scrollLock() {
+		$('body').addClass('no-scroll');
+	}
+
+	function scrollUnlock() {
+		$('body').removeClass('no-scroll');
+	}
+
 	function isVisited() {
 		let bReturn = false;
-
-		// if (sessionStorage.getItem('visited')) {
-		// 	bReturn = true
-		// } else {
-		// 	sessionStorage.setItem('visited', 'true');
-		// }
 
 		if (sessionStorage.getItem('visited') !== null) {
 			bReturn = true
@@ -41,7 +43,7 @@ jQuery(function ($) {
 			.to([loading], { duration: 0.9, autoAlpha: 0, delay: 0.6 })
 			.to([imgWrap], { duration: 0.9, scale: 1.2 }, '<')
 			.add(function () {
-				document.body.style.overflow = 'auto';
+				scrollUnlock();
 			})
 			;
 
@@ -60,12 +62,10 @@ jQuery(function ($) {
 	//Loading
 	window.addEventListener('load', function () {
 
-		// swiperMv.autoplay.stop();
-
 		if (!isVisited()) {
 
 			swiperMv.autoplay.stop();
-			document.body.style.overflow = 'hidden';
+			scrollLock();
 			loadingAnimation();
 
 			setTimeout(function () {
@@ -74,27 +74,9 @@ jQuery(function ($) {
 
 		} else {
 			loadingClose();
-			// swiperMv.autoplay.start();
 		}
 
-		// document.body.style.overflow = 'auto';
-		// swiperMv.autoplay.start();
 	});
-
-
-	// checkVisited();
-
-	// function checkVisited() {
-	// 	if (sessionStorage.getItem('visited')) {
-	// 		//2回目以降
-
-	// 	} else {
-	// 		//初回
-	// 		sessionStorage.setItem('visited', 'true');
-	// 	}
-	// }
-	// })
-
 
 	//Drawer
 	$(".js-hamburger,.js-sp-nav,.js-sp-nav a").click(function () {
@@ -122,13 +104,13 @@ jQuery(function ($) {
 	function closeDrawer() {
 		$('.js-hamburger').removeClass("is-active");
 		$('.js-sp-nav').removeClass("is-active");
-		document.body.style.overflow = 'auto';
+		scrollUnlock();
 	}
 
 	function openDrawer() {
 		$('.js-hamburger').addClass("is-active");
 		$('.js-sp-nav').addClass("is-active");
-		document.body.style.overflow = 'hidden';
+		scrollLock();
 	}
 
 	// Smooth Scroll

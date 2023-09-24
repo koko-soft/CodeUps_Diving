@@ -38,6 +38,10 @@ body {
   line-height: 1.5;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* Remove list styles on ul, ol elements with a class attribute */
 ul,
 ol {
