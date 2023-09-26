@@ -2,6 +2,7 @@
 
 jQuery(function ($) {
 
+	//scroll
 	function scrollLock() {
 		$('body').addClass('no-scroll');
 	}
@@ -10,6 +11,16 @@ jQuery(function ($) {
 		$('body').removeClass('no-scroll');
 	}
 
+	//loading
+	function loadingOpen() {
+		$(".js-loading").removeClass("is-none");
+	}
+
+	function loadingClose() {
+		$(".js-loading").addClass("is-none");
+	}
+
+	//訪問したことがあるかチェック
 	function isVisited() {
 		let bReturn = false;
 
@@ -21,6 +32,7 @@ jQuery(function ($) {
 		return bReturn;
 	}
 
+	//loadingアニメーションの表示、MV Sliderの停止／開始
 	function loadingAnimation() {
 
 		const tl1 = gsap.timeline();
@@ -33,6 +45,10 @@ jQuery(function ($) {
 		const imgWrap = $(".loading__wrap");
 
 		tl1
+			.add(function () {
+				loadingOpen();
+				swiperMv.autoplay.stop();
+			})
 			.to([circle], { duration: 0.1, autoAlpha: 0 })
 			.to([title, subtitle], { duration: 0.2, opacity: 0 })
 			.set([left, right], { y: "100%", opacity: 1 })
@@ -44,17 +60,8 @@ jQuery(function ($) {
 			.to([imgWrap], { duration: 0.9, scale: 1.2 }, '<')
 			.add(function () {
 				scrollUnlock();
+				swiperMv.autoplay.start();
 			})
-			;
-
-	}
-
-	function loadingClose() {
-
-		const tl1 = gsap.timeline();
-		const loading = $(".js-loading");
-
-		tl1.to([loading], { duration: 0.8, autoAlpha: 0 })
 			;
 
 	}
@@ -62,18 +69,21 @@ jQuery(function ($) {
 	//Loading
 	window.addEventListener('load', function () {
 
-		if (!isVisited()) {
+		if (isVisited()) {
 
-			swiperMv.autoplay.stop();
+			loadingClose();
+
+		} else {
+
 			scrollLock();
 			loadingAnimation();
 
+			//タイムアウトしたら強制的に解除
 			setTimeout(function () {
+				loadingClose();
+				scrollUnlock();
 				swiperMv.autoplay.start();
-			}, 3000);
-
-		} else {
-			loadingClose();
+			}, 3500);
 		}
 
 	});
@@ -145,11 +155,6 @@ jQuery(function ($) {
 		speed: 2000,
 
 	});
-
-	// swiperMv.autoplay.stop();
-	// setTimeout(function () {
-	// 	swiperMv.autoplay.start();
-	// }, 3000);
 
 	//Swiper --- campaign
 	var swiperCampaign = new Swiper(".js-campaign__swiper", {
