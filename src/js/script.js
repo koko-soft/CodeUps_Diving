@@ -142,7 +142,7 @@ jQuery(function ($) {
 	});
 
 	//Swiper --- mv
-	var swiperMv = new Swiper(".js-mv__swiper", {
+	var swiperMv = new Swiper(".js-mv-swiper", {
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: 'true',
@@ -157,7 +157,7 @@ jQuery(function ($) {
 	});
 
 	//Swiper --- campaign
-	var swiperCampaign = new Swiper(".js-campaign__swiper", {
+	var swiperCampaign = new Swiper(".js-campaign-swiper", {
 		loop: true,
 		autoplay: {
 			delay: 2000,
