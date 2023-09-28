@@ -47,13 +47,6 @@
 	}
 }
 
-.voice__card {
-
-	@include mq('md') {
-		flex-basis: calc((100% - 40px) / 2);
-	}
-}
-
 .voice__btn {
 	margin-top: rem(40);
 	text-align: center;

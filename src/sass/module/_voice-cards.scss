@@ -12,3 +12,10 @@
 		column-gap: rem(40);
 	}
 }
+
+.voice-cards__card {
+
+	@include mq('md') {
+		flex-basis: calc((100% - 40px) / 2);
+	}
+}
