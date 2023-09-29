@@ -17,7 +17,12 @@ jQuery(function ($) {
 	}
 
 	function loadingClose() {
-		$(".js-loading").addClass("is-none");
+		$(".js-loading").animate({
+			opacity: 0
+		}, 500, function () {
+			// アニメーションが完了した後にクラスを追加する
+			$(this).addClass("is-none");
+		});
 	}
 
 	//訪問したことがあるかチェック
@@ -36,13 +41,13 @@ jQuery(function ($) {
 	function loadingAnimation() {
 
 		const tl1 = gsap.timeline();
+		const loading = $(".js-loading");
 		const circle = $(".js-loading-circle");
+		const imgWrap = $(".js-loading-imageWrap");
 		const left = $(".js-loading-left");
 		const right = $(".js-loading-right");
 		const title = $(".js-loading-title");
 		const subtitle = $(".js-loading-subtitle");
-		const loading = $(".js-loading");
-		const imgWrap = $(".loading__wrap");
 
 		tl1
 			.add(function () {
@@ -50,7 +55,6 @@ jQuery(function ($) {
 				swiperMv.autoplay.stop();
 			})
 			.to([circle], { duration: 0.1, autoAlpha: 0 })
-			.to([title, subtitle], { duration: 0.2, opacity: 0 })
 			.set([left, right], { y: "100%", opacity: 1 })
 			.to([left], { duration: 0.9, y: "0%", ease: "Power0.easeNone" })
 			.to([right], { duration: 0.9, y: "0%", ease: "Power0.easeNone", delay: 0.1 }, '<')

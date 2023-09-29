@@ -76,12 +76,10 @@
 	clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
-.loading__header {}
-
-.loading__title {
+.loading__header .heroTitle__title {
 	opacity: 0;
 }
 
-.loading__subtitle {
+.loading__header .heroTitle__subtitle {
 	opacity: 0;
 }
