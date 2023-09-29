@@ -2,6 +2,8 @@
 
 jQuery(function ($) {
 
+	$('body').addClass('no-scroll');
+
 	//scroll
 	function scrollLock() {
 		$('body').addClass('no-scroll');
