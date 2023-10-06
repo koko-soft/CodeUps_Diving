@@ -2,27 +2,27 @@
 
 .footer-nav {}
 
-.footer-nav__inner {
-	padding-left: rem(15);
-	padding-right: rem(11);
+// .footer-nav__inner {
+// 	// padding-left: rem(15);
+// 	// padding-right: rem(11);
 
-	@include mq('md') {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
+// 	// @include mq('md') {
+// 	// 	padding-left: 0;
+// 	// 	padding-right: 0;
+// 	// }
+// }
 
 .footer-nav__wrap {
 	margin-top: rem(32);
-	width: 100%;
-	max-width: rem(385);
-	margin-left: auto;
-	margin-right: auto;
+	// width: 100%;
+	// max-width: rem(385);
+	// margin-left: auto;
+	// margin-right: auto;
 
 
 	@include mq('md') {
 		margin-top: rem(12);
-		max-width: initial;
+		// max-width: initial;
 	}
 }
 
