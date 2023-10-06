@@ -2,7 +2,7 @@
 
 jQuery(function ($) {
 
-	$('body').addClass('no-scroll');
+	scrollLock();
 
 	//scroll
 	function scrollLock() {
@@ -78,6 +78,7 @@ jQuery(function ($) {
 		if (isVisited()) {
 
 			loadingClose();
+			scrollUnlock();
 
 		} else {
 
