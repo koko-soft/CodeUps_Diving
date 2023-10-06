@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .campaign {
+	padding-bottom: rem(10);
 	overflow: hidden;
 
 	@include mq('md') {
