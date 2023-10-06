@@ -2,47 +2,13 @@
 
 .footer-nav {}
 
-// .footer-nav__inner {
-// 	// padding-left: rem(15);
-// 	// padding-right: rem(11);
-
-// 	// @include mq('md') {
-// 	// 	padding-left: 0;
-// 	// 	padding-right: 0;
-// 	// }
-// }
-
 .footer-nav__wrap {
 	margin-top: rem(32);
-	// width: 100%;
-	// max-width: rem(385);
-	// margin-left: auto;
-	// margin-right: auto;
 
 
 	@include mq('md') {
 		margin-top: rem(12);
-		// max-width: initial;
 	}
 }
 
-.footer-nav__menu-items {
-	// display: flex;
-	// column-gap: min((18 / 375)*100vw, rem(40));
-
-	// column-gap: min(vw(375, 18), rem(40));
-
-	// @include mq('md') {
-	// 	// column-gap: min(calc(120 / 1440 * 100vw * 1.17), rem(120));
-	// 	column-gap: min(vw(1440, 120), rem(120));
-	// }
-}
-
-// .footer-nav__menu-items-wrap {
-// 	// @include mq('md') {
-// 	// 	display: flex;
-// 	// 	// column-gap: min(calc(120 / 1440 * 100vw * 1.17), rem(120));
-// 	// 	column-gap: min(vw(1440, 120), rem(120));
-
-// 	// }
-// }
+.footer-nav__menu-items {}

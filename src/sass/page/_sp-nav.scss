@@ -16,29 +16,7 @@
 }
 
 .sp-nav__inner.inner {
-	// width: 100%;
 	max-width: rem(400);
-	// margin-left: auto;
-	// margin-right: auto;
-	// padding-left: rem(15);
-	// padding-right: rem(11);
-
-	// @include mq('md') {
-	// 	padding-left: 0;
-	// 	padding-right: 0;
-	// }
 }
 
-.sp-nav__menu-items {
-	// display: flex;
-	// justify-content: space-between;
-	// column-gap: (7 / 375)*100vw;
-
-	// column-gap: vw(375, 7);
-	// column-gap: vw(375, 18);
-
-}
-
-// .sp-nav__menu-items-wrap:nth-child(2) {
-// 	padding-right: rem(26);
-// }
+.sp-nav__menu-items {}
