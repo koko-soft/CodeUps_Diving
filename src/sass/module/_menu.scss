@@ -1,6 +1,20 @@
 @use "global" as *;
 
-.menu {}
+.menu {
+	display: flex;
+	column-gap: min(vw(375, 18), rem(40));
+
+	@include mq('md') {
+		column-gap: min(vw(1440, 120), rem(120));
+	}
+}
+
+.menu__column-wrap {
+	@include mq('md') {
+		display: flex;
+		column-gap: min(vw(1440, 120), rem(120));
+	}
+}
 
 .menu__column {}
 

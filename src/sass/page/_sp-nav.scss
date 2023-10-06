@@ -49,13 +49,15 @@
 }
 
 .sp-nav__menu-items {
-	display: flex;
-	justify-content: space-between;
-	column-gap: min((7 / 375)*100vw, rem(40));
+	// display: flex;
+	// justify-content: space-between;
+	// column-gap: (7 / 375)*100vw;
+	
+	// column-gap: vw(375, 7);
+	// column-gap: vw(375, 18);
+
 }
 
-.sp-nav__menu-items-wrap:nth-child(2) {
-	padding-right: rem(26);
-}
-
-.sp-nav__menu-item {}
+// .sp-nav__menu-items-wrap:nth-child(2) {
+// 	padding-right: rem(26);
+// }

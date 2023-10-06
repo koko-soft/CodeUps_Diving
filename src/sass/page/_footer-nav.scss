@@ -27,17 +27,22 @@
 }
 
 .ft-nav__menu-items {
-	display: flex;
-	column-gap: min((18 / 375)*100vw, rem(40));
+	// display: flex;
+	// column-gap: min((18 / 375)*100vw, rem(40));
 
-	@include mq('md') {
-		column-gap: min(calc(120 / 1440 * 100vw * 1.17), rem(120));
-	}
+	// column-gap: min(vw(375, 18), rem(40));
+
+	// @include mq('md') {
+	// 	// column-gap: min(calc(120 / 1440 * 100vw * 1.17), rem(120));
+	// 	column-gap: min(vw(1440, 120), rem(120));
+	// }
 }
 
-.ft-nav__menu-items-wrap {
-	@include mq('md') {
-		display: flex;
-		column-gap: min(calc(120 / 1440 * 100vw * 1.17), rem(120));
-	}
-}
+// .ft-nav__menu-items-wrap {
+// 	// @include mq('md') {
+// 	// 	display: flex;
+// 	// 	// column-gap: min(calc(120 / 1440 * 100vw * 1.17), rem(120));
+// 	// 	column-gap: min(vw(1440, 120), rem(120));
+
+// 	// }
+// }
