@@ -20,6 +20,7 @@
 	line-height: 1;
 	color: $color-white;
 	text-align: center;
+	text-transform: uppercase;
 
 	@include mq('md') {
 		font-size: rem(80);
