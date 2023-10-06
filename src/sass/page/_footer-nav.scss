@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.ft-nav {}
+.footer-nav {}
 
-.ft-nav__inner {
+.footer-nav__inner {
 	padding-left: rem(15);
 	padding-right: rem(11);
 
@@ -12,7 +12,7 @@
 	}
 }
 
-.ft-nav__wrap {
+.footer-nav__wrap {
 	margin-top: rem(32);
 	width: 100%;
 	max-width: rem(385);
@@ -26,7 +26,7 @@
 	}
 }
 
-.ft-nav__menu-items {
+.footer-nav__menu-items {
 	// display: flex;
 	// column-gap: min((18 / 375)*100vw, rem(40));
 
@@ -38,7 +38,7 @@
 	// }
 }
 
-// .ft-nav__menu-items-wrap {
+// .footer-nav__menu-items-wrap {
 // 	// @include mq('md') {
 // 	// 	display: flex;
 // 	// 	// column-gap: min(calc(120 / 1440 * 100vw * 1.17), rem(120));
