@@ -2,12 +2,28 @@
 
 .sub-mv {
 	height: rem(460);
-	background-image: url(../images/sub/sub-mv_blog_pc.jpg);
 	background-repeat: no-repeat;
+
 	background-size: cover;
 
 	@include mq('md') {
 		height: rem(548);
+	}
+}
+
+.sub-mv.sub-mv--page-blog {
+	background-image: url(../images/sub/sub-mv_blog_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_blog_pc.jpg);
+	}
+}
+
+.sub-mv.sub-mv--page-contact {
+	background-image: url(../images/sub/sub-mv_contact_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_contact_pc.jpg);
 	}
 }
 

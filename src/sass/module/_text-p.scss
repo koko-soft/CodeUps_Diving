@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.text-p {
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0em;
+	line-height: 1.44;
+	color: $color-text;
+}
