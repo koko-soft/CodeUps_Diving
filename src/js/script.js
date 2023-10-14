@@ -15,11 +15,11 @@ jQuery(function ($) {
 
 	//loading
 	function loadingOpen() {
-		$(".js-loading").removeClass("is-none");
+		$(".loading").removeClass("is-none");
 	}
 
 	function loadingClose() {
-		$(".js-loading").animate({
+		$(".loading").animate({
 			opacity: 0
 		}, 500, function () {
 			// アニメーションが完了した後にクラスを追加する
@@ -43,13 +43,13 @@ jQuery(function ($) {
 	function loadingAnimation() {
 
 		const tl1 = gsap.timeline();
-		const loading = $(".js-loading");
-		const circle = $(".js-loading-circle");
-		const imgWrap = $(".js-loading-imageWrap");
-		const left = $(".js-loading-left");
-		const right = $(".js-loading-right");
-		const title = $(".js-loading-title");
-		const subtitle = $(".js-loading-subtitle");
+		const loading = $(".loading");
+		const circle = $(".loading__circle");
+		const imgWrap = $(".loading__wrap");
+		const left = $(".loading__left");
+		const right = $(".loading__right");
+		const title = $(".heroTitle__title");
+		const subtitle = $(".heroTitle__subtitle");
 
 		tl1
 			.add(function () {
@@ -61,8 +61,8 @@ jQuery(function ($) {
 			.to([left], { duration: 0.9, y: "0%", ease: "Power0.easeNone" })
 			.to([right], { duration: 0.9, y: "0%", ease: "Power0.easeNone", delay: 0.1 }, '<')
 			.fromTo([title], { opacity: 0 }, { opacity: 1, duration: 0.6, delay: 0.2 })
-			.fromTo([subtitle], { opacity: 0 }, { opacity: 1, duration: 0.4, delay: 0.4 }, '<')
-			.to([loading], { duration: 0.9, autoAlpha: 0, delay: 0.6 })
+			.fromTo([subtitle], { opacity: 0 }, { opacity: 1, duration: 0.4, delay: 0.3 }, '<')
+			.to([loading], { duration: 0.9, autoAlpha: 0, delay: 0.3 })
 			.to([imgWrap], { duration: 0.9, scale: 1.2 }, '<')
 			.add(function () {
 				scrollUnlock();
