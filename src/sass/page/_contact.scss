@@ -37,23 +37,12 @@
 	@include mq('md') {
 		padding-top: rem(84);
 		padding-bottom: rem(80);
-		box-shadow: 4px 4px 10px rgba($color: #000, $alpha: 0.25);
-	}
-}
-
-.contact__content-inner {
-	@include mq('md') {
 		padding-left: calc(50 / 1080 * 100%);
 		padding-right: calc(31 / 1080 * 100%);
-	}
-}
-
-.contact__wrap {
-	@include mq('md') {
 		display: flex;
 		justify-content: space-between;
+		box-shadow: 4px 4px 10px rgba($color: #000, $alpha: 0.25);
 	}
-
 }
 
 .contact__top {
