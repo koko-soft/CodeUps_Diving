@@ -27,6 +27,14 @@
 	}
 }
 
+.sub-mv.sub-mv--page-privacy {
+	background-image: url(../images/sub/sub-mv_privacy_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_privacy_pc.jpg);
+	}
+}
+
 .sub-mv__title {
 	padding-top: rem(200);
 	display: flex;

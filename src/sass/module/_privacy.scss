@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.privacy {
+	position: relative;
+}
+
+.privacy::before {
+	position: absolute;
+	content: "";
+	top: rem(-22);
+	left: calc(50% - min(46.1vw, rem(286)));
+	width: rem(120);
+	height: rem(55);
+	background-image: url('../images/common/img-fish.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	transform: scaleX(-1);
+
+	@include mq('md') {
+		top: rem(-69);
+		left: calc(50% - min(48.5vw, rem(620)));
+		width: rem(301);
+		height: rem(138);
+	}
+}
+
+.privacy__inner.inner {
+	@include mq('md') {
+		max-width: rem(850);
+	}
+}
+
+.privacy__sub-title {
+	font-family: $font-family-jp-sans;
+	font-size: rem(24);
+	font-weight: $font-weight-medium;
+	letter-spacing: 0;
+	color: $color-text;
+
+	@include mq('md') {
+		font-size: rem(32);
+	}
+}
+
+.privacy__text {
+	margin-top: rem(38);
+
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0em;
+	line-height: 2;
+	color: $color-text;
+}
+
+.privacy__text-paragraph {
+	margin-top: rem(32);
+}
+
+.privacy__text-paragraph ol {
+	list-style: decimal;
+
+	li {
+		margin-left: 1.5em;
+	}
+
+	li::marker {
+		font-weight: $font-weight-regular;
+	}
+}
+
+.privacy__text-paragraph ul {
+	li {
+		// text-indent: -1em;
+		// padding-left: 1em;
+	}
+
+	li::before {
+		content: '・';
+	}
+}
+
+.privacy__text-paragraph span {
+	margin-right: 0.2rem;
+}
