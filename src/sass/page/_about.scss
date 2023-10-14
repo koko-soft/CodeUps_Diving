@@ -105,7 +105,7 @@
 	}
 }
 
-.about__wrap {
+.about__body {
 	margin-top: rem(16);
 
 	@include mq('md') {
@@ -115,9 +115,9 @@
 	}
 }
 
-.about__text {}
+.about__text-wrap {}
 
-.about__text-text {
+.about__text {
 	@include mq('md') {
 		color: $color-white;
 		text-align: justify;
