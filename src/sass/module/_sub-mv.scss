@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.sub-mv {
+	height: rem(460);
+	background-image: url(../images/sub/sub-mv_blog_pc.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include mq('md') {
+		height: rem(548);
+	}
+}
+
+.sub-mv__title {
+	padding-top: rem(200);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: $font-family-lato;
+	font-size: rem(40);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	line-height: 1.5;
+	color: $color-white;
+
+	@include mq('md') {
+		padding-top: rem(265);
+		font-size: rem(80);
+	}
+}

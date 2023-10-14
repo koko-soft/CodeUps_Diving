@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.breadcrumb {
+	padding: rem(8) 0;
+	font-family: $font-family-jp-sans;
+	font-size: rem(14);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	color: $color-text;
+}
