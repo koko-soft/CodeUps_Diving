@@ -1,5 +1,9 @@
 @use "global" as *;
 
-.layout-sub-contact{
+.layout-sub-contact {
 	margin-top: rem(106);
+}
+
+.layout-sub-contact.layout-sub-contact--terms-of-service {
+	margin-top: rem(136);
 }

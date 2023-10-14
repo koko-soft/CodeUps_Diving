@@ -1,0 +1,57 @@
+@use "global" as *;
+
+
+.site-policy {}
+
+.site-policy__title {
+	font-family: $font-family-jp-sans;
+	font-size: rem(24);
+	font-weight: $font-weight-medium;
+	letter-spacing: 0;
+	color: $color-text;
+
+	@include mq('md') {
+		font-size: rem(32);
+	}
+}
+
+.site-policy__text {
+	margin-top: rem(38);
+
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0em;
+	line-height: 2;
+	color: $color-text;
+}
+
+.site-policy__text-paragraph {
+	margin-top: rem(32);
+}
+
+.site-policy__text-paragraph ol {
+	list-style: decimal;
+
+	li {
+		margin-left: 1.5em;
+	}
+
+	li::marker {
+		font-weight: $font-weight-regular;
+	}
+}
+
+.site-policy__text-paragraph ul {
+	li {
+		display: inline;
+	}
+
+	li::before {
+		content: '・';
+	}
+}
+
+.site-policy__text-paragraph span {
+	margin-right: 0.2rem;
+}
