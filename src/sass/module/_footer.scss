@@ -20,6 +20,14 @@
 	}
 }
 
+.footer.footer--thanks {
+	margin-top: rem(145);
+
+	@include mq('md') {
+		margin-top: rem(120);
+	}
+}
+
 .footer__inner.inner {
 	max-width: rem(415);
 
