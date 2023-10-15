@@ -118,6 +118,13 @@ jQuery(function ($) {
 		}
 	})
 
+	$(window).on("load resize", function () {
+		let window_height = window.innerHeight
+			? window.innerHeight
+			: $(window).innerHeight();
+		$(".page-container").css("min-height", window_height + "px");
+	});
+
 	function closeDrawer() {
 		$('.js-hamburger').removeClass("is-active");
 		$('.js-sp-nav').removeClass("is-active");

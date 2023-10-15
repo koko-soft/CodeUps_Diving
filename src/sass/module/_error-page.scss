@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.error-page-body {
+	background-color: $color-accent;
+
+}
+
+.error-page {
+	padding-top: rem(80);
+	background-image: url('../images/sub/error-page_sp.png');
+	background-repeat: no-repeat;
+	background-size: rem(345) rem(345);
+	background-position: center rem(80);
+
+	@include mq('md') {
+		padding-top: rem(90);
+		padding-bottom: rem(150);
+		background-image: url('../images/sub/error-page_pc.png');
+		background-size: rem(698) rem(698);
+		background-position: calc(50% - rem(190)) rem(90);
+	}
+}
+
+.error-page__inner {}
+
+.error-page__content {
+	margin-top: rem(52);
+	text-align: center;
+
+	@include mq('md') {
+		margin-top: rem(128);
+	}
+}
+
+.error-page__sub-title {
+	font-family: $font-family-lato;
+	font-size: rem(80);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0.5em;
+	line-height: 1;
+	color: $color-white;
+	text-indent: 0.5em;
+
+	@include mq('md') {
+		font-size: rem(160);
+	}
+}
+
+.error-page__text-wrap {
+	margin-top: rem(2);
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0em;
+	line-height: calc(24 / 16);
+	color: $color-white;
+
+	@include mq('md') {
+		margin-top: rem(37);
+	}
+}
+
+.error-page__text {}
+
+.error-page__title {
+	font-size: rem(16);
+	font-weight: normal;
+}
+
+.error-page__btn {
+	margin-top: rem(40);
+
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}

@@ -13,6 +13,13 @@
 	}
 }
 
+.footer.footer--error-page {
+	@include mq('md') {
+		margin-top: rem(80);
+		padding-top: rem(0);
+	}
+}
+
 .footer__inner.inner {
 	max-width: rem(415);
 

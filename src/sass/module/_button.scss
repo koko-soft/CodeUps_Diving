@@ -17,6 +17,11 @@
 
 }
 
+.button.button--white {
+	background-color: $color-white;
+	border: 1px solid $color-white;
+}
+
 .button::after {
 	position: absolute;
 	top: 0;
@@ -29,6 +34,10 @@
 	transform-origin: left top;
 	transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 	z-index: -1;
+}
+
+.button.button--white::after {
+	background-color: $color-accent;
 }
 
 .button:hover {
@@ -50,6 +59,17 @@
 
 }
 
+.button.button--white:hover {
+	p {
+		color: $color-white;
+	}
+
+	p::after,
+	p::before {
+		background-color: $color-white;
+	}
+}
+
 .button::before {
 	position: absolute;
 	bottom: -4px;
@@ -61,6 +81,9 @@
 	z-index: -2;
 }
 
+.button.button--white::before {
+	border: 1px solid $color-white;
+}
 
 .button p {
 	position: relative;
@@ -76,6 +99,10 @@
 
 }
 
+.button.button--white p {
+	color: $color-accent;
+}
+
 .button p::before,
 .button p::after {
 	position: absolute;
@@ -83,6 +110,11 @@
 	background-color: $color-white;
 	border-radius: 50%;
 	transition: background-color 0.3s ease;
+}
+
+.button.button--white p::before,
+.button.button--white p::after {
+	background-color: $color-accent;
 }
 
 .button p::before {
