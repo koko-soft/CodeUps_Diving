@@ -1,8 +1,9 @@
 @use "global" as *;
 
 .campaign-cards {
-	display: grid;
-	grid-auto-flow: column;
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(40);
 }
 
 .campaign-cards__card {}
