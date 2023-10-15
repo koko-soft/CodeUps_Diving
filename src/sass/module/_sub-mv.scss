@@ -35,6 +35,14 @@
 	}
 }
 
+.sub-mv--sub-campaign {
+	background-image: url(../images/sub/sub-mv_campaign_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_campaign_pc.jpg);
+	}
+}
+
 .sub-mv__title {
 	padding-top: rem(200);
 	display: flex;

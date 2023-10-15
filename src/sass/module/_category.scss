@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.category {}
+
+.category__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(16) rem(21);
+
+	@include mq('md') {
+		gap: rem(24) rem(32);
+	}
+}
+
+.category__item {
+	padding: rem(5);
+	display: inline-block;
+	min-width: rem(162);
+	transition: background-color 0.3s, color 0.3s;
+	background-color: $color-white;
+	border: 1px solid $color-accent;
+	text-align: center;
+	font-family: $font-family-jp-sans;
+	font-size: rem(14);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	line-height: calc(22 / 14);
+	color: $color-accent;
+}
+
+.category__item:hover {
+	background-color: $color-accent;
+	color: $color-white;
+}
+
+.category__item--current {
+	background-color: $color-accent;
+	color: $color-white;
+}

@@ -197,8 +197,10 @@
 
 //下層ページ
 .campaign-card--sub-page {
+	width: 100%;
+
 	@include mq('md') {
-		width: rem(520);
+		width: 100%;
 	}
 }
 
@@ -228,9 +230,11 @@
 }
 
 .campaign-card__wrap--sub-page {
-	@include mq('md') {
-		justify-content: center;
+	margin-left: rem(0);
+	justify-content: center;
+	gap: rem(18);
 
+	@include mq('md') {
 		margin-left: rem(0);
 		gap: rem(40);
 	}

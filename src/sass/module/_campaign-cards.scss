@@ -1,9 +1,19 @@
 @use "global" as *;
 
 .campaign-cards {
-	display: flex;
-	flex-wrap: wrap;
-	gap: rem(40);
+	display: grid;
+	grid-auto-flow: column;
 }
 
 .campaign-cards__card {}
+
+.campaign-cards--sub-page {
+	grid-auto-flow: initial;
+	display: grid;
+	gap: rem(40);
+
+	@include mq('md') {
+		grid-template-columns: 1fr 1fr;
+		gap: rem(80) rem(40);
+	}
+}
