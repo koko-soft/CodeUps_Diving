@@ -272,6 +272,23 @@ jQuery(function ($) {
 		});
 	});
 
+	// modal --- open
+	$(".js-modal").click(function () {
+		$(".js-modal-background").html($(this).prop("outerHTML"));
+		$(".js-modal-background").fadeIn(150);
+		scrollLock();
+		$(".js-modal-background .sub-about__item").addClass("active");
+	});
+
+	// modal --- close
+	$(".js-modal-background").click(function () {
+		$(".js-modal-background").fadeOut(150, function () {
+			scrollUnlock();
+			$(".sub-about__item").removeClass("active");
+		});
+	});
+
+
 	document.cookie = "cookie_name=cookie_value; expires=Sun, 01 Jan 2023 00:00:00 UTC; path=/; domain=codeups.com; secure; samesite=None";
 
 });

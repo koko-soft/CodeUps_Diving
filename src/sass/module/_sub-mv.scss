@@ -3,7 +3,7 @@
 .sub-mv {
 	height: rem(460);
 	background-repeat: no-repeat;
-
+	background-position: center center;
 	background-size: cover;
 
 	@include mq('md') {
