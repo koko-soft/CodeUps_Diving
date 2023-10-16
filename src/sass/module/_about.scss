@@ -164,7 +164,7 @@
 .about__subtitle--sub-page {
 	position: absolute;
 	top: 1%;
-	left: calc(50% - min(42.1vw, rem(256)));
+	left: calc(50% - min(39.6vw, rem(256)));
 
 	@include mq('md') {
 		position: initial;
@@ -175,4 +175,10 @@
 
 .about__subtitle-text--sub-page {
 	color: $color-white;
+}
+
+.about__body--sub-page {
+	@include mq('md') {
+		margin-top: rem(24);
+	}
 }
