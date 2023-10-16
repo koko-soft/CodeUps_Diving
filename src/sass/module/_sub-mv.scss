@@ -11,6 +11,22 @@
 	}
 }
 
+.sub-mv--sub-campaign {
+	background-image: url(../images/sub/sub-mv_campaign_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_campaign_pc.jpg);
+	}
+}
+
+.sub-mv--page-sub-about {
+	background-image: url(../images/sub/sub-mv_about_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_about_pc.jpg);
+	}
+}
+
 .sub-mv.sub-mv--page-blog {
 	background-image: url(../images/sub/sub-mv_blog_sp.jpg);
 
@@ -32,14 +48,6 @@
 
 	@include mq('md') {
 		background-image: url(../images/sub/sub-mv_privacy_pc.jpg);
-	}
-}
-
-.sub-mv--sub-campaign {
-	background-image: url(../images/sub/sub-mv_campaign_sp.jpg);
-
-	@include mq('md') {
-		background-image: url(../images/sub/sub-mv_campaign_pc.jpg);
 	}
 }
 
