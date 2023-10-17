@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.sub-voice {}
+
+.sub-voice__inner {}
+
+.sub-voice__contents {
+	margin-top: rem(40);
+}
+
+.sub-voice__cards {}
+
+.sub-voice__wp-pagenavi {
+	margin-top: rem(80);
+
+	@include mq('md') {
+		margin-top: rem(72);
+	}
+}

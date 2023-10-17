@@ -35,6 +35,14 @@
 	}
 }
 
+.sub-mv--sub-voice {
+	background-image: url(../images/sub/sub-mv_voice_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_voice_pc.jpg);
+	}
+}
+
 .sub-mv--sub-price {
 	background-image: url(../images/sub/sub-mv_price_sp.jpg);
 
