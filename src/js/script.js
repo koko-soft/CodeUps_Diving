@@ -288,6 +288,20 @@ jQuery(function ($) {
 		});
 	});
 
+	// accordion
+	$(function () {
+		$(".js-accordion-item:first-child .js-accordion-content").css(
+			"display",
+			"block"
+		);
+		$(".js-accordion-item:first-child .js-accordion-title").addClass(
+			"is-open"
+		);
+		$(".js-accordion-title").on("click", function () {
+			$(this).toggleClass("is-open");
+			$(this).next().slideToggle(300);
+		});
+	});
 
 	document.cookie = "cookie_name=cookie_value; expires=Sun, 01 Jan 2023 00:00:00 UTC; path=/; domain=codeups.com; secure; samesite=None";
 

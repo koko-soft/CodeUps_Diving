@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.accordion {}
+
+.accordion__list {}
+
+.accordion__item {}
+
+.accordion__item:not(:first-child) {
+	margin-top: rem(40);
+}
+
+.accordion__title {
+	padding: rem(16);
+	position: relative;
+	background-color: $color-accent;
+	cursor: pointer;
+
+	@include mq('md') {
+		padding: rem(2);
+	}
+}
+
+.accordion__title::before,
+.accordion__title::after {
+	position: absolute;
+	top: 50%;
+	right: rem(16);
+	display: block;
+	width: rem(28);
+	height: 1px;
+	content: "";
+	transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	background-color: $color-white;
+
+	@include mq('md') {
+		right: rem(40);
+		width: rem(32);
+	}
+}
+
+.accordion__title::before {
+	transform: rotate(0deg);
+}
+
+.accordion__title::after {
+	transform: rotate(90deg);
+}
+
+.accordion__title.is-open::after {
+	transform: rotate(0deg);
+	opacity: 0;
+}
+
+.accordion__title-text {
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	line-height: calc(23 / 16);
+	color: $color-white;
+
+	@include mq('md') {
+		padding: rem(24) rem(40);
+		font-size: rem(20);
+	}
+}
+
+.accordion__content {
+	padding: rem(23) rem(16);
+	border: 1px solid $color-accent;
+	display: none;
+
+	@include mq('md') {
+		margin-top: rem(16);
+		padding: rem(39) rem(40);
+	}
+}
+
+.accordion__text {
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	line-height: calc(23 / 16);
+	color: $color-text;
+}

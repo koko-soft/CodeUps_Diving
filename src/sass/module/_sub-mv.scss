@@ -43,6 +43,14 @@
 	}
 }
 
+.sub-mv--sub-faq {
+	background-image: url(../images/sub/sub-mv_faq_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_faq_pc.jpg);
+	}
+}
+
 .sub-mv.sub-mv--page-contact {
 	background-image: url(../images/sub/sub-mv_contact_sp.jpg);
 
