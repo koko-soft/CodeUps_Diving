@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.site-map {}
+
+.site-map__inner.inner {
+	max-width: rem(415);
+
+	@include mq('md') {
+		max-width: $inner + strip-unit($padding-pc) * 2;
+	}
+}
+
+.site-map__menu {}

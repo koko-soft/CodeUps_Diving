@@ -56,7 +56,6 @@
 	height: rem(18);
 	background-image: url('../images/common/icon_starfish.png');
 	background-size: contain;
-
 }
 
 .menu__list {
@@ -78,4 +77,30 @@
 	letter-spacing: 0;
 	line-height: calc(18 / 16);
 	color: $color-white;
+}
+
+.menu--sub-page {
+	column-gap: min(vw(375, 29), rem(40));
+
+	@include mq('md') {
+		column-gap: min(vw(1440, 144), rem(144));
+	}
+}
+
+.menu__column-wrap--sub-page {
+	@include mq('md') {
+		column-gap: min(vw(1440, 144), rem(144));
+	}
+}
+
+.menu__title--sub-page a {
+	color: $color-text;
+}
+
+.menu__list--sub-page a {
+	color: $color-text;
+}
+
+.menu__title--sub-page a::before {
+	background-image: url('../images/common/icon_starfish_black.png');
 }
