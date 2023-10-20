@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.toggle {}
+
+.toggle::before {
+	margin-right: 0.45em;
+	content: "";
+	display: inline-block;
+	border-style: solid;
+	border-width: 0.45em 0 0.45em 0.8em;
+	border-color: transparent transparent transparent $color-accent;
+	transition: transform 0.3s;
+}
+
+.toggle.is-active::before {
+	transform: rotate(90deg);
+}

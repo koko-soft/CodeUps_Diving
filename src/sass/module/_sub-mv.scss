@@ -11,7 +11,7 @@
 	}
 }
 
-.sub-mv--sub-campaign {
+.sub-mv.sub-mv--sub-campaign {
 	background-image: url(../images/sub/sub-mv_campaign_sp.jpg);
 
 	@include mq('md') {
@@ -19,7 +19,7 @@
 	}
 }
 
-.sub-mv--page-sub-about {
+.sub-mv.sub-mv--page-sub-about {
 	background-image: url(../images/sub/sub-mv_about_sp.jpg);
 
 	@include mq('md') {
@@ -27,7 +27,7 @@
 	}
 }
 
-.sub-mv.sub-mv--page-blog {
+.sub-mv.sub-mv--sub-blog {
 	background-image: url(../images/sub/sub-mv_blog_sp.jpg);
 
 	@include mq('md') {
@@ -35,7 +35,7 @@
 	}
 }
 
-.sub-mv--sub-voice {
+.sub-mv.sub-mv--sub-voice {
 	background-image: url(../images/sub/sub-mv_voice_sp.jpg);
 
 	@include mq('md') {
@@ -43,7 +43,7 @@
 	}
 }
 
-.sub-mv--sub-price {
+.sub-mv.sub-mv--sub-price {
 	background-image: url(../images/sub/sub-mv_price_sp.jpg);
 
 	@include mq('md') {
@@ -51,7 +51,7 @@
 	}
 }
 
-.sub-mv--sub-faq {
+.sub-mv.sub-mv--sub-faq {
 	background-image: url(../images/sub/sub-mv_faq_sp.jpg);
 
 	@include mq('md') {
@@ -59,7 +59,7 @@
 	}
 }
 
-.sub-mv--site-map {
+.sub-mv.sub-mv--site-map {
 	background-image: url(../images/sub/sub-mv_site-map_sp.jpg);
 
 	@include mq('md') {

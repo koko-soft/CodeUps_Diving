@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.blog-archive {
+	font-family: $font-family-jp-sans;
+	font-weight: $font-weight-regular;
+	font-size: rem(24);
+	letter-spacing: 0;
+	line-height: 1.6;
+	color: $color-accent;
+}
+
+.blog-archive__months {
+	margin-left: 1.15em;
+	display: none;
+}
+
+.blog-archive__months a {
+	display: block;
+}
+
+.blog-archive__year {
+
+	cursor: pointer;
+}

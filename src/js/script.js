@@ -303,6 +303,12 @@ jQuery(function ($) {
 		});
 	});
 
+	// blog-archive
+	$(".js-blog-archive .blog-archive__year p").on("click", function () {
+		$(this).next(".blog-archive__months").slideToggle();
+		$(this).toggleClass("is-active");
+	});
+
 	document.cookie = "cookie_name=cookie_value; expires=Sun, 01 Jan 2023 00:00:00 UTC; path=/; domain=codeups.com; secure; samesite=None";
 
 });

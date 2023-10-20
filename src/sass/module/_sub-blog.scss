@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.sub-blog {}
+
+.sub-blog__inner {}
+
+.sub-blog__container {
+	@include mq('md') {
+		display: grid;
+		column-gap: rem(80);
+		grid-template-columns: 2.4fr 1fr;
+	}
+}
+
+.sub-blog__main {}
+
+.sub-blog__cards {}
+
+.sub-blog__wp-pagenavi {
+	margin-top: rem(80);
+}
+
+.sub-blog__aside {
+	margin-top: rem(80);
+	// margin-left: auto;
+	// margin-right: auto;
+	max-width: rem(294);
+
+	@include mq('md') {
+		margin-top: 0;
+		max-width: 100%;
+	}
+}
