@@ -21,24 +21,23 @@
 	height: inherit;
 }
 
-.mv__swiper-wrapper {
+.mv__swiper .swiper-wrapper {
 	height: inherit;
 }
 
-.mv__swiper-img {
+.mv__swiper .swiper-slide {
 	height: inherit;
 }
 
-.mv__swiper-img picture {
+.mv__swiper .swiper-slide picture {
 	height: inherit;
 }
 
-.mv__swiper-img source {
+.mv__swiper .swiper-slide source {
 	height: inherit;
 }
 
-.mv__swiper-img picture img {
+.mv__swiper .swiper-slide picture img {
 	height: inherit;
 	object-fit: cover;
-
 }
