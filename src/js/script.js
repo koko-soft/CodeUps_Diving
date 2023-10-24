@@ -177,18 +177,19 @@ jQuery(function ($) {
 			delay: 2000,
 			disableOnInteraction: false,
 		},
-		speed: 1500,
+		speed: 1000,
 		navigation: {
 			nextEl: ".campaign__button-prev",
 			prevEl: ".campaign__button-next",
 		},
 		slidesPerView: 'auto',
-		spaceBetween: 24,
+		spaceBetween: 42,
 		breakpoints: {
 			768: {
-				spaceBetween: 40,
+				spaceBetween: 59,
 			}
-		}
+		},
+
 	});
 
 	// ToTop

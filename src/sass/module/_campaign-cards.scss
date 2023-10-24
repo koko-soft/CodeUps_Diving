@@ -5,7 +5,13 @@
 	grid-auto-flow: column;
 }
 
-.campaign-cards__card {}
+.campaign-cards__card {
+	max-width: rem(280);
+
+	@include mq('md') {
+		max-width: rem(333);
+	}
+}
 
 .campaign-cards--sub-page {
 	grid-auto-flow: initial;

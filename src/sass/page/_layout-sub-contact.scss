@@ -4,17 +4,28 @@
 	margin-top: rem(106);
 }
 
-.layout-sub-contact--sub-price {
+.layout-sub-contact.layout-sub-contact--sub-price {
 	margin-top: rem(137);
 }
 
-.layout-sub-contact--site-map{
+.layout-sub-contact.layout-sub-contact--site-map {
 	margin-top: rem(98);
+
 	@include mq('md') {
 		margin-top: rem(140);
 	}
 }
 
+.layout-sub-contact.layout-sub-contact--privacy {
+	@include mq('md') {
+		margin-top: rem(137);
+	}
+}
+
 .layout-sub-contact.layout-sub-contact--terms-of-service {
-	margin-top: rem(136);
+	margin-top: rem(107);
+
+	@include mq('md') {
+		margin-top: rem(136);
+	}
 }
