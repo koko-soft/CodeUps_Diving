@@ -232,3 +232,40 @@
 		padding: 0 rem(24);
 	}
 }
+
+//下層ページ Blog aside
+.campaign-card--home .campaign-card__img img {
+	aspect-ratio: 294 / 188;
+}
+
+.campaign-card--home .campaign-card__body {
+	padding: rem(12) rem(16) 0;
+
+}
+
+.campaign-card--home .campaign-card__title {
+	text-align: center;
+}
+
+.campaign-card--home .campaign-card__offer {
+	margin-top: rem(10);
+	font-size: rem(14);
+}
+
+.campaign-card--home .campaign-card__foot {
+	padding: 0 rem(16) rem(25);
+}
+
+.campaign-card--home .campaign-card__original-price-text {
+	font-size: rem(20);
+}
+
+.campaign-card--home .campaign-card__sale-price-text {
+	font-size: rem(32);
+}
+
+.campaign-card--home .campaign-card__wrap {
+	margin-left: 0px;
+	justify-content: center;
+	gap: rem(16);
+}
