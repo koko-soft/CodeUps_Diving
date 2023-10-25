@@ -7,3 +7,11 @@
 		margin-top: rem(141);
 	}
 }
+
+.layout-sub-blog.layout-sub-blog--post {
+	margin-top: rem(41);
+
+	@include mq('md') {
+		margin-top: rem(140);
+	}
+}

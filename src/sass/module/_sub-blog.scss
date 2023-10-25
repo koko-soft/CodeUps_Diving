@@ -30,6 +30,14 @@
 	margin-right: rem(-6);
 }
 
+.sub-blog__wp-pagenavi.sub-blog__wp-pagenavi--post {
+	margin-top: rem(40);
+
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}
+
 .sub-blog__aside {
 	margin-top: rem(80);
 	padding-left: rem(25);
@@ -39,5 +47,104 @@
 		margin-top: 0;
 		padding-left: 0;
 		padding-right: 0;
+	}
+}
+
+//ブログ詳細
+.sub-blog__main.sub-blog__main--post {
+	padding-left: 0;
+	padding-right: 0;
+
+	@include mq('md') {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.sub-blog__post {
+	time {
+		font-family: $font-family-eng;
+		font-size: rem(14);
+		font-weight: $font-weight-regular;
+		letter-spacing: 0;
+		line-height: 1;
+		color: $color-text;
+		vertical-align: super;
+	}
+
+	h2 {
+		margin-top: rem(4);
+		padding-bottom: rem(3);
+		position: relative;
+		font-family: $font-family-jp-sans;
+		font-size: rem(24);
+		font-weight: $font-weight-medium;
+		letter-spacing: 0;
+		// line-height: calc( / );
+		color: $color-text;
+
+		@include mq('md') {
+			margin-top: rem(2);
+			padding-bottom: 0;
+			font-size: rem(32);
+		}
+	}
+
+	h2::after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $color-accent;
+	}
+
+	img {
+		margin-top: rem(24);
+
+		@include mq('md') {
+			margin-top: rem(40);
+		}
+	}
+
+	p {
+		margin-top: rem(24);
+		font-family: $font-family-jp-sans;
+		font-size: rem(16);
+		font-weight: $font-weight-regular;
+		letter-spacing: 0;
+		line-height: calc(24 / 16);
+		color: $color-text;
+
+		@include mq('md') {
+			margin-top: rem(40);
+		}
+	}
+
+	ul {
+		margin-top: rem(24);
+
+		@include mq('md') {
+			margin-top: rem(40);
+		}
+
+		li {
+			padding-left: rem(27);
+			background-image: url('../images/common/icon_starfish_green.png');
+			background-position: center left;
+			background-repeat: no-repeat;
+			background-size: rem(18) rem(18);
+			font-family: $font-family-jp-sans;
+			font-size: rem(16);
+			font-weight: $font-weight-regular;
+			letter-spacing: 0;
+			line-height: calc(24 / 16);
+			color: $color-text;
+		}
+
+		li:not(:first-child) {
+			margin-top: rem(4);
+		}
 	}
 }

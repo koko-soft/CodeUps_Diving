@@ -85,3 +85,13 @@
 		display: inline-block;
 	}
 }
+
+.wp-pagenavi.sub-blog__wp-pagenavi--post> :first-child {
+	margin-left: 0;
+	margin-right: rem(41);
+}
+
+.wp-pagenavi.sub-blog__wp-pagenavi--post> :last-child {
+	margin-left: rem(41);
+	margin-right: 0;
+}
