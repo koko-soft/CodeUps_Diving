@@ -59,14 +59,6 @@
 	}
 }
 
-.sub-mv.sub-mv--site-map {
-	background-image: url(../images/sub/sub-mv_site-map_sp.jpg);
-
-	@include mq('md') {
-		background-image: url(../images/sub/sub-mv_site-map_pc.jpg);
-	}
-}
-
 .sub-mv.sub-mv--page-contact {
 	background-image: url(../images/sub/sub-mv_contact_sp.jpg);
 
@@ -75,11 +67,11 @@
 	}
 }
 
-.sub-mv.sub-mv--page-privacy {
-	background-image: url(../images/sub/sub-mv_privacy_sp.jpg);
+.sub-mv.sub-mv--site {
+	background-image: url(../images/sub/sub-mv_site_sp.jpg);
 
 	@include mq('md') {
-		background-image: url(../images/sub/sub-mv_privacy_pc.jpg);
+		background-image: url(../images/sub/sub-mv_site_pc.jpg);
 	}
 }
 
