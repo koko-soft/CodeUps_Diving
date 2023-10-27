@@ -15,7 +15,7 @@
 	}
 }
 
-.site-policy__text {
+.site-policy__content {
 	margin-top: rem(38);
 
 	font-family: $font-family-jp-sans;
@@ -26,14 +26,12 @@
 	color: $color-text;
 }
 
-.site-policy__text-paragraph {
-	margin-top: rem(32);
-}
 
-.site-policy__text-paragraph ol {
+.site-policy__content p {}
+
+.site-policy__content ol {
 	list-style: decimal;
 
-	li {
 		margin-left: 1.5em;
 	}
 
@@ -42,7 +40,7 @@
 	}
 }
 
-.site-policy__text-paragraph ul {
+.site-policy__content ul {
 	li {
 		display: inline;
 	}
@@ -52,6 +50,6 @@
 	}
 }
 
-.site-policy__text-paragraph span {
+.site-policy__content span {
 	margin-right: 0.2rem;
 }
