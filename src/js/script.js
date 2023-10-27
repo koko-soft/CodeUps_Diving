@@ -278,14 +278,14 @@ jQuery(function ($) {
 		$(".js-modal-background").html($(this).prop("outerHTML"));
 		$(".js-modal-background").fadeIn(150);
 		scrollLock();
-		$(".js-modal-background .sub-about__item").addClass("active");
+		$(".js-modal-background .gallery__item").addClass("active");
 	});
 
 	// modal --- close
 	$(".js-modal-background").click(function () {
 		$(".js-modal-background").fadeOut(150, function () {
 			scrollUnlock();
-			$(".sub-about__item").removeClass("active");
+			$(".gallery__item").removeClass("active");
 		});
 	});
 

@@ -157,13 +157,13 @@
 
 .about__content--sub-page {
 	@include mq('md') {
-		top: 8.3%;
+		top: 30.6%;
 	}
 }
 
 .about__subtitle--sub-page {
 	position: absolute;
-	top: 0.65%;
+	top: 5.4%;
 	left: calc(50% - min(39.6vw, rem(256)));
 
 	@include mq('md') {
