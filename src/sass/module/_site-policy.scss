@@ -30,9 +30,9 @@
 .site-policy__content p {}
 
 .site-policy__content ol {
-	list-style: decimal;
-
+	li {
 		margin-left: 1.5em;
+		list-style: decimal;
 	}
 
 	li::marker {
