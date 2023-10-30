@@ -6,12 +6,11 @@
 
 .tab__button-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(rem(100), 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	gap: rem(16) vw(375, 19);
 
 	@include mq('md') {
-		grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));
-		gap: rem(16) min(vw(1440, 90), rem(90));
+		gap: rem(24) min(vw(1440, 90), rem(90));
 	}
 }
 
