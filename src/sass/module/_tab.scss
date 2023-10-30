@@ -31,10 +31,6 @@
 	}
 }
 
-.tab__button.is-active {
-	background-color: $color-accent;
-}
-
 .tab__button::before {
 	@include mq('md') {
 		content: "";
@@ -46,10 +42,18 @@
 	}
 }
 
+.tab__button.is-active {
+	background-color: $color-accent;
+}
+
 .tab__button.is-active::before {
 	@include mq('md') {
 		background-image: url('../images/sub/img-whale_pc.png');
 	}
+}
+
+.tab__button.is-active .tab__button-title {
+	color: $color-white;
 }
 
 .tab__button-img {
@@ -82,10 +86,6 @@
 		margin-left: rem(8);
 		font-size: rem(24);
 	}
-}
-
-.tab__button.is-active .tab__button-title {
-	color: $color-white;
 }
 
 .tab__contents {
@@ -140,18 +140,3 @@
 	width: 100%;
 	height: 100%;
 }
-
-// .tab__items {
-// 	display: flex;
-// 	flex-direction: column;
-// 	gap: rem(37);
-
-// 	@include mq('md') {
-// 		flex-direction: row;
-// 		gap: rem(20);
-// 	}
-// }
-
-// .tab__img {
-// 	margin-top: 24px;
-// }
