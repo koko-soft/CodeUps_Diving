@@ -305,23 +305,136 @@ jQuery(function ($) {
 	});
 
 	// tab
-	$(function () {
+	// $(function () {
 
-		$(".js-tab-content").removeClass("is-active");
-		$(".js-tab-content:first-of-type").addClass("is-active");
+	// 	$(".js-tab-content").removeClass("is-active");
+	// 	$(".js-tab-content:first-of-type").addClass("is-active");
+
+	// 	const tabButton = $(".js-tab-button");
+	// 	const tabContent = $(".js-tab-content");
+
+	// 	tabButton.on("click", function () {
+
+	// 		let index = tabButton.index(this);
+	// 		tabButton.removeClass("is-active");
+	// 		$(this).addClass("is-active");
+	// 		tabContent.eq(index).addClass("is-active");
+	// 		tabContent.hide().eq(index).fadeIn(300);
+	// 	});
+	// });
+
+	//tab スクロール
+	//クリックイベントを監視
+	$(document).ready(function () {
+
+		//page-info.html内でタブをクリックしたとき
+		$(".js-tab-button").click(function (e) {
+			// alert("click");
+			// alert(window.localStorage.hash);
+
+			//通常のページ遷移をキャンセル
+			e.preventDefault();
+
+			//id属性をハッシュ値にセット（例：#tab1）
+			var hash = "#" + $(this).attr("id");
+			console.log("タブがクリックされました：" + hash);
+			window.localStorage.hash = hash;
+
+			// alert("タブがクリックされました：ハッシュ：" + window.localStorage.hash);
+
+			activeInfoTab(hash);
+
+		});
+
+		//別ページから/sub-info.htmlを開いたとき
+		var currentURL = window.location.pathname;
+
+		if (currentURL === "/sub-info.html") {
+			// /sub-info.htmlが開かれたときのみ実行される処理をこちらに書く
+			console.log(currentURL);
+			activeInfoTab();
+		}
+
+
+	});
+
+	$(document).ready(function () {
+
+		//別ページから/page-info.htmlを開いたとき
+		var currentURL = window.location.pathname;
+		// alert(currentURL);
+		console.log(currentURL);
+
+		if (currentURL === "/page-info.html") {
+			// console.log("activeInfoTab");
+			// /sub-info.htmlが開かれたときのみ実行される処理をこちらに書く
+			var hash = window.location.hash;
+			console.log(hash);
+			activeInfoTab(hash);
+		}
+
+
+	});
+
+	//自分のページ内でメニューをクリックしたとき
+
+
+
+	// //ハッシュ値が変更されたら
+	// $(window).on("hashchange", function () {
+	// 	activeInfoTab();
+	// });
+	function activeInfoTab(hash = "") {
+		console.log("activeInfoTab：hash：" + hash);
+		// alert("activeInfoTab()" + window.localStorage.hash);
+
+		//現在のハッシュを取得
+		// var hash = window.location.hash;
 
 		const tabButton = $(".js-tab-button");
 		const tabContent = $(".js-tab-content");
+		var index = 0;
 
-		tabButton.on("click", function () {
+		//全ての表示を初期化
+		tabButton.removeClass("is-active");
+		tabContent.removeClass("is-active");
 
-			let index = tabButton.index(this);
-			tabButton.removeClass("is-active");
-			$(this).addClass("is-active");
-			tabContent.eq(index).addClass("is-active");
-			tabContent.hide().eq(index).fadeIn(300);
-		});
-	});
+		if (hash !== "") {
+			//id属性にhashを持つクラスのインデックスを取得
+			index = tabButton.index($(hash))
+			// console.log("hashがあります：" + hash);
+			// var index = tabButton.index(hash);
+			// console.log("インデックス番号：" + index);
+			//取得できなければ1番初めのタブをアクティブ化
+			if (index < 0) {
+				index = 0;
+			}
+
+		} else {
+			// alert("hashがありません");
+
+			//ハッシュがなければ1番初めのタブをアクティブ化
+			index = 0;
+			// tabButton.first().addClass("is-active");
+			// tabContent.first().addClass("is-active");
+			// tabContent.hide().first().fadeIn(300);
+		}
+
+		tabButton.eq(index).addClass("is-active");
+		tabContent.eq(index).addClass("is-active");
+		tabContent.hide().eq(index).fadeIn(300);
+		// $(".js-tab-content:first-of-type").addClass("is-active");
+
+
+		// 	tabButton.on("click", function () {
+
+		// 		let index = tabButton.index(this);
+		// 		tabButton.removeClass("is-active");
+		// 		$(this).addClass("is-active");
+		// 		tabContent.eq(index).addClass("is-active");
+		// 		tabContent.hide().eq(index).fadeIn(300);
+		// 	});
+	};
 
 	// blog-archive toggle
 	$(".js-blog-archive .blog-archive__year p").on("click", function () {
