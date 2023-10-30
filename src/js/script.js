@@ -304,7 +304,26 @@ jQuery(function ($) {
 		});
 	});
 
-	// blog-archive
+	// tab
+	$(function () {
+
+		$(".js-tab-content").removeClass("is-active");
+		$(".js-tab-content:first-of-type").addClass("is-active");
+
+		const tabButton = $(".js-tab-button");
+		const tabContent = $(".js-tab-content");
+
+		tabButton.on("click", function () {
+
+			let index = tabButton.index(this);
+			tabButton.removeClass("is-active");
+			$(this).addClass("is-active");
+			tabContent.eq(index).addClass("is-active");
+			tabContent.hide().eq(index).fadeIn(300);
+		});
+	});
+
+	// blog-archive toggle
 	$(".js-blog-archive .blog-archive__year p").on("click", function () {
 		$(this).next(".blog-archive__months").slideToggle();
 		$(this).toggleClass("is-active");

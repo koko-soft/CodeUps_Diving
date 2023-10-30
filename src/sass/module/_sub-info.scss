@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.sub-info {}
+
+.sub-info__inner {}
+
+.sub-info__content {
+	margin-top: rem(0);
+
+	@include mq('md') {
+		margin-top: rem(0);
+	}
+}
+
+.sub-info__tab {}
