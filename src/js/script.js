@@ -329,18 +329,13 @@ jQuery(function ($) {
 
 		//page-info.html内でタブをクリックしたとき
 		$(".js-tab-button").click(function (e) {
-			// alert("click");
-			// alert(window.localStorage.hash);
 
 			//通常のページ遷移をキャンセル
 			e.preventDefault();
 
 			//id属性をハッシュ値にセット（例：#tab1）
 			var hash = "#" + $(this).attr("id");
-			console.log("タブがクリックされました：" + hash);
 			window.localStorage.hash = hash;
-
-			// alert("タブがクリックされました：ハッシュ：" + window.localStorage.hash);
 
 			activeInfoTab(hash);
 
@@ -351,7 +346,6 @@ jQuery(function ($) {
 
 		if (currentURL === "/sub-info.html") {
 			// /sub-info.htmlが開かれたときのみ実行される処理をこちらに書く
-			console.log(currentURL);
 			activeInfoTab();
 		}
 
@@ -362,32 +356,62 @@ jQuery(function ($) {
 
 		//別ページから/page-info.htmlを開いたとき
 		var currentURL = window.location.pathname;
-		// alert(currentURL);
-		console.log(currentURL);
 
 		if (currentURL === "/page-info.html") {
-			// console.log("activeInfoTab");
 			// /sub-info.htmlが開かれたときのみ実行される処理をこちらに書く
 			var hash = window.location.hash;
-			console.log(hash);
 			activeInfoTab(hash);
 		}
 
+		//自分のページ内でメニューをクリックしたとき
+		//ハッシュ値が変更されたら
+		$(window).on("hashchange", function () {
+			var hash = window.location.hash;
+			activeInfoTab(hash);
+		});
+
+		//ページ内リンク（全ページ共通の処理）
+		var currentPage = window.location.pathname;
+		$('a[href^="' + currentPage + '#"]').click(function (event) {
+			// $('a[href^="#"]').click(function () {
+
+			//現在のページのURLを取得
+
+			//リンクのURLを取得
+			var linkPath = $(this).prop('pathname');
+
+			//現在のページとリンクが同じである場合のみスムーズスクロールを適用
+			if (currentPage === linkPath) {
+				//デフォルトのアクションを防ぐ
+				// event.preventDefault();
+
+				//idがあればそこへスクロール
+				//idがなければ一番上へスクロール
+				const headerHeight = $(".js-header").height();
+				// $("main").css("margin-top", headerHeight);
+				// let id = $(this).attr('href').split('#')[1];
+				// let target = $('#' + id).offset().top; // 対象となる要素の位置を取得
+				let href = $(this).attr("href").replace(currentPage, "");
+				let target = $(href == "#" || href == "" ? "html" : href);
+				let position = target.offset().top - headerHeight;
+
+
+				//下層Infoページはタブの切り替えを行う
+				if (currentPage === "/page-info.html") {
+					activeInfoTab(href);
+				}
+
+				$("body,html").animate({ scrollTop: position }, speed);
+
+				return false;
+			}
+		});
 
 	});
 
-	//自分のページ内でメニューをクリックしたとき
 
 
-
-	// //ハッシュ値が変更されたら
-	// $(window).on("hashchange", function () {
-	// 	activeInfoTab();
-	// });
 	function activeInfoTab(hash = "") {
-		console.log("activeInfoTab：hash：" + hash);
-		// alert("activeInfoTab()" + window.localStorage.hash);
-
 		//現在のハッシュを取得
 		// var hash = window.location.hash;
 
@@ -402,17 +426,13 @@ jQuery(function ($) {
 		if (hash !== "") {
 			//id属性にhashを持つクラスのインデックスを取得
 			index = tabButton.index($(hash))
-			// console.log("hashがあります：" + hash);
 			// var index = tabButton.index(hash);
-			// console.log("インデックス番号：" + index);
 			//取得できなければ1番初めのタブをアクティブ化
 			if (index < 0) {
 				index = 0;
 			}
 
 		} else {
-			// alert("hashがありません");
-
 			//ハッシュがなければ1番初めのタブをアクティブ化
 			index = 0;
 			// tabButton.first().addClass("is-active");

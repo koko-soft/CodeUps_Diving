@@ -1,6 +1,12 @@
 @use "global" as *;
 
-.sub-info {}
+.sub-info {
+	scroll-padding-top: rem(80);
+
+	@include mq('md') {
+		scroll-padding-top: rem(90);
+	}
+}
 
 .sub-info__inner {}
 
