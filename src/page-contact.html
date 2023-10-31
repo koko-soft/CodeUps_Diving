@@ -245,23 +245,31 @@
             <div class="contact-form__body">
               <dl>
                 <dt><label for="userName">お名前<span>必須</span></label></dt>
-                <dd><input type="text" id="userName" name="name" value="" required></dd>
+                <dd><input type="text" id="userName" name="name" value="" required placeholder="沖縄　太郎"></dd>
               </dl>
               <dl>
                 <dt><label for="userEmail">メールアドレス<span>必須</span></label></dt>
-                <dd><input type="email" id="userEmail" name="mailAddress" value="" required></dd>
+                <dd><input type="email" id="userEmail" name="mailAddress" value="" required
+                    placeholder="aaa000@mail.com"></dd>
               </dl>
               <dl>
                 <dt><label for="userTel">電話番号<span>必須</span></label></dt>
-                <dd><input type="tel" id="userTel" name="tel" value="" required></dd>
+                <dd><input type="tel" id="userTel" name="tel" value="" required placeholder="000-0000-0000"></dd>
               </dl>
               <dl>
-                <dt><label for="userRadio">お問い合わせ項目<span>必須</span></label></dt>
-                <dd class="p-form__radio" id="userRadio">
+                <dt><label for="userCheck">お問い合わせ項目<span>必須</span></label></dt>
+                <!-- <dd>
                   <label><input type="radio" name="radio" value="ダイビング講習について" checked><span>ダイビング講習について</span></label>
                   <label><input type="radio" name="radio" value="ファンダイビングについて"><span>ファンデイビングについて</span></label>
                   <label><input type="radio" name="radio" value="体験ダイビングについて"><span>体験ダイビングについて</span></label>
                   <label><input type="radio" name="radio" value="スペシャルダイビングについて"><span>スペシャルダイビングについて</span></label>
+                </dd> -->
+                <dd>
+                  <label><input type="checkbox" name="checkbox[]" value="ダイビング講習について"><span>ダイビング講習について</span></label>
+                  <label><input type="checkbox" name="checkbox[]" value="ファンダイビングについて"><span>ファンデイビングについて</span></label>
+                  <label><input type="checkbox" name="checkbox[]" value="体験ダイビングについて"><span>体験ダイビングについて</span></label>
+                  <!-- <label><input type="checkbox" name="checkbox[]"
+                      value="スペシャルダイビングについて"><span>スペシャルダイビングについて</span></label> -->
                 </dd>
               </dl>
               <dl>
@@ -306,7 +314,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer--sub-contact">
     <div class="footer__inner inner">
       <div class="footer__head">
         <div class="footer__logoBlock">

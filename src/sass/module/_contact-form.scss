@@ -5,13 +5,49 @@
 .contact-form__body {}
 
 .contact-form__body dl {
-	padding-top: rem(24);
+	padding-top: rem(22);
 	padding-bottom: rem(24);
 	border-bottom: 1px dashed $color-accent;
+
+	@include mq('md') {
+		display: grid;
+		grid-template-columns: 31.3% 68.7%;
+		padding-top: rem(40);
+		padding-bottom: rem(39);
+	}
 }
 
 .contact-form__body dl:first-child {
 	padding-top: 0;
+}
+
+.contact-form__body dt {
+	font-family: $font-family-jp-sans;
+	font-size: rem(16);
+	font-weight: $font-weight-bold;
+	letter-spacing: 0;
+	color: $color-text;
+}
+
+.contact-form__body dt span {
+	margin-left: rem(8);
+	padding: rem(5) rem(19);
+	display: inline-block;
+	background-color: $color-red;
+	font-family: $font-family-jp-sans;
+	font-size: rem(12);
+	font-weight: $font-weight-regular;
+	letter-spacing: 40%;
+	line-height: 1;
+	color: $color-white;
+}
+
+.contact-form__body dd {
+	margin-top: rem(16);
+
+	@include mq('md') {
+		margin-top: 0;
+	}
 }
 
 .contact-form__footer {
@@ -22,7 +58,10 @@
 	}
 }
 
-.contact-form__privacy {}
+.contact-form__privacy {
+	display: flex;
+	justify-content: center;
+}
 
 .contact-form__btn {
 	margin-top: rem(24);

@@ -65,7 +65,7 @@
 .button-submit p {
 	position: absolute;
 	top: 50%;
-	left: 30%;
+	left: 27%;
 	transform: translateY(-50%);
 	font-family: $font-family-eng;
 	font-size: rem(14);
@@ -91,7 +91,7 @@
 	width: 40px;
 	height: 1px;
 	top: 0;
-	left: calc(100% + 8px);
+	left: calc(100% + rem(16));
 	transition: background-color 0.3s ease;
 }
 
@@ -99,6 +99,6 @@
 	width: 8px;
 	height: 1px;
 	top: -2px;
-	left: calc(100% + 41px);
+	left: calc(100% + rem(49));
 	transform: rotate(37deg);
 }
