@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.contact-form {}
+
+.contact-form__body {}
+
+.contact-form__body dl {
+	padding-top: rem(24);
+	padding-bottom: rem(24);
+	border-bottom: 1px dashed $color-accent;
+}
+
+.contact-form__body dl:first-child {
+	padding-top: 0;
+}
+
+.contact-form__footer {
+	margin-top: rem(40);
+
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}
+
+.contact-form__privacy {}
+
+.contact-form__btn {
+	margin-top: rem(24);
+	display: flex;
+	justify-content: center;
+
+	@include mq('md') {
+		margin-top: rem(40);
+	}
+
+}

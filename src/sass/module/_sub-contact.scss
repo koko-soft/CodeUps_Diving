@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.sub-contact {}
+
+.sub-contact__inner {}
+
+.sub-contact__error {
+	padding-left: 1em;
+	display: flex;
+	justify-content: center;
+
+	@include mq('md') {
+		padding-left: 0;
+	}
+}
+
+.sub-contact__error p {
+	text-align: left;
+	text-indent: -1em;
+	font-family: $font-family-jp-sans;
+	font-size: rem(14);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	// line-height: calc( / );
+	color: $color-red;
+
+	@include mq('md') {
+		text-indent: 0;
+		text-align: center;
+	}
+}
+
+.sub-contact__content {
+	margin-top: rem(40);
+}

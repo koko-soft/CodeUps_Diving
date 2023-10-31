@@ -1,0 +1,104 @@
+@use "global" as *;
+
+
+.button-submit {
+	position: relative;
+	width: 100%;
+	max-width: rem(202);
+	min-height: rem(54);
+	background-color: $color-accent;
+	border: 1px solid $color-accent;
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+
+.button-submit__body {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.button-submit::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: $color-white;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+.button-submit:hover {
+
+	opacity: 1;
+
+	&::after {
+		transform: scale(1, 1);
+	}
+
+	p {
+		color: $color-accent;
+	}
+
+	p::after,
+	p::before {
+		background-color: $color-accent;
+	}
+
+}
+
+.button-submit::before {
+	position: absolute;
+	bottom: -4px;
+	right: -4px;
+	width: 100%;
+	height: 100%;
+	border: 1px solid $color-accent;
+	content: '';
+	z-index: -2;
+}
+
+.button-submit p {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translateY(-50%);
+	font-family: $font-family-eng;
+	font-size: rem(14);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	line-height: 0;
+	color: $color-white;
+
+	transition: color 0.3s ease;
+
+}
+
+.button-submit p::before,
+.button-submit p::after {
+	position: absolute;
+	content: "";
+	background-color: $color-white;
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+}
+
+.button-submit p::before {
+	width: 40px;
+	height: 1px;
+	top: 0;
+	left: calc(100% + 8px);
+	transition: background-color 0.3s ease;
+}
+
+.button-submit p::after {
+	width: 8px;
+	height: 1px;
+	top: -2px;
+	left: calc(100% + 41px);
+	transform: rotate(37deg);
+}
