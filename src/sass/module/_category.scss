@@ -12,7 +12,7 @@
 	}
 }
 
-.category__item {
+.category__item button {
 	padding: rem(5);
 	display: inline-block;
 	min-width: rem(162);
@@ -28,12 +28,12 @@
 	color: $color-accent;
 }
 
-.category__item:hover {
+.category__item:hover button {
 	background-color: $color-accent;
 	color: $color-white;
 }
 
-.category__item--current {
+.category__item.category__item--current button {
 	background-color: $color-accent;
 	color: $color-white;
 }
