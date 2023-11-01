@@ -42,7 +42,19 @@
 	}
 }
 
-.tab__button:hover{
+.tab__button.tab__button--whale2::before {
+	@include mq('md') {
+		background-image: url('../images/sub/img-whale2_green.png');
+	}
+}
+
+.tab__button.tab__button--fish::before {
+	@include mq('md') {
+		background-image: url('../images/sub/img-fish_green.png');
+	}
+}
+
+.tab__button:hover {
 	opacity: 1;
 }
 
@@ -53,6 +65,18 @@
 .tab__button.is-active::before {
 	@include mq('md') {
 		background-image: url('../images/sub/img-whale_pc.png');
+	}
+}
+
+.tab__button.tab__button--whale2.is-active::before {
+	@include mq('md') {
+		background-image: url('../images/sub/img-whale2_white.png');
+	}
+}
+
+.tab__button.tab__button--fish.is-active::before {
+	@include mq('md') {
+		background-image: url('../images/sub/img-fish_white.png');
 	}
 }
 
