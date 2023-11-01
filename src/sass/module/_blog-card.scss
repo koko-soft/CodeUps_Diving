@@ -16,7 +16,10 @@
 }
 
 .blog-card__link:hover .blog-card__img img {
-	scale: 1.2;
+	@include mq('md') {
+		scale: 1.35;
+
+	}
 }
 
 .blog-card__img {

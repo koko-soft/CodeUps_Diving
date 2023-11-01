@@ -8,7 +8,7 @@
 
 /*デフォルト色の指定*/
 $border-cr-default: #AAAAAA; //デフォルト時のボーダーの色
-$border-cr: #391E88; //inputのhover or focus時の色
+$border-cr: #408F95; //inputのhover or focus時の色
 $back-cr: #fff; //input（テキスト系）の背景色
 
 /*サイズ等の指定*/
@@ -19,7 +19,7 @@ $border-r: rem(0); //border-radius（テキスト系）
 
 /*ボタン系の指定*/
 $fz-btn: rem(14); //送信ボタンのfont-size
-$back-cr-btn: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0% no-repeat padding-box; //ボタンの背景色
+$back-cr-btn: transparent linear-gradient(90deg, #408F95 0%, #250d65 100%) 0% 0% no-repeat padding-box; //ボタンの背景色
 $font-cr-btn: white; //ボタンのフォントカラー
 $padding-und-btn: rem(20); //paddingの指定（上下） btnの内側の余白で使う
 $padding-lnr-btn: rem(72); //paddingの指定（左右） btnの内側の余白で使う
@@ -74,6 +74,7 @@ form {
 		background: $back-cr;
 		border: 1px solid $border-cr-default;
 		border-radius: $border-r;
+		transition: border 0.3s;
 
 		/*↓↓↓↓不要ならコメントアウト or 削除 */
 		// &:hover {  //ホバーしたときの色
@@ -192,19 +193,13 @@ form {
 			}
 
 			&::after {
-				opacity: 0;
-				transition: opacity 0.3s ease;
-			}
-		}
-
-		&:checked+span {
-			&::after {
 				content: "";
 				position: absolute;
 				top: 50%;
 				left: 0;
 				display: block;
-				opacity: 1;
+				opacity: 0;
+				transition: opacity 0.3s ease;
 				/*チェックマークじゃない場合は以下を変更する*/
 				transform: translateY(-50%) rotate(-45deg);
 				width: calc($check-size * 0.7);
@@ -213,6 +208,14 @@ form {
 				margin-left: 0.1em;
 				border-left: $check-weight solid $check-bg-cr-inner;
 				border-bottom: $check-weight solid $check-bg-cr-inner;
+
+				@include mq('md') {}
+			}
+		}
+
+		&:checked+span {
+			&::after {
+				opacity: 1;
 			}
 		}
 	}
@@ -223,6 +226,10 @@ form {
 			padding: 0 0 0 calc($check-size-privacy + $check-space-privacy);
 			font-size: rem(14);
 
+			@include mq('md') {
+				padding: 0 0 0 rem(39);
+			}
+
 			&::before {
 				top: 25%;
 				width: $check-size-privacy;
@@ -232,14 +239,16 @@ form {
 					top: 50%;
 				}
 			}
-		}
 
-		&:checked+span {
 			&::after {
 				width: calc($check-size-privacy * 0.7);
 				height: calc($check-size-privacy * 0.4);
-				margin-top: -0.1em;
+				margin-top: -0.9em;
 				margin-left: 0.2em;
+
+				@include mq('md') {
+					margin-top: -0.1em;
+				}
 			}
 		}
 	}
@@ -254,8 +263,8 @@ form {
 		width: 100%;
 		/*↓カスタム */
 		margin-top: rem(0);
-		font-size: rem(12);
-		padding: rem(10) rem(3);
+		font-size: rem(16);
+		padding: rem(3);
 		background-color: $back-cr;
 		border: 1px solid $border-cr-default;
 		border-radius: $border-r;
@@ -263,6 +272,7 @@ form {
 		// appearance: auto;
 		appearance: none;
 		position: relative;
+		transition: border 0.3s;
 
 		/*↓デフォルトではないアイコンを使う場合は入力する*/
 		background-image: url('../images/sub/img-select.png');
@@ -299,6 +309,7 @@ form {
 	textarea {
 		height: $textarea-height;
 		width: 100%;
+		resize: none;
 		// max-width: rem(600);
 	}
 
