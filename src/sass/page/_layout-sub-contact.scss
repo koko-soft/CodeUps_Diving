@@ -17,7 +17,17 @@
 }
 
 .layout-sub-contact.layout-sub-contact--sub-price {
-	margin-top: rem(137);
+	margin-top: rem(106);
+
+	@include mq('md') {
+		margin-top: rem(137);
+	}
+}
+
+.layout-sub-contact.layout-sub-contact--faq {
+	@include mq('md') {
+		margin-top: rem(137);
+	}
 }
 
 .layout-sub-contact.layout-sub-contact--site-map {

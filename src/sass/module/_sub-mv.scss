@@ -27,6 +27,14 @@
 	}
 }
 
+.sub-mv.sub-mv--sub-info {
+	background-image: url(../images/sub/sub-mv_info_sp.jpg);
+
+	@include mq('md') {
+		background-image: url(../images/sub/sub-mv_info_pc.jpg);
+	}
+}
+
 .sub-mv.sub-mv--sub-blog {
 	background-image: url(../images/sub/sub-mv_blog_sp.jpg);
 
