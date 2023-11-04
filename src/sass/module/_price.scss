@@ -114,6 +114,35 @@
 	}
 }
 
+.price__list {
+	margin-top: rem(7);
+	display: grid;
+	grid-template-columns: 80% 20%;
+	row-gap: rem(8);
+}
+
+.price__list-term {}
+
+.price__list-description {
+	text-align: right;
+}
+
+.price__list-term,
+.price__list-description {
+
+	font-family: $font-family-jp-sans;
+	font-size: rem(14);
+	font-weight: $font-weight-regular;
+	letter-spacing: 0;
+	line-height: calc(24 / 14);
+	color: $color-text;
+
+	@include mq('md') {
+		font-size: rem(16);
+		line-height: calc(24 / 16);
+	}
+}
+
 .price__btn {
 	margin-top: rem(40);
 	text-align: center;
