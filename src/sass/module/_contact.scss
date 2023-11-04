@@ -81,18 +81,12 @@
 	}
 }
 
-.contact__logoBlock.title-line::after {
-	box-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
-}
-
 .contact__logo {
 	display: inline-block;
 	width: rem(174);
-	filter: drop-shadow(0 4px 4px rgba($color: #000, $alpha: 0.25));
 
 	@include mq('md') {
 		width: rem(200);
-		filter: initial;
 	}
 }
 
@@ -114,11 +108,9 @@
 
 .contact__info p {
 	text-align: center;
-	text-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
 
 	@include mq('md') {
 		text-align: left;
-		text-shadow: none;
 	}
 }
 
@@ -128,7 +120,6 @@
 
 .contact__map {
 	margin-top: rem(16);
-	box-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
 	aspect-ratio: 295 / 160;
 
 	@include mq('md') {
@@ -168,18 +159,12 @@
 
 .contact__msg-text {
 	text-align: center;
-	text-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
-
 	font-family: $font-family-jp-sans;
 	font-size: rem(14);
 	font-weight: $font-weight-regular;
 	letter-spacing: 0;
 	line-height: calc(18 / 14);
 	color: $color-accent;
-
-	@include mq('md') {
-		text-shadow: none;
-	}
 }
 
 .contact__btn {
@@ -189,8 +174,4 @@
 	@include mq('md') {
 		margin-top: rem(39);
 	}
-}
-
-.contact__btn.button::before {
-	box-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
 }

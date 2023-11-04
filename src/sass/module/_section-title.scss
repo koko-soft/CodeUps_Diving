@@ -46,15 +46,12 @@
 
 .section-title--contact .section-title__eng {
 	font-size: rem(80);
-	text-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
 }
 
 .section-title--contact .section-title__ja {
 	margin-top: rem(-4);
-	text-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
 
 	@include mq('md') {
 		margin-top: rem(-5);
-		text-shadow: none;
 	}
 }
