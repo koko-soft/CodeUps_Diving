@@ -194,7 +194,7 @@ jQuery(function ($) {
 
 	// ToTop
 	$(function () {
-		const pageTop = $("#page-top");
+		const pageTop = $(".to-top");
 		pageTop.hide();
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 100) {
@@ -214,7 +214,7 @@ jQuery(function ($) {
 		});
 
 		//page-top
-		$("#page-top").hide();
+		pageTop.hide();
 		$(window).on("scroll", function () {
 			var scrollHeight = $(document).height();
 			var scrollPosition = $(window).height() + $(window).scrollTop();
@@ -222,12 +222,12 @@ jQuery(function ($) {
 			if (scrollHeight - scrollPosition <= footHeight) {
 
 				if (window.matchMedia("(min-width: 768px)").matches) {
-					$("#page-top").css({
+					pageTop.css({
 						position: "absolute",
 						bottom: footHeight + 20,
 					});
 				} else {
-					$("#page-top").css({
+					pageTop.css({
 						position: "absolute",
 						bottom: footHeight + 16,
 					});
@@ -235,12 +235,12 @@ jQuery(function ($) {
 
 			} else {
 				if (window.matchMedia("(min-width: 768px)").matches) {
-					$("#page-top").css({
+					pageTop.css({
 						position: "fixed",
 						bottom: "20px",
 					});
 				} else {
-					$("#page-top").css({
+					pageTop.css({
 						position: "fixed",
 						bottom: "16px",
 					});
