@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.layout-header {
+	position: fixed;
+	z-index: $z-index-header;
+	top: 0;
+	right: 0;
+	left: 0;
+}

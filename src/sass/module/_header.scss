@@ -4,9 +4,6 @@
 
 	height: rem(80);
 	background-color: rgba($color: $color-black, $alpha: 0.68);
-	z-index: $z-index-header;
-	position: fixed;
-	width: 100%;
 	transition: background-color 0.3s ease;
 
 	@include mq('md') {

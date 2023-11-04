@@ -440,6 +440,7 @@ jQuery(function ($) {
 			// tabContent.hide().first().fadeIn(300);
 		}
 
+		console.log(index);
 		tabButton.eq(index).addClass("is-active");
 		tabContent.eq(index).addClass("is-active");
 		tabContent.hide().eq(index).fadeIn(300);
