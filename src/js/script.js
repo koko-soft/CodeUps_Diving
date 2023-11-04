@@ -43,13 +43,13 @@ jQuery(function ($) {
 	function loadingAnimation() {
 
 		const tl1 = gsap.timeline();
-		const loading = $(".loading");
-		const circle = $(".loading__circle");
-		const imgWrap = $(".loading__wrap");
-		const left = $(".loading__left");
-		const right = $(".loading__right");
-		const title = $(".heroTitle__title");
-		const subtitle = $(".heroTitle__subtitle");
+		const loading = $(".js-loading");
+		const circle = $(".js-loading-circle");
+		const imgWrap = $(".js-loading-wrap");
+		const left = $(".js-loading-left");
+		const right = $(".js-loading-right");
+		const title = $(".js-loading-title");
+		const subtitle = $(".js-loading-subtitle");
 
 		tl1
 			.add(function () {
