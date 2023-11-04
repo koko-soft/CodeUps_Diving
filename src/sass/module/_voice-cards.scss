@@ -6,7 +6,6 @@
 	row-gap: rem(40);
 
 	@include mq('md') {
-		margin-top: rem(35);
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: rem(80);
 		column-gap: rem(40);
