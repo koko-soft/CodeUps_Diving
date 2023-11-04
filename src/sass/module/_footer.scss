@@ -1,38 +1,20 @@
 @use "global" as *;
 
 .footer {
-	margin-top: rem(102);
 	padding-top: rem(48);
 	padding-bottom: rem(56);
 	background-color: $color-accent;
 
 	@include mq('md') {
-		margin-top: rem(160);
 		padding-top: rem(80);
 		padding-bottom: rem(80);
 	}
 }
 
-.footer.footer--sub-contact {
-	margin-top: rem(147);
-
-	@include mq('md') {
-		margin-top: rem(165);
-	}
-}
 
 .footer.footer--error-page {
 	@include mq('md') {
-		margin-top: rem(80);
 		padding-top: rem(0);
-	}
-}
-
-.footer.footer--thanks {
-	margin-top: rem(145);
-
-	@include mq('md') {
-		margin-top: rem(120);
 	}
 }
 
