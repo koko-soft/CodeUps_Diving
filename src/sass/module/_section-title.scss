@@ -36,19 +36,19 @@
 
 }
 
-.section-title--white .section-title__eng,
-.section-title--white .section-title__eng::first-letter,
-.section-title--white .section-title__ja {
+.section-title.section-title--white .section-title__eng,
+.section-title.section-title--white .section-title__eng::first-letter,
+.section-title.section-title--white .section-title__ja {
 	@include mq('md') {
 		color: $color-white;
 	}
 }
 
-.section-title--contact .section-title__eng {
+.section-title.section-title--contact .section-title__eng {
 	font-size: rem(80);
 }
 
-.section-title--contact .section-title__ja {
+.section-title.section-title--contact .section-title__ja {
 	margin-top: rem(-4);
 
 	@include mq('md') {
