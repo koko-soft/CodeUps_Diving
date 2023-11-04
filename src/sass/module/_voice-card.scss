@@ -12,10 +12,15 @@
 .voice-card__head {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: flex-start;
 	column-gap: rem(13);
 
+	@include mq('sm') {
+		align-items: flex-start;
+	}
+
 	@include mq('md') {
+		align-items: flex-end;
 		column-gap: rem(16);
 	}
 }
@@ -113,6 +118,7 @@
 
 .voice-card__right {
 	width: calc(151 / 313 * 100%);
+	margin-top: auto;
 
 	@include mq('md') {
 		width: calc(180 / 472 * 100%);
