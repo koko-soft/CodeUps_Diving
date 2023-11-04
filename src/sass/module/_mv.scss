@@ -3,41 +3,55 @@
 .mv {
 	position: relative;
 	height: 100vh;
+	min-height: rem(460);
+
+	@include mq('md') {
+		min-height: rem(548);
+	}
 }
 
 .mv__inner {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__content {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__images {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__swiper {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__swiper .swiper-wrapper {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__swiper .swiper-slide {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__swiper .swiper-slide picture {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__swiper .swiper-slide source {
 	height: inherit;
+	min-height: inherit;
 }
 
 .mv__swiper .swiper-slide picture img {
 	height: inherit;
+	min-height: inherit;
 	object-fit: cover;
 }
