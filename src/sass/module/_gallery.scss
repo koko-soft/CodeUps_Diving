@@ -1,13 +1,7 @@
 @use "global" as *;
 
 
-.gallery {
-	margin-top: rem(40);
-
-	@include mq('md') {
-		margin-top: rem(120);
-	}
-}
+.gallery {}
 
 .gallery__section-title {}
 
