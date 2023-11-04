@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.layout-about {
-	margin-top: rem(77);
+.layout-sub-site-map {
+	margin-top: rem(35);
 
 	@include mq('md') {
 		margin-top: rem(133);

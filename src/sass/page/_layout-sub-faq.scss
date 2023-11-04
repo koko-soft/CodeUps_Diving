@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.layout-faq {
+.layout-sub-faq {
 	margin-top: rem(43);
 
 	@include mq('md') {
