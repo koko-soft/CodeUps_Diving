@@ -291,11 +291,11 @@ jQuery(function ($) {
 
 	// accordion
 	$(function () {
-		$(".js-accordion-item:first-child .js-accordion-content").css(
+		$(".js-accordion-item .js-accordion-content").css(
 			"display",
 			"block"
 		);
-		$(".js-accordion-item:first-child .js-accordion-title").addClass(
+		$(".js-accordion-item .js-accordion-title").addClass(
 			"is-open"
 		);
 		$(".js-accordion-title").on("click", function () {
@@ -458,6 +458,9 @@ jQuery(function ($) {
 	};
 
 	// blog-archive toggle
+	$(".js-blog-archive .blog-archive__year:first-child p").addClass("is-active");
+	$(".js-blog-archive .blog-archive__year:first-child p").next(".blog-archive__months").slideToggle();
+
 	$(".js-blog-archive .blog-archive__year p").on("click", function () {
 		$(this).next(".blog-archive__months").slideToggle();
 		$(this).toggleClass("is-active");
