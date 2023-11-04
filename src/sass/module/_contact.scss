@@ -45,7 +45,7 @@
 	}
 }
 
-.contact__top {
+.contact__info {
 
 	padding-left: rem(25);
 	padding-right: rem(25);
@@ -59,7 +59,7 @@
 	}
 }
 
-.contact__top::after {
+.contact__info::after {
 	@include mq('md') {
 
 		position: absolute;
@@ -97,7 +97,7 @@
 	}
 }
 
-.contact__info {
+.contact__detail {
 	margin-top: rem(16);
 
 	@include mq('md') {
@@ -106,7 +106,7 @@
 	}
 }
 
-.contact__info p {
+.contact__detail p {
 	text-align: center;
 
 	@include mq('md') {
@@ -114,7 +114,7 @@
 	}
 }
 
-.contact__info p:not(:first-child) {
+.contact__detail p:not(:first-child) {
 	margin-top: rem(4);
 }
 
@@ -140,7 +140,7 @@
 
 }
 
-.contact__bottom {
+.contact__action {
 	margin-top: rem(42);
 
 	@include mq('md') {
