@@ -85,8 +85,8 @@
 	}
 }
 
-.sub-price__table dt,
-.sub-price__table dd {
+.sub-price__term,
+.sub-price__description {
 	padding: rem(5);
 	display: flex;
 	align-items: center;
@@ -103,12 +103,12 @@
 	}
 }
 
-.sub-price__table dt:first-of-type,
-.sub-price__table dd:first-of-type {
+.sub-price__term:first-of-type,
+.sub-price__description:first-of-type {
 	border-top: none;
 }
 
-.sub-price__table dt {
+.sub-price__term {
 	justify-content: center;
 	text-align: center;
 
@@ -118,7 +118,7 @@
 	}
 }
 
-.sub-price__table dd {
+.sub-price__description {
 	padding-right: rem(15);
 	justify-content: flex-end;
 	border-left: 1px solid $color-accent;
