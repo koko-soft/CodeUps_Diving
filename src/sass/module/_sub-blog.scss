@@ -12,22 +12,19 @@
 	}
 }
 
-.sub-blog__main {
-	padding-left: rem(6);
-	padding-right: rem(6);
+.sub-blog__main {}
+
+.sub-blog__cards {
+	margin: auto;
+	width: 96.525%;
 
 	@include mq('md') {
-		padding-left: 0;
-		padding-right: 0;
+		width: 100%;
 	}
 }
 
-.sub-blog__cards {}
-
 .sub-blog__wp-pagenavi {
 	margin-top: rem(80);
-	margin-left: rem(-6);
-	margin-right: rem(-6);
 }
 
 .sub-blog__wp-pagenavi.sub-blog__wp-pagenavi--post {
