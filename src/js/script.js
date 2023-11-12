@@ -458,11 +458,12 @@ jQuery(function ($) {
 	};
 
 	// blog-archive toggle
-	$(".js-blog-archive .blog-archive__year:first-child p").addClass("is-active");
-	$(".js-blog-archive .blog-archive__year:first-child p").next(".blog-archive__months").slideToggle();
+	const toggleYear = $(".js-toggle-year");
+	toggleYear.first().addClass("is-active");
+	toggleYear.first().next().slideToggle();
 
-	$(".js-blog-archive .blog-archive__year p").on("click", function () {
-		$(this).next(".blog-archive__months").slideToggle();
+	toggleYear.on("click", function () {
+		$(this).next().slideToggle();
 		$(this).toggleClass("is-active");
 	});
 
