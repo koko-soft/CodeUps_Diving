@@ -3,9 +3,14 @@
 .category {}
 
 .category__list {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: rem(16) rem(21);
+
+	@include mq('sm') {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
 	@include mq('md') {
 		gap: rem(24) rem(32);
@@ -17,7 +22,7 @@
 .category__text {
 	padding: rem(5);
 	display: inline-block;
-	min-width: rem(162);
+	width: 100%;
 	transition: background-color 0.3s, color 0.3s;
 	background-color: $color-white;
 	border: 1px solid $color-accent;
@@ -28,6 +33,10 @@
 	letter-spacing: 0;
 	line-height: calc(22 / 14);
 	color: $color-accent;
+
+	@include mq('sm') {
+		min-width: rem(162);
+	}
 }
 
 .category__text:hover {
