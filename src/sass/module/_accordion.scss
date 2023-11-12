@@ -11,13 +11,13 @@
 }
 
 .accordion__title {
-	padding: rem(16);
+	padding: rem(16) rem(58) rem(16) rem(16);
 	position: relative;
 	background-color: $color-accent;
 	cursor: pointer;
 
 	@include mq('md') {
-		padding: rem(2);
+		padding: rem(28) rem(88) rem(24) rem(40);
 	}
 }
 
@@ -61,7 +61,6 @@
 	color: $color-white;
 
 	@include mq('md') {
-		padding: rem(24) rem(40);
 		font-size: rem(20);
 	}
 }

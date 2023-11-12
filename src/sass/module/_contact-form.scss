@@ -4,7 +4,7 @@
 
 .contact-form__body {}
 
-.contact-form__body dl {
+.contact-form__wrap {
 	padding-top: rem(22);
 	padding-bottom: rem(24);
 	border-bottom: 1px dashed $color-accent;
@@ -17,11 +17,11 @@
 	}
 }
 
-.contact-form__body dl:first-child {
+.contact-form__wrap:first-child {
 	padding-top: 0;
 }
 
-.contact-form__body dt {
+.contact-form__label {
 	font-family: $font-family-jp-sans;
 	font-size: rem(16);
 	font-weight: $font-weight-bold;
@@ -29,7 +29,7 @@
 	color: $color-text;
 }
 
-.contact-form__body dt span {
+.contact-form__label span {
 	margin-left: rem(8);
 	padding: rem(5) rem(19);
 	display: inline-block;
@@ -42,7 +42,7 @@
 	color: $color-white;
 }
 
-.contact-form__body dd {
+.contact-form__input {
 	margin-top: rem(16);
 
 	@include mq('md') {

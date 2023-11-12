@@ -9,6 +9,7 @@
 }
 
 .sub-contact__error {
+	margin-bottom: rem(39);
 	padding-left: 1em;
 	display: flex;
 	justify-content: center;
@@ -26,7 +27,6 @@
 	font-size: rem(14);
 	font-weight: $font-weight-regular;
 	letter-spacing: 0;
-	// line-height: calc( / );
 	color: $color-red;
 
 	@include mq('md') {
@@ -35,6 +35,4 @@
 	}
 }
 
-.sub-contact__content {
-	margin-top: rem(41);
-}
+.sub-contact__content {}
