@@ -8,8 +8,6 @@
 	}
 }
 
-.sub-price__content {}
-
 .sub-price__list {}
 
 .sub-price__item {
@@ -21,10 +19,10 @@
 }
 
 .sub-price__item:not(:first-child) {
-	margin-top: rem(40);
+	margin-top: rem(43);
 
 	@include mq('md') {
-		margin-top: rem(80);
+		margin-top: rem(79);
 	}
 }
 
