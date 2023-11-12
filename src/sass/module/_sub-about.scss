@@ -17,10 +17,10 @@
 	}
 }
 
-.sub-about__inner {
-	@include mq('md') {
-		position: relative;
-	}
+.sub-about__inner {}
+
+.sub-about__wrap {
+	position: relative;
 }
 
 .sub-about__images {
@@ -83,16 +83,14 @@
 		margin-top: 0;
 		position: absolute;
 		display: flex;
-
 		width: 72.18%;
-		// top: 40%;
 		top: 30.6%;
 		left: 19.8%;
 	}
 }
 
 .sub-about__subtitle {
-	width: 100%;
+	width: 90%;
 	position: absolute;
 	top: 5.4%;
 	left: calc(50% - min(39.6vw, rem(256)));
