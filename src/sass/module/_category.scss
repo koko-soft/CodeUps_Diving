@@ -12,7 +12,9 @@
 	}
 }
 
-.category__item button {
+.category__item {}
+
+.category__text {
 	padding: rem(5);
 	display: inline-block;
 	min-width: rem(162);
@@ -28,12 +30,13 @@
 	color: $color-accent;
 }
 
-.category__item:hover button {
+.category__text:hover {
 	background-color: $color-accent;
 	color: $color-white;
+	opacity: 1;
 }
 
-.category__item.category__item--current button {
+.category__text.active {
 	background-color: $color-accent;
 	color: $color-white;
 }
