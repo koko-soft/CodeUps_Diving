@@ -79,7 +79,7 @@
 	color: $color-white;
 }
 
-.menu--sub-page {
+.menu.menu--sub-page {
 	column-gap: min(vw(375, 29), rem(40));
 
 	@include mq('md') {
@@ -87,20 +87,20 @@
 	}
 }
 
-.menu__column-wrap--sub-page {
+.menu__column-wrap.menu__column-wrap--sub-page {
 	@include mq('md') {
 		column-gap: min(vw(1440, 144), rem(144));
 	}
 }
 
-.menu__title--sub-page a {
+.menu__title.menu__title--sub-page a {
 	color: $color-text;
 }
 
-.menu__list--sub-page a {
+.menu__list.menu__list--sub-page a {
 	color: $color-text;
 }
 
-.menu__title--sub-page a::before {
+.menu__title.menu__title--sub-page a::before {
 	background-image: url('../images/common/icon_starfish_black.png');
 }
